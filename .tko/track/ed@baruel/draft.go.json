@@ -1,0 +1,104 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_09-42-49",
+            "content": "@@ -525,12 +525,8 @@\n s) -\n- 1 -\n  i; \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-14_09-44-47",
+            "content": "@@ -415,19 +415,16 @@\n   %7D%0A%0A   \n- //\n  repetid\n@@ -440,19 +440,16 @@\n nt%7B%7D%0A   \n- //\n  for i :\n@@ -479,27 +479,24 @@\n ); i++ %7B%0A   \n- //\n      for j :\n@@ -539,26 +539,24 @@\n + %7B%0A    \n-//\n         \n  if figu\n@@ -547,17 +547,16 @@\n         \n- \n if figur\n@@ -587,26 +587,24 @@\n  + j%5D %7B%0A    \n-//\n             \n@@ -603,17 +603,16 @@\n         \n- \n repetida\n@@ -631,27 +631,24 @@\n inhas%5Bi%5D%0A   \n- //\n          %7D%0A \n@@ -649,19 +649,16 @@\n    %7D%0A   \n- //\n      %7D%0A \n@@ -663,21 +663,15 @@\n %0A   \n- //\n  %7D%0A%0A   \n- //\n  fmt\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-14_09-46-00",
+            "content": "@@ -206,25 +206,24 @@\n  %7D%0A%0A    \n-repetidas\n+faltando\n  := %5B%5Din\n@@ -243,30 +243,21 @@\n  := \n-0\n+1\n ; i %3C\n- len(figurinhas)\n+= album\n ; i+\n@@ -281,37 +281,20 @@\n  := \n-1\n+0\n ; j %3C \n-len(figurinhas) - 1 - \n+possu\n i; j\n@@ -317,23 +317,11 @@\n  if \n-figurinhas%5Bi%5D =\n+i !\n = fi\n@@ -333,12 +333,8 @@\n has%5B\n-i + \n j%5D %7B\n@@ -354,36 +354,38 @@\n     \n-repetidas%5Bi%5D = figurinhas%5Bi%5D\n+faltando = append(faltando, i)\n %0A   \n@@ -415,57 +415,25 @@\n   %7D%0A\n+%0A\n     \n-fmt.Println(repetidas)%0A%0A%0A%0A%0A%0A%0A%0A    // faltando\n+// repetidas\n  := \n@@ -452,37 +452,46 @@\n // for i := \n-1\n+0\n ; i %3C\n-= album\n+ len(figurinhas)\n ; i++ %7B%0A    \n@@ -502,36 +502,53 @@\n    for j := \n-0\n+1\n ; j %3C \n-possu\n+len(figurinhas) - 1 - \n i; j++ %7B%0A   \n@@ -554,35 +554,47 @@\n   //         if \n-i !\n+figurinhas%5Bi%5D =\n = figurinhas%5Bj%5D \n@@ -582,32 +582,36 @@\n %5D == figurinhas%5B\n+i + \n j%5D %7B%0A    //     \n@@ -622,38 +622,36 @@\n     \n-faltando = append(faltando, i)\n+repetidas%5Bi%5D = figurinhas%5Bi%5D\n %0A   \n@@ -687,23 +687,49 @@\n   // %7D%0A%0A\n-%0A\n     //\n+ fmt.Println(repetidas)%0A   \n  fmt.Pri\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-14_09-51-55",
+            "content": "@@ -239,38 +239,47 @@\n for i := 0; i %3C \n-possui\n+len(figurinhas)\n ; i++ %7B%0A        \n@@ -294,22 +294,31 @@\n  1; j %3C \n-possui\n+len(figurinhas)\n  - 1 - i\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_09-53-16",
+            "content": "@@ -123,27 +123,15 @@\n  := \n-make(%5B%5Dint, possui)\n+%5B%5Dint%7B%7D\n %0A%0A  \n@@ -471,16 +471,19 @@\n %0A%0A%0A%0A%0A   \n+ //\n  faltand\n@@ -490,32 +490,35 @@\n o := %5B%5Dint%7B%7D%0A   \n+ //\n  for i := 1; i %3C\n@@ -527,32 +527,35 @@\n album; i++ %7B%0A   \n+ //\n      for j := 0;\n@@ -577,24 +577,26 @@\n + %7B%0A    \n+//\n         \n if i != \n@@ -587,16 +587,17 @@\n         \n+ \n if i != \n@@ -608,32 +608,34 @@\n rinhas%5Bj%5D %7B%0A    \n+//\n             falt\n@@ -630,16 +630,17 @@\n         \n+ \n faltando\n@@ -661,24 +661,27 @@\n ando, i)%0A   \n+ //\n          %7D%0A \n@@ -674,32 +674,35 @@\n //         %7D%0A   \n+ //\n      %7D%0A    %7D%0A%0A%0A \n@@ -699,16 +699,19 @@\n %0A   \n+ //\n  %7D%0A%0A%0A   \n  fmt\n@@ -702,24 +702,27 @@\n   // %7D%0A%0A%0A   \n+ //\n  fmt.Println\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_09-56-14",
+            "content": "@@ -259,31 +259,22 @@\n  0; i %3C \n-len(figurinhas)\n+possui\n ; i++ %7B%0A\n@@ -301,23 +301,14 @@\n j %3C \n-len(figurinhas)\n+possui\n  - 1\n@@ -483,19 +483,16 @@\n %0A%0A%0A%0A%0A   \n- //\n  faltand\n@@ -507,19 +507,16 @@\n nt%7B%7D%0A   \n- //\n  for i :\n@@ -537,27 +537,24 @@\n m; i++ %7B%0A   \n- //\n      for j :\n@@ -580,26 +580,24 @@\n + %7B%0A    \n-//\n         \n  if i !=\n@@ -588,17 +588,16 @@\n         \n- \n if i != \n@@ -612,26 +612,24 @@\n as%5Bj%5D %7B%0A    \n-//\n             \n@@ -628,17 +628,16 @@\n         \n- \n faltando\n@@ -658,27 +658,24 @@\n ando, i)%0A   \n- //\n          %7D%0A \n@@ -676,19 +676,16 @@\n    %7D%0A   \n- //\n      %7D%0A \n@@ -690,19 +690,16 @@\n %0A   \n- //\n  %7D%0A%0A%0A   \n  // \n@@ -698,11 +698,8 @@\n %0A   \n- //\n  fmt\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_09-57-45",
+            "content": "@@ -418,28 +418,13 @@\n idas\n- = append(repetidas,\n+%5Bi%5D =\n  fig\n@@ -429,25 +429,24 @@\n igurinhas%5Bi%5D\n-)\n %0A           \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_09-58-47",
+            "content": "@@ -323,16 +323,20 @@\n inhas) -\n+ 1 -\n  i; j++ \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_10-01-00",
+            "content": "@@ -243,26 +243,8 @@\n t%7B%7D%0A\n-    flag := false%0A\n     \n@@ -286,29 +286,8 @@\n + %7B%0A\n-        flag = false%0A\n     \n@@ -389,86 +389,8 @@\n %5D %7B%0A\n-                if flag == true %7B%0A                    break%0A                %7D%0A\n     \n@@ -450,36 +450,8 @@\n i%5D)%0A\n-                flag = true%0A\n     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_10-03-43",
+            "content": "@@ -658,16 +658,19 @@\n %0A%0A%0A%0A%0A   \n+ //\n  faltand\n@@ -681,24 +681,27 @@\n  %5B%5Dint%7B%7D%0A   \n+ //\n  for i := 1;\n@@ -718,24 +718,27 @@\n m; i++ %7B%0A   \n+ //\n      for j :\n@@ -764,24 +764,26 @@\n + %7B%0A    \n+//\n         \n if i != \n@@ -774,16 +774,17 @@\n         \n+ \n if i != \n@@ -795,32 +795,34 @@\n rinhas%5Bj%5D %7B%0A    \n+//\n             falt\n@@ -817,16 +817,17 @@\n         \n+ \n faltando\n@@ -848,24 +848,27 @@\n ando, i)%0A   \n+ //\n          %7D%0A \n@@ -861,32 +861,35 @@\n //         %7D%0A   \n+ //\n      %7D%0A    %7D%0A%0A%0A \n@@ -886,16 +886,19 @@\n %0A   \n+ //\n  %7D%0A%0A%0A   \n  fmt\n@@ -889,24 +889,27 @@\n   // %7D%0A%0A%0A   \n+ //\n  fmt.Println\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-14_10-05-39",
+            "content": "@@ -683,27 +683,8 @@\n t%7B%7D%0A\n-    flag2 := false%0A\n     \n@@ -726,60 +726,29 @@\n    f\n-lag2 = false%0A        for j := 0; j %3C len(figurinhas)\n+or j := 0; j %3C possui\n ; j+\n@@ -768,17 +768,17 @@\n    if i \n-=\n+!\n = figuri\n@@ -795,85 +795,8 @@\n     \n-            flag2 = true%0A            %7D%0A        %7D%0A        if flag2 == false %7B%0A\n     \n@@ -834,16 +834,30 @@\n ndo, i)%0A\n+            %7D%0A\n         \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-14_10-21-15",
+            "content": "@@ -630,76 +630,31 @@\n    f\n-or _, f := range repetidas%7B%0A        fmt.Println(f, %22 %22)%0A    %7D%0A%0A%0A    \n+mt.Println(repetidas)%0A%0A\n %0A%0A%0A%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-14_10-24-12",
+            "content": "@@ -671,16 +671,18 @@\n mt.Print\n+ln\n (f, %22 %22)\n@@ -690,16 +690,20 @@\n     %7D%0A%0A%0A\n+    \n %0A%0A%0A%0A%0A%0A  \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-14_10-24-18",
+            "content": "@@ -690,27 +690,8 @@\n   %7D%0A\n-    fmt.Print(%22%5Cn%22)\n %0A%0A%0A%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-14_10-24-52",
+            "content": "@@ -632,17 +632,17 @@\n  for _, \n-r\n+f\n  := rang\n@@ -672,17 +672,17 @@\n t.Print(\n-r\n+f\n , %22 %22)%0A \n@@ -1046,85 +1046,27 @@\n    f\n-or _, f := range faltando%7B%0A        fmt.Print(f, %22 %22)%0A    %7D%0A    fmt.Print(%22%5Cn%22\n+mt.Println(faltando\n )%0A%7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-14_10-25-28",
+            "content": "@@ -629,17 +629,17 @@\n     for \n-i\n+_\n , r := r\n@@ -652,17 +652,16 @@\n epetidas\n- \n %7B%0A      \n@@ -677,67 +677,14 @@\n nt(r\n-)%0A        if i %3E 0 %7B  %0A            fmt.Print(%22 %22)%0A        %7D\n+, %22 %22)\n %0A   \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-14_10-27-46",
+            "content": "@@ -693,28 +693,11 @@\n f i \n-%3C len(repetidas) - 1\n+%3E 0\n  %7B  \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-14_10-28-14",
+            "content": "@@ -1116,17 +1116,17 @@\n     for \n-i\n+_\n , f := r\n@@ -1138,17 +1138,16 @@\n faltando\n- \n %7B%0A      \n@@ -1163,83 +1163,14 @@\n nt(f\n-)%0A        if i %3C len(faltando) - 1 %7B  %0A            fmt.Print(%22 %22)%0A        %7D\n+, %22 %22)\n %0A   \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-14_10-28-53",
+            "content": "@@ -625,80 +625,8 @@\n   %7D%0A\n-%0A    if len(repetidas) == 0 %7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A    \n     \n@@ -655,36 +655,32 @@\n tidas %7B%0A        \n-    \n fmt.Print(r)%0A   \n@@ -676,36 +676,32 @@\n rint(r)%0A        \n- \n-   \n if i %3C len(repet\n@@ -718,36 +718,32 @@\n %7B  %0A            \n-    \n fmt.Print(%22 %22)%0A \n@@ -749,36 +749,24 @@\n         \n-    %7D%0A        \n %7D%0A    \n+%7D%0A\n     fmt.\n@@ -777,22 +777,16 @@\n t(%22%5Cn%22)%0A\n-    %7D%0A\n %0A%0A%0A%0A%0A%0A%0A \n@@ -1111,78 +1111,9 @@\n  %7D%0A%0A\n-    if len(faltando) == 0 %7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A    \n+%0A\n     \n@@ -1141,36 +1141,32 @@\n tando %7B%0A        \n-    \n fmt.Print(f)%0A   \n@@ -1166,28 +1166,24 @@\n (f)%0A        \n-  \n-  \n if i %3C len(f\n@@ -1203,36 +1203,32 @@\n %7B  %0A            \n-    \n fmt.Print(%22 %22)%0A \n@@ -1234,36 +1234,24 @@\n         \n-    %7D%0A        \n %7D%0A    \n+%7D%0A\n     fmt.\n@@ -1262,16 +1262,10 @@\n t(%22%5Cn%22)%0A\n-    %7D%0A\n %7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-03-14_10-30-28",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var album, possui int\n    fmt.Scanf(\"%d\\n%d\", &album, &possui)\n\n    figurinhas := make([]int, possui)\n\n    for i := 0; i < possui; i++ {\n        fmt.Scan(&figurinhas[i])\n    }\n\n    repetidas := []int{}\n    flag := false\n    for i := 0; i < len(figurinhas); i++ {\n        flag = false\n        for j := 1; j < len(figurinhas) - i; j++ {\n            if figurinhas[i] == figurinhas[i + j] {\n                if flag == true {\n                    break\n                }\n                repetidas = append(repetidas, figurinhas[i])\n                flag = true\n            }\n        }\n    }\n\n    if len(repetidas) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for i, r := range repetidas {\n            fmt.Print(r)\n            if i < len(repetidas) - 1 {  \n                fmt.Print(\" \")\n            }\n        }\n        fmt.Print(\"\\n\")\n    }\n\n\n\n\n\n\n\n    faltando := []int{}\n    flag2 := false\n    for i := 1; i <= album; i++ {\n        flag2 = false\n        for j := 0; j < len(figurinhas); j++ {\n            if i == figurinhas[j] {\n                flag2 = true\n            }\n        }\n        if flag2 == false {\n            faltando = append(faltando, i)\n        }\n    }\n\n    if len(faltando) == 0 {\n        fmt.Println(\"N\")\n    } else {\n        for i, f := range faltando {\n            fmt.Print(f)\n            if i < len(faltando) - 1 {  \n                fmt.Print(\" \")\n            }\n        }\n        fmt.Print(\"\\n\")\n    }\n}\n",
+            "lines": "71"
+        }
+    ]
+}

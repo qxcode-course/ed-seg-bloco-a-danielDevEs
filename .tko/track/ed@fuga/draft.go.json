@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-11_21-35-17",
+            "content": "@@ -125,46 +125,46 @@\n for \n-%7B%0A%09%09fugit = (\n+i := 0; i %3C 15; i++ %7B%0A%09%09\n fugit +\n+=\n  direc\n- + 16) %25 16%0A\n %0A%09%09i\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-11_22-08-37",
+            "content": "@@ -124,22 +124,8 @@\n %09for\n- i := 0; ; i++\n  %7B%0A%09\n@@ -135,86 +135,36 @@\n git \n-+\n = \n-direc%0A%09%09if fugit %3E 15 %7B%0A%09%09%09fugit = 0%0A%09%09%7D%0A%09%09if fugit %3C 0 %7B%0A%09%09%09fugit = 15%0A%09%09%7D\n+(fugit + direc + 16) %25 16%0A\n %0A%09%09i\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-11_22-08-57",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar helico, polic, fugit, direc int\n\tfmt.Scan(&helico, &polic, &fugit, &direc)\n\n\tfor i := 0; ; i++ {\n\t\tfugit += direc\n\t\tif fugit > 15 {\n\t\t\tfugit = 0\n\t\t}\n\t\tif fugit < 0 {\n\t\t\tfugit = 15\n\t\t}\n\t\tif fugit == polic {\n\t\t\tfmt.Println(\"N\")\n\t\t\tbreak\n\t\t}\n\t\tif fugit == helico {\n\t\t\tfmt.Println(\"S\")\n\t\t\tbreak\n\t\t}\n\t}\n}\n",
+            "lines": "26"
+        }
+    ]
+}

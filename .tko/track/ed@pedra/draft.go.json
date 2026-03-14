@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-12_08-22-49",
+            "content": "@@ -203,31 +203,8 @@\n dif)\n-%0A        fmt.Print(dif)\n %0A%0A  \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-12_08-24-43",
+            "content": "@@ -194,14 +194,8 @@\n     \n- dif =\n  abs\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-12_08-26-26",
+            "content": "@@ -210,32 +210,8 @@\n if)%0A\n-        fmt.Print(a, b)%0A\n     \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-12_08-27-48",
+            "content": "@@ -93,23 +93,13 @@\n  aux\n-, ganhador\n  int%0A\n+\n     \n@@ -132,28 +132,8 @@\n + %7B%0A\n-        a, b = 0, 0%0A\n     \n@@ -182,26 +182,82 @@\n := a\n-bs(a - b)%0A        \n+ - b%0A        dif = abs(dif)%0A        fmt.Print(a, b)%0A        fmt.Print(dif)\n %0A%0A  \n@@ -336,39 +336,8 @@\n ux =\n- dif%0A                ganhador =\n  i%0A \n@@ -385,16 +385,11 @@\n tln(\n-ganhador\n+aux\n )%0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-12_08-33-57",
+            "content": "@@ -138,16 +138,36 @@\n ; i++ %7B%0A\n+        a, b = 0, 0%0A\n         \n@@ -374,35 +374,8 @@\n   %7D%0A\n-    if ganhador == 0 %7B%0A    \n     \n@@ -390,21 +390,16 @@\n tln(\n-%22sem \n ganhador\n %22)%0A \n@@ -398,60 +398,10 @@\n ador\n-%22\n )%0A\n-    %7D else %7B%0A        fmt.Println(ganhador)%0A    %7D%0A\n %7D%0A%0Af\n@@ -407,27 +407,35 @@\n func valid(a\n-, b\n+ int, b int\n , dif int) b\n@@ -444,22 +444,18 @@\n l %7B%0A    \n-return\n+if\n  (a %3E= 1\n@@ -470,27 +470,16 @@\n  100) &&\n-%0A          \n  (b %3E= 1\n@@ -494,27 +494,16 @@\n  100) &&\n-%0A          \n  (dif %3E=\n@@ -506,16 +506,61 @@\n f %3E= 10)\n+ %7B%0A        return true%0A    %7D%0A    return false\n %0A%7D%0A%0Afunc\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-12_08-37-40",
+            "content": "@@ -89,24 +89,17 @@\n , b, aux\n- int%0A   \n+,\n  ganhado\n@@ -104,12 +104,11 @@\n dor \n-:= 0\n+int\n %0A   \n@@ -122,17 +122,17 @@\n or i := \n-1\n+0\n ; i %3C n;\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-12_08-40-58",
+            "content": "@@ -112,16 +112,20 @@\n or := 0%0A\n+    \n %0A    for\n@@ -136,17 +136,16 @@\n = 1; i %3C\n-=\n  n; i++ \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-12_08-41-32",
+            "content": "@@ -66,18 +66,16 @@\n fmt.Scan\n-ln\n (&n)%0A%0A  \n@@ -159,18 +159,16 @@\n fmt.Scan\n-ln\n (&a, &b)\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-12_08-43-52",
+            "content": "@@ -86,16 +86,21 @@\n var a, b\n+, aux\n  int%0A   \n@@ -112,23 +112,13 @@\n ador\n-, aux := 0, 101\n+ := 0\n %0A%0A  \n@@ -132,14 +132,15 @@\n  := \n-0\n+1\n ; i %3C\n+=\n  n; \n@@ -266,17 +266,17 @@\n  if aux \n-%3E\n+%3C\n  dif %7B%0A \n@@ -517,25 +517,24 @@\n turn (a %3E= 1\n-0\n  && a %3C= 100\n@@ -556,17 +556,16 @@\n  (b %3E= 1\n-0\n  && b %3C=\n@@ -569,16 +569,42 @@\n  %3C= 100)\n+ &&%0A           (dif %3E= 10)\n %0A%7D%0A%0Afunc\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-12_08-48-42",
+            "content": "@@ -242,16 +242,21 @@\n lid(a, b\n+, dif\n ) %7B%0A    \n@@ -485,24 +485,29 @@\n c valid(a, b\n+, dif\n  int) bool %7B\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-12_08-49-22",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n    var n int\n    fmt.Scanln(&n)\n\n    var a, b int\n    ganhador, aux := 0, 101\n\n    for i := 0; i < n; i++ {\n        fmt.Scanln(&a, &b)\n        \n        dif := abs(a - b)\n        \n\n        if valid(a, b) {\n            if aux > dif {\n                aux = dif\n                ganhador = i\n            }\n        }\n    }\n    if ganhador == 0 {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(ganhador)\n    }\n}\n\nfunc valid(a, b int) bool {\n    return (a >= 10 && a <= 100) &&\n           (b >= 10 && b <= 100)\n}\n\nfunc abs(dif int) int {\n    if dif < 0 {\n        return -dif\n    }\n    return dif\n}",
+            "lines": "44"
+        }
+    ]
+}

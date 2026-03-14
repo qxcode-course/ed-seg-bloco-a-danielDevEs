@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-11_21-15-06",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,265 +37,32 @@\n ) %7B%0A\n-%09var nome string%0A%09var idade int%0A%09fmt.Scan(&nome, &idade)%0A%0A%09var tipo string%0A%09if idade %3C 12 %7B%0A%09%09tipo = %22crianca%22%0A%09%7D else if idade %3C 18 %7B%0A%09%09tipo = %22jovem%22%0A%09%7D else if idade %3C 65 %7B%0A%09%09tipo = %22adulto%22%0A%09%7D else %7B%0A%09%09tipo = %22mumia%22%0A%09%7D%0A%0A%09fmt.Println(nome + %22eh%22 + tipo)%0A\n+    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-11_21-15-19",
+            "content": "@@ -285,12 +285,10 @@\n  + %22\n- \n eh\n- \n %22 + \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-11_21-15-34",
+            "content": "@@ -233,51 +233,8 @@\n to%22%0A\n-%09%7D else if idade %3C 1000 %7B%0A%09%09tipo = %22idoso%22%0A\n %09%7D e\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-11_21-16-18",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar nome string\n\tvar idade int\n\tfmt.Scan(&nome, &idade)\n\n\tvar tipo string\n\tif idade < 12 {\n\t\ttipo = \"crianca\"\n\t} else if idade < 18 {\n\t\ttipo = \"jovem\"\n\t} else if idade < 65 {\n\t\ttipo = \"adulto\"\n\t} else if idade < 1000 {\n\t\ttipo = \"idoso\"\n\t} else {\n\t\ttipo = \"mumia\"\n\t}\n\n\tfmt.Println(nome + \" eh \" + tipo)\n\n}\n",
+            "lines": "25"
+        }
+    ]
+}

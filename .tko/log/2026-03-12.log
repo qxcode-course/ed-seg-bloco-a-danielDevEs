@@ -1,0 +1,30 @@
+2026-03-12 07:58:03, MOVE, v:1, k:ed@pedra, mode:DOWN
+2026-03-12 07:58:04, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-12 07:58:50, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-12 07:59:00, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-12 08:22:49, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:40
+2026-03-12 08:23:51, EXEC, v:1, k:ed@pedra, mode:FREE
+2026-03-12 08:24:43, EXEC, v:1, k:ed@pedra, mode:FREE, size:41
+2026-03-12 08:25:13, EXEC, v:1, k:ed@pedra, mode:FREE
+2026-03-12 08:25:41, EXEC, v:1, k:ed@pedra, mode:FREE
+2026-03-12 08:26:26, EXEC, v:1, k:ed@pedra, mode:FREE, size:41
+2026-03-12 08:27:48, EXEC, v:1, k:ed@pedra, mode:FREE, size:42
+2026-03-12 08:33:57, EXEC, v:1, k:ed@pedra, mode:FREE, size:42
+2026-03-12 08:37:40, EXEC, v:1, k:ed@pedra, mode:FREE, size:44
+2026-03-12 08:37:57, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-12 08:37:59, EXEC, v:1, k:ed@pedra, mode:FULL, rate:25
+2026-03-12 08:40:58, EXEC, v:1, k:ed@pedra, mode:FREE, size:45
+2026-03-12 08:41:32, EXEC, v:1, k:ed@pedra, mode:FULL, rate:25, size:45
+2026-03-12 08:41:36, EXEC, v:1, k:ed@pedra, mode:FREE
+2026-03-12 08:43:52, EXEC, v:1, k:ed@pedra, mode:FREE, size:45
+2026-03-12 08:44:01, EXEC, v:1, k:ed@pedra, mode:FREE
+2026-03-12 08:48:26, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-12 08:48:40, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-12 08:48:42, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:44
+2026-03-12 08:49:22, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:44
+2026-03-12 08:50:09, SELF, v:1, k:ed@pedra, self:1, rate:100, study:50, friend:nao se aplica, concept:1, debug:1
+2026-03-12 08:50:19, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
+2026-03-12 08:50:20, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-12 08:50:30, MOVE, v:1, k:ed@casais, mode:DOWN
+2026-03-12 08:50:31, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-12 09:13:38, MOVE, v:1, k:ed@casais, mode:BACK

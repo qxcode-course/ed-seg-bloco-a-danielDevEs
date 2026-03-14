@@ -1,0 +1,89 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_08-37-03",
+            "content": "@@ -283,35 +283,8 @@\n    %7D\n-%0A    fmt.Println(descasdos)\n %0A%0A  \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-14_08-37-52",
+            "content": "@@ -284,29 +284,8 @@\n   %7D%0A\n-    fmt.Println(qtd)%0A\n     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-14_08-38-16",
+            "content": "@@ -406,9 +406,9 @@\n  := \n-1\n+0\n ; j \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-14_08-38-54",
+            "content": "@@ -428,86 +428,8 @@\n ++%7B%0A\n-            if qtd%5Bj%5D %3C 0 %7B%0A                qtd%5Bj%5D *= -1%0A                %0A    \n     \n@@ -464,22 +464,31 @@\n qtd%5Bj%5D) \n-%7B%0A    \n+&& qtd%5Bj%5D %3C 0%7B%0A\n         \n@@ -511,36 +511,32 @@\n                 \n-    \n descasdos%5Bi%5D = 0\n@@ -540,26 +540,8 @@\n = 0%0A\n-                %7D%0A\n     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-14_08-41-58",
+            "content": "@@ -328,20 +328,16 @@\n casdos)%0A\n-    \n %0A    cou\n@@ -666,35 +666,8 @@\n    %0A\n-    fmt.Println(descasdos)%0A\n     \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-14_08-42-57",
+            "content": "@@ -406,17 +406,17 @@\n or j := \n-0\n+1\n ; j %3C le\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-14_08-43-45",
+            "content": "@@ -368,27 +368,33 @@\n  0; i %3C len(\n-qtd\n+descasdos\n ); i++%7B%0A    \n@@ -417,25 +417,19 @@\n j %3C len(\n-descasdos\n+qtd\n ); j++%7B%0A\n@@ -447,17 +447,17 @@\n  if qtd%5B\n-i\n+j\n %5D %3C 0 %7B%0A\n@@ -476,17 +476,17 @@\n     qtd%5B\n-i\n+j\n %5D *= -1%0A\n@@ -532,17 +532,17 @@\n scasdos%5B\n-j\n+i\n %5D == qtd\n@@ -542,17 +542,17 @@\n  == qtd%5B\n-i\n+j\n %5D) %7B%0A   \n@@ -606,17 +606,17 @@\n scasdos%5B\n-j\n+i\n %5D = 0%0A  \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-14_08-48-26",
+            "content": "@@ -464,32 +464,44 @@\n                 \n+qtd%5Bi%5D *= -1\n %0A               \n@@ -542,24 +542,45 @@\n  == \n-(\n qtd%5Bi%5D\n- * -1)) %7B\n+) %7B%0A                    count++\n %0A   \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-14_08-51-45",
+            "content": "@@ -432,96 +432,8 @@\n ++%7B%0A\n-            if descasdos%5Bj - 1%5D == descasdos%5Bj%5D%7B%0A                continue%0A            %7D%0A\n     \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-14_08-58-40",
+            "content": "@@ -450,24 +450,28 @@\n  descasdos%5Bj\n+ - 1\n %5D == descasd\n@@ -478,10 +478,8 @@\n os%5Bj\n-+1\n %5D%7B%0A \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-14_09-00-13",
+            "content": "@@ -341,21 +341,18 @@\n     \n-flag := false\n+count := 0\n %0A   \n@@ -447,20 +447,38 @@\n  if \n-flag == true\n+descasdos%5Bj%5D == descasdos%5Bj+1%5D\n %7B%0A  \n@@ -670,40 +670,8 @@\n = 0%0A\n-                    flag = true%0A\n     \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-14_09-06-12",
+            "content": "@@ -771,10 +771,8 @@\n     \n-//\n fmt.\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_09-06-23",
+            "content": "@@ -390,29 +390,8 @@\n ++%7B%0A\n-        flag = false%0A\n     \n@@ -499,17 +499,16 @@\n       %7D%0A\n-%0A\n         \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_09-07-16",
+            "content": "@@ -355,23 +355,8 @@\n lse%0A\n-    count := 0%0A\n     \n@@ -725,23 +725,10 @@\n     \n-    count++%0A   \n+%7D%0A\n     \n@@ -727,39 +727,34 @@\n   %7D%0A            \n- \n %7D%0A\n-    \n         %7D%0A      \n@@ -755,21 +755,14 @@\n     \n-  \n-  \n %7D%0A    \n-%7D%0A%0A\n %0A   \n@@ -785,24 +785,26 @@\n casdos)%0A    \n+//\n fmt.Println(\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-14_09-09-06",
+            "content": "@@ -276,24 +276,72 @@\n     %7D%0A    %7D%0A\n+    fmt.Println(qtd)%0A    fmt.Println(descasdos)%0A\n     %0A    fla\n@@ -798,16 +798,43 @@\n     %7D%0A%0A%0A\n+    fmt.Println(descasdos)%0A\n     fmt.\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-14_09-09-23",
+            "content": "@@ -318,17 +318,16 @@\n nt := 0%0A\n-%0A\n     for \n@@ -468,13 +468,16 @@\n     \n-break\n+continue\n %0A   \n@@ -516,16 +516,50 @@\n %5D %3C 0 %7B%0A\n+                %0A                %0A\n         \n@@ -745,24 +745,25 @@\n    %7D%0A    %7D%0A%0A\n+%0A\n     fmt.Prin\n@@ -773,10 +773,11 @@\n (count)%0A\n+%0A\n %7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-14_09-12-30",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scanln(&n)\n\n    qtd := make([]int, n)\n    descasdos := []int{}\n\n    for i := 0; i < len(qtd); i++ {\n        fmt.Scan(&qtd[i])\n        \n        if(qtd[i] > 0){\n            descasdos = append(descasdos, qtd[i])\n        }\n    }\n    \n    flag := false\n    count := 0\n\n    for i := 0; i < len(qtd); i++{\n        flag = false\n        for j := 0; j < len(descasdos); j++{\n            if flag == true{\n                break\n            }\n\n            if qtd[i] < 0 {\n                if (descasdos[j] == (qtd[i] * -1)) {\n                    descasdos[j] = 0\n                    flag = true\n                    count++\n                }\n            }\n        }\n    }\n\n    fmt.Println(count)\n}\n",
+            "lines": "39"
+        }
+    ]
+}
