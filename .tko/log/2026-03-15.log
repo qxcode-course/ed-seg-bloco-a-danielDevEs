@@ -17,3 +17,7 @@
 2026-03-15 15:05:02, MOVE, v:1, k:ed@gomos, mode:BACK
 2026-03-15 15:05:51, SELF, v:1, k:ed@gomos, self:1, rate:100, study:90, friend:nao se aplica
 2026-03-15 15:06:10, SELF, v:1, k:ed@pedra, self:1, rate:100, study:50, friend:nao se aplica, concept:1
+2026-03-15 15:10:05, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-15 15:10:08, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:71
+2026-03-15 15:11:26, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:46
+2026-03-15 15:11:27, MOVE, v:1, k:ed@gomos, mode:BACK
