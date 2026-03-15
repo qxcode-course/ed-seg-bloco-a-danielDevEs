@@ -56,3 +56,5 @@
 2026-03-14 10:28:53, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:63
 2026-03-14 10:30:28, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:71
 2026-03-14 10:31:46, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-14 10:35:52, SELF, v:1, k:ed@baruel, self:1, rate:100, study:82, friend:nao se aplica
+2026-03-14 10:40:43, MOVE, v:1, k:ed@pintando, mode:DOWN

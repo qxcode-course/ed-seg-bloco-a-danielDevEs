@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_14-31-31",
+            "content": "@@ -275,24 +275,27 @@\n  %5B%5Dint%7B%7D%0A   \n+ //\n  var posX, p\n@@ -320,14 +320,13 @@\n  := \n-0; i %3C\n+range\n  qtd\n@@ -334,13 +334,8 @@\n omos\n-; i++\n %7B%0A  \n@@ -353,90 +353,28 @@\n can(\n-posX, posY)%0A        lineX = append(lineX, posX)%0A        lineY = append(lineY, posY\n+&lineX%5Bi%5D, &lineY%5Bi%5D\n )%0A  \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-15_14-33-03",
+            "content": "@@ -445,54 +445,8 @@\n    %7D\n-%0A    fmt.Println(lineX)%0A    fmt.Println(lineY)\n %0A%0A  \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-15_14-34-07",
+            "content": "@@ -263,59 +263,28 @@\n  := \n-make(%5B%5Dint, qtdgomos), make(%5B%5Dint, qtdgomos)\n+%5B%5Dint%7B%7D, %5B%5Dint%7B%7D\n %0A   \n- //\n  var\n@@ -305,37 +305,38 @@\n t%0A%0A    for i := \n-range\n+0; i %3C\n  qtdgomos%7B%0A     \n@@ -328,16 +328,21 @@\n qtdgomos\n+; i++\n %7B%0A      \n@@ -356,28 +356,18 @@\n can(\n-&lineX%5Bi%5D, &lineY%5Bi%5D\n+posX, posY\n )%0A  \n@@ -367,27 +367,24 @@\n osY)%0A       \n- //\n  lineX = app\n@@ -407,19 +407,16 @@\n %0A       \n- //\n  lineY =\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_14-36-28",
+            "content": "@@ -482,27 +482,24 @@\n Y)%0A    %7D%0A   \n- //\n  fmt.Println\n@@ -509,19 +509,16 @@\n neX)%0A   \n- //\n  fmt.Pri\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_14-37-16",
+            "content": "@@ -76,14 +76,12 @@\n ion \n-string\n+byte\n %0A%0A  \n@@ -576,11 +576,11 @@\n ase \n-%22R%22\n+'R'\n :%0A  \n@@ -672,11 +672,11 @@\n ase \n-%22L%22\n+'L'\n :%0A  \n@@ -768,11 +768,11 @@\n ase \n-%22U%22\n+'U'\n :%0A  \n@@ -865,11 +865,11 @@\n ase \n-%22D%22\n+'D'\n :%0A  \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_14-41-55",
+            "content": "@@ -639,605 +639,160 @@\n neX%5B\n-qtdgomos - i%5D = lineX%5Bqtdgomos - i - 1%5D%0A            %7D%0A            for i := range lineY%7B%0A                lineY%5Bqtdgomos - i%5D = lineY%5Bqtdgomos - i - 1%5D%0A            %7D%0A            lineX%5B0%5D += 1%0A        case %22L%22:%0A            for i := range lineX%7B%0A                lineX%5Bqtdgomos - i%5D = lineX%5Bqtdgomos - i - 1%5D%0A            %7D%0A            for i := range lineY%7B%0A                lineY%5Bqtdgomos - i%5D = lineY%5Bqtdgomos - i - 1%5D%0A            %7D%0A            lineX%5B0%5D -= 1%0A        case %22U%22:%0A            for i := range lineX%7B%0A                lineX%5Bqtdgomos - i%5D = lineX%5Bqtdgomos - i - 1%5D%0A            %7D%0A            for\n+i%5D += 1%0A            %7D%0A        case %22L%22:%0A            for i := range lineX%7B%0A                lineX%5Bi%5D -= 1%0A            %7D%0A        case %22U%22:%0A            for \n  i :\n@@ -832,47 +832,15 @@\n neY%5B\n-qtdgomos - i%5D = lineY%5Bqtdgomos - i -\n+i%5D -=\n  1\n-%5D\n %0A   \n@@ -854,34 +854,8 @@\n   %7D%0A\n-            lineY%5B0%5D -= 1%0A\n     \n@@ -872,118 +872,8 @@\n D%22:%0A\n-            for i := range lineX%7B%0A                lineX%5Bqtdgomos - i%5D = lineX%5Bqtdgomos - i - 1%5D%0A            %7D%0A\n     \n@@ -928,87 +928,29 @@\n neY%5B\n-qtdgomos - \n i%5D \n++\n = \n-lineY%5Bqtdgomos - i - 1%5D%0A            %7D%0A            lineY%5B0%5D += 1\n+1%0A            %7D\n %0A   \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_14-54-49",
+            "content": "@@ -1111,59 +1111,8 @@\n U%22:%0A\n-            // for i := 0; i %3C len(lineX) - 1; i++%0A\n     \n@@ -1139,21 +1139,12 @@\n ge l\n-en(lineX) - 1\n+ineX\n %7B%0A  \n@@ -1167,36 +1167,32 @@\n neX%5Bqtdgomos - i\n- - 1\n %5D = lineX%5Bqtdgom\n@@ -1192,33 +1192,33 @@\n %5Bqtdgomos - i - \n-2\n+1\n %5D%0A            %7D%0A\n@@ -1277,36 +1277,32 @@\n neY%5Bqtdgomos - i\n- - 1\n %5D = lineY%5Bqtdgom\n@@ -1302,33 +1302,33 @@\n %5Bqtdgomos - i - \n-2\n+1\n %5D%0A            %7D%0A\n@@ -1443,11 +1443,8 @@\n  - i\n- -1\n %5D = \n@@ -1456,33 +1456,33 @@\n %5Bqtdgomos - i - \n-2\n+1\n %5D%0A            %7D%0A\n@@ -1549,20 +1549,16 @@\n omos - i\n- - 1\n %5D = line\n@@ -1578,9 +1578,9 @@\n i - \n-2\n+1\n %5D%0A  \n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-15_15-02-14",
+            "content": "@@ -583,33 +583,32 @@\n R%22:%0A            \n- \n for i := range l\n@@ -603,37 +603,28 @@\n i := range l\n-en(lineX) - 1\n+ineX\n %7B%0A          \n@@ -639,36 +639,32 @@\n neX%5Bqtdgomos - i\n- - 1\n %5D = lineX%5Bqtdgom\n@@ -664,33 +664,33 @@\n %5Bqtdgomos - i - \n-2\n+1\n %5D%0A            %7D%0A\n@@ -713,37 +713,28 @@\n i := range l\n-en(lineY) - 1\n+ineY\n %7B%0A          \n@@ -749,36 +749,32 @@\n neY%5Bqtdgomos - i\n- - 1\n %5D = lineY%5Bqtdgom\n@@ -774,33 +774,33 @@\n %5Bqtdgomos - i - \n-2\n+1\n %5D%0A            %7D%0A\n@@ -847,33 +847,32 @@\n L%22:%0A            \n- \n for i := range l\n@@ -867,37 +867,28 @@\n i := range l\n-en(lineX) - 1\n+ineX\n %7B%0A          \n@@ -903,36 +903,32 @@\n neX%5Bqtdgomos - i\n- - 1\n %5D = lineX%5Bqtdgom\n@@ -928,33 +928,33 @@\n %5Bqtdgomos - i - \n-2\n+1\n %5D%0A            %7D%0A\n@@ -977,37 +977,28 @@\n i := range l\n-en(lineY) - 1\n+ineY\n %7B%0A          \n@@ -1013,36 +1013,32 @@\n neY%5Bqtdgomos - i\n- - 1\n %5D = lineY%5Bqtdgom\n@@ -1038,33 +1038,33 @@\n %5Bqtdgomos - i - \n-2\n+1\n %5D%0A            %7D%0A\n@@ -1305,37 +1305,28 @@\n i := range l\n-en(lineY) - 1\n+ineY\n %7B%0A          \n@@ -1463,37 +1463,28 @@\n i := range l\n-en(lineX) - 1\n+ineX\n %7B%0A          \n@@ -1584,21 +1584,12 @@\n ge l\n-en(lineY) - 1\n+ineY\n %7B%0A  \n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-15_15-04-31",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtdgomos int\n    var direction string\n\n    fmt.Scanln(&qtdgomos, &direction)\n\n    // cobra := make([][]int, qtdgomos)\n    // for i := range cobra{\n    //     cobra[i] = make([]int, qtdgomos)\n    // }\n    lineX, lineY := make([]int, qtdgomos), make([]int, qtdgomos)\n    // var posX, posY int\n\n    for i := range qtdgomos{\n        fmt.Scan(&lineX[i], &lineY[i])\n        // lineX = append(lineX, posX)\n        // lineY = append(lineY, posY)\n    }\n    // fmt.Println(lineX)\n    // fmt.Println(lineY)\n\n    switch direction {\n        case \"R\":\n             for i := range len(lineX) - 1{\n                lineX[qtdgomos - i - 1] = lineX[qtdgomos - i - 2]\n            }\n            for i := range len(lineY) - 1{\n                lineY[qtdgomos - i - 1] = lineY[qtdgomos - i - 2]\n            }\n            lineX[0] += 1\n        case \"L\":\n             for i := range len(lineX) - 1{\n                lineX[qtdgomos - i - 1] = lineX[qtdgomos - i - 2]\n            }\n            for i := range len(lineY) - 1{\n                lineY[qtdgomos - i - 1] = lineY[qtdgomos - i - 2]\n            }\n            lineX[0] -= 1\n        case \"U\":\n            // for i := 0; i < len(lineX) - 1; i++\n            for i := range len(lineX) - 1{\n                lineX[qtdgomos - i - 1] = lineX[qtdgomos - i - 2]\n            }\n            for i := range len(lineY) - 1{\n                lineY[qtdgomos - i - 1] = lineY[qtdgomos - i - 2]\n            }\n            lineY[0] -= 1\n        case \"D\":\n            for i := range len(lineX) - 1{\n                lineX[qtdgomos - i -1] = lineX[qtdgomos - i - 2]\n            }\n            for i := range len(lineY) - 1{\n                lineY[qtdgomos - i - 1] = lineY[qtdgomos - i - 2]\n            }\n            lineY[0] += 1\n    }\n\n    for i := range qtdgomos {\n        fmt.Printf(\"%d %d\\n\", lineX[i], lineY[i])\n    }\n    \n\n}\n",
+            "lines": "65"
+        }
+    ]
+}
