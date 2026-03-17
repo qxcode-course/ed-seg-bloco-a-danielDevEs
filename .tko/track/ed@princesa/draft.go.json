@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_19-36-43",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var size, pos int\n    fmt.Scan(&size, &pos)\n\n    vivos := make([]int, size)\n    for i := 1; i < len(vivos); i++{\n        vivos[i - 1] = i\n    }\n\n    fmt.Println(vivos)\n    i := 0\n    for {\n        if vivos[i] == 0 {\n            continue\n        }\n        if vivos[i] == pos{\n            prox := vivos[i + 1] % size\n            vivos[prox] = 0\n        }\n        i++\n        if i > size {\n            i = i % size\n        }\n        fmt.Println(vivos)\n    }\n}\n    ",
+            "lines": "29"
+        }
+    ]
+}

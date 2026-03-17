@@ -2,33 +2,72 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func main() {
     var n int
     fmt.Scanln(&n)
 
-    var a, b int
-    ganhador, aux := 0, 101
+    // var a, b int
+    type Jogada struct {
+        pa, pb int
+    }
 
-    for i := 0; i < n; i++ {
-        fmt.Scanln(&a, &b)
-        
-        dif := abs(a - b)
-        
+    jogadas := make([]Jogada, n)
+    for _, jog := range jogadas{
+        fmt.Scan(&jog.pa, &jog.pb)
+    }
 
-        if valid(a, b) {
-            if aux > dif {
-                aux = dif
-                ganhador = i
-            }
+    ind_melhor := -1
+    valor_melhor := math.MaxInt32
+
+    for _,jog := range jogadas {
+        
+        if valid(jog.pa, jog.pb) == false{
+            continue
         }
+        pontuacao := abs(jog.pa - jog.pb)
+
+        if ind_melhor == -1 || pontuacao < valor_melhor {
+            ind_melhor = ind_melhor
+            valor_melhor = pontuacao
+        }
+
+        fmt.Println(ind_melhor)
     }
-    if ganhador == 0 {
-        fmt.Println("sem ganhador")
-    } else {
-        fmt.Println(ganhador)
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+    // ganhador, aux := 0, 101
+
+    // for i := 0; i < n; i++ {
+    //     fmt.Scanln(&a, &b)
+        
+    //     dif := abs(a - b)
+        
+
+    //     if valid(a, b) {
+    //         if aux > dif {
+    //             aux = dif
+    //             ganhador = i
+    //         }
+    //     }
+    // }
+    // if ganhador == 0 {
+    //     fmt.Println("sem ganhador")
+    // } else {
+    //     fmt.Println(ganhador)
+    // }
 }
 
 func valid(a, b int) bool {
