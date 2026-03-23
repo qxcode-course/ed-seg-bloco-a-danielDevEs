@@ -2,8 +2,238 @@
     "patches": [
         {
             "label": "2026-03-17_19-36-43",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var size, pos int\n    fmt.Scan(&size, &pos)\n\n    vivos := make([]int, size)\n    for i := 1; i < len(vivos); i++{\n        vivos[i - 1] = i\n    }\n\n    fmt.Println(vivos)\n    i := 0\n    for {\n        if vivos[i] == 0 {\n            continue\n        }\n        if vivos[i] == pos{\n            prox := vivos[i + 1] % size\n            vivos[prox] = 0\n        }\n        i++\n        if i > size {\n            i = i % size\n        }\n        fmt.Println(vivos)\n    }\n}\n    ",
+            "content": "@@ -89,19 +89,8 @@\n %0A   \n- elementos,\n  viv\n@@ -110,28 +110,8 @@\n int,\n- size), make(%5B%5Dbool,\n  siz\n@@ -158,23 +158,19 @@\n         \n-element\n+viv\n os%5Bi - 1\n@@ -202,35 +202,20 @@\n tln(\n-element\n+viv\n os)%0A\n-%0A\n     \n-count_vivos\n+i\n  := \n@@ -228,248 +228,94 @@\n for \n-(count_vivos != 1)%7B%0A        %0A       elementos%5B((procurar_vivo(elementos, size, pos) + 1) %25 size)\n+%7B%0A        if vivos%5Bi\n %5D =\n+=\n  0\n-%0A\n  \n+%7B%0A\n       \n-pos = procurar_vivo(elementos, size, pos)%0A\n       \n- \n co\n-u\n nt\n-_vivos = 0%0A       for i := range elementos%7B%0A            if(element\n+inue%0A        %7D%0A        if viv\n os%5Bi%5D \n-!= 0)\n+== pos\n %7B%0A  \n@@ -328,47 +328,43 @@\n     \n-    count_vivos++%0A            %7D\n+prox := vivos%5Bi + 1%5D %25 size\n %0A       \n %7D%0A  \n@@ -363,177 +363,50 @@\n     \n-%7D%0A\n     \n-%7D%0A    fmt.Println(elementos)%0A    fmt.Println(count_vivos)%0A%7D%0A%0Afunc procurar_vivo(elementos %5B%5Dint, size int, pos int) int %7B%0A    for i := 1; ; i++ %7B%0A        pos += i%0A\n+ vivos%5Bprox%5D = 0%0A        %7D%0A        i++\n %0A   \n@@ -417,14 +417,11 @@\n  if \n-pos\n+i\n  %3E\n-=\n  siz\n@@ -440,17 +440,13 @@\n     \n-pos = pos\n+i = i\n  %25 s\n@@ -459,25 +459,24 @@\n       %7D%0A\n-%0A\n         \n if eleme\n@@ -471,73 +471,35 @@\n     \n-if elementos%5Bpos%5D != 0 %7B%0A            return pos - 1\n+fmt.Println(vivos)\n %0A    \n-    \n+%7D%0A\n %7D%0A    \n-%7D%0A%7D\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-03-19_10-39-14",
+            "content": "@@ -234,28 +234,11 @@\n rint\n-f(%22Primeiro: %25v%5Cn%22, \n+ln(\n elem\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-19_10-42-20",
+            "content": "@@ -163,17 +163,16 @@\n = 1; i %3C\n-=\n  len(viv\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-19_10-43-05",
+            "content": "@@ -875,16 +875,20 @@\n turn pos\n+ - 1\n %0A       \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-19_10-45-37",
+            "content": "@@ -84,21 +84,8 @@\n pos)\n-%0A    pos -= 1\n %0A%0A  \n@@ -95,16 +95,23 @@\n lementos\n+, vivos\n  := make\n@@ -113,24 +113,44 @@\n  make(%5B%5Dint,\n+ size), make(%5B%5Dbool,\n  size)%0A    f\n@@ -169,23 +169,19 @@\n  %3C= len(\n-element\n+viv\n os); i++\n@@ -339,16 +339,17 @@\n mentos%5B(\n+(\n procurar\n@@ -375,16 +375,21 @@\n ze, pos)\n+ + 1)\n  %25 size)\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-19_10-48-28",
+            "content": "@@ -364,16 +364,23 @@\n ze, pos)\n+ %25 size\n )%5D = 0%0A \n@@ -754,17 +754,17 @@\n  if pos \n-=\n+%3E\n = size %7B\n@@ -830,17 +830,17 @@\n os%5Bpos%5D \n-=\n+!\n = 0 %7B%0A  \n@@ -853,35 +853,8 @@\n     \n-continue%0A        %7D%0A        \n retu\n@@ -859,16 +859,26 @@\n turn pos\n+%0A        %7D\n %0A    %7D%0A%7D\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-19_10-59-19",
+            "content": "@@ -367,24 +367,73 @@\n  pos))%5D = 0%0A\n+       pos = procurar_vivo(elementos, size, pos)%0A\n        count\n@@ -568,57 +568,8 @@\n   %7D%0A\n-       pos = procurar_vivo(elementos, size, pos)%0A\n     \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-19_11-04-04",
+            "content": "@@ -353,16 +353,22 @@\n ementos,\n+ size,\n  pos))%5D \n@@ -664,16 +664,26 @@\n s %5B%5Dint,\n+ size int,\n  pos int\n@@ -750,30 +750,20 @@\n  pos == \n-len(elementos)\n+size\n  %7B%0A     \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_16-09-18",
+            "content": "@@ -775,30 +775,20 @@\n = pos %25 \n-len(elementos)\n+size\n %0A       \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_16-09-35",
+            "content": "@@ -542,24 +542,30 @@\n o(elementos,\n+ size,\n  pos)%0A    %7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_16-09-56",
+            "content": "@@ -87,16 +87,8 @@\n )%0A  \n-      //\n   po\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_16-19-31",
+            "content": "@@ -83,16 +83,24 @@\n &pos)%0A  \n+      //\n   pos -=\n@@ -700,32 +700,41 @@\n ; i++ %7B%0A        \n+pos += i%0A\n %0A        if pos \n@@ -806,33 +806,8 @@\n   %7D%0A\n-        %0A        pos += i\n %0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_16-21-12",
+            "content": "@@ -733,20 +733,16 @@\n ementos)\n- - 1\n  %7B%0A     \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_16-22-43",
+            "content": "@@ -778,20 +778,16 @@\n ementos)\n- - 1\n %0A       \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_16-24-15",
+            "content": "@@ -736,17 +736,17 @@\n ntos) - \n-2\n+1\n  %7B%0A     \n@@ -785,9 +785,9 @@\n ) - \n-2\n+1\n %0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_16-31-18",
+            "content": "@@ -516,27 +516,35 @@\n %0A       \n-fmt.Println\n+pos = procurar_vivo\n (element\n@@ -545,21 +545,29 @@\n lementos\n+, pos\n )%0A   \n+ %7D%0A\n     fmt.\n@@ -578,25 +578,23 @@\n tln(\n-count_viv\n+element\n os)%0A    \n    f\n@@ -589,19 +589,16 @@\n os)%0A    \n-  \n- \n fmt.Prin\n@@ -605,61 +605,20 @@\n tln(\n-pos)%0A       pos = procurar_vivo(elementos, pos)%0A    %7D\n+count_vivos)\n %0A%7D%0A%0A\n@@ -736,17 +736,17 @@\n ntos) - \n-1\n+2\n  %7B%0A     \n@@ -781,17 +781,17 @@\n ntos) - \n-1\n+2\n %0A       \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_16-32-18",
+            "content": "@@ -369,32 +369,8 @@\n = 0%0A\n-       fmt.Println(pos)%0A\n     \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-23_16-34-14",
+            "content": "@@ -591,24 +591,48 @@\n ount_vivos)%0A\n+       fmt.Println(pos)%0A\n        pos =\n@@ -666,32 +666,8 @@\n os)%0A\n-       fmt.Println(pos)%0A\n     \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-23_16-34-29",
+            "content": "@@ -787,16 +787,21 @@\n ementos)\n+ - 1 \n %7B%0A      \n@@ -824,32 +824,36 @@\n %25 len(elementos)\n+ - 1\n %0A        %7D%0A     \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-23_16-34-54",
+            "content": "@@ -81,16 +81,28 @@\n , &pos)%0A\n+    pos -= 1\n %0A%0A    el\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-23_16-35-22",
+            "content": "@@ -856,33 +856,8 @@\n = i%0A\n-        fmt.Println(pos)%0A\n     \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-23_16-36-06",
+            "content": "@@ -625,34 +625,16 @@\n os, pos)\n- %25 len(elementos)%0A\n %0A       \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-23_16-37-33",
+            "content": "@@ -629,99 +629,10 @@\n pos)\n-%0A       if(pos %3E len(elementos))%7B%0A        pos = 0%0A       %7D else if (pos %3C 0)%7B%0A        pos =\n+ %25\n  len\n@@ -642,25 +642,16 @@\n ementos)\n-%0A       %7D\n %0A%0A      \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-23_16-38-48",
+            "content": "@@ -874,17 +874,17 @@\n  if pos \n-%3E\n+=\n = len(el\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-39-14",
+            "content": "@@ -891,20 +891,16 @@\n ementos)\n- - 1\n %7B%0A      \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-39-25",
+            "content": "@@ -935,20 +935,16 @@\n ementos)\n- - 1\n %0A       \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-39-35",
+            "content": "@@ -942,9 +942,9 @@\n ) - \n-2\n+1\n %0A   \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-39-44",
+            "content": "@@ -894,17 +894,17 @@\n ntos) - \n-2\n+1\n %7B%0A      \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-39-58",
+            "content": "@@ -863,25 +863,8 @@\n    %0A\n-        pos += i%0A\n     \n@@ -951,32 +951,49 @@\n      %7D%0A        %0A\n+        pos += i%0A\n         fmt.Prin\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-41-20",
+            "content": "@@ -915,10 +915,9 @@\n ) - \n-1 \n+2\n %7B%0A  \n@@ -955,17 +955,17 @@\n ntos) - \n-1\n+2\n %0A       \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-43-49",
+            "content": "@@ -908,16 +908,20 @@\n ementos)\n+ - 1\n  %7B%0A     \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-44-26",
+            "content": "@@ -196,16 +196,60 @@\n %0A    %7D%0A%0A\n+    fmt.Printf(%22Primeiro: %25v%5Cn%22, elementos)%0A\n %0A    cou\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_16-45-09",
+            "content": "@@ -488,99 +488,61 @@\n     \n-if(count_vivos == 1)%7B%0A        break%0A       %7D%0A       fmt.Print(toString(elementos, pos, %22%3E%22)\n+fmt.Println(elementos)%0A       fmt.Println(count_vivos\n )%0A  \n@@ -688,32 +688,57 @@\n mentos)%0A       %7D\n+%0A%0A       fmt.Println(pos)\n %0A    %7D%0A%7D%0A%0Afunc p\n@@ -794,243 +794,108 @@\n for \n-%7B%0A        pos = (pos + 1) %25 len(elementos)%0A        %0A        if elementos%5Bpos%5D != 0 %7B%0A            return pos%0A        %7D%0A    %7D%0A%7D%0A%0Afunc toString(elementos %5B%5Dint, pos int, sep string) string%7B%0A    str := %22%22%0A    str += %22%5B%22%0A    for i := 0; i %3C\n+i := 1; ; i++ %7B%0A        %0A        pos += i%0A        if pos %3E= len(elementos) %7B%0A            pos = pos %25\n  len\n@@ -897,38 +897,36 @@\n %25 len(elementos)\n-; i++%7B\n+ - 1\n %0A        if elem\n@@ -922,103 +922,74 @@\n     \n-if elementos%5Bi%5D != 0%7B%0A            str +=\n+%7D%0A        %0A       \n  fmt.\n-Sp\n+P\n rint\n-(elementos%5Bi%5D)%0A        %7D%0A        if i\n+ln(pos)%0A        if elementos%5Bpos%5D\n  == \n-pos\n+0\n  %7B%0A \n@@ -1003,18 +1003,16 @@\n     \n-str += sep\n+continue\n %0A   \n@@ -1026,39 +1026,26 @@\n     \n-%7D%0A\n     \n-str += %22%5D%5Cn%22%0A    return str\n+return pos%0A    %7D\n %0A%7D\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-23_19-25-44",
+            "content": "@@ -1138,31 +1138,8 @@\n i%5D)%0A\n-            str += %22 %22%0A\n     \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-23_19-26-37",
+            "content": "@@ -305,24 +305,48 @@\n  pos))%5D = 0%0A\n+       fmt.Println(pos)%0A\n        count\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-03-23_19-28-34",
+            "content": "@@ -464,100 +464,100 @@\n     \n-fmt.Print(toString(elementos, pos, %22%3E%22))%0A       if(count_vivos == 1)%7B%0A        break%0A       %7D\n+if(count_vivos == 1)%7B%0A        break%0A       %7D%0A       fmt.Print(toString(elementos, pos, %22%3E%22))\n %0A   \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-23_19-29-08",
+            "content": "@@ -254,38 +254,43 @@\n         %0A       \n-pos = \n+elementos%5B(\n procurar_vivo(el\n@@ -306,36 +306,15 @@\n pos)\n-%0A       elementos%5Bpos\n+)\n %5D = 0%0A\n-%0A\n     \n@@ -592,24 +592,139 @@\n entos, pos)%0A\n+       if(pos %3E len(elementos))%7B%0A        pos = 0%0A       %7D else if (pos %3C 0)%7B%0A        pos = len(elementos)%0A       %7D%0A\n     %7D%0A%7D%0A%0Afun\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-23_19-30-49",
+            "content": "@@ -127,25 +127,25 @@\n    for i := \n-0\n+1\n ; i %3C= len(e\n@@ -183,17 +183,17 @@\n os%5Bi\n+ - 1\n %5D = i\n- + 1\n %0A   \n@@ -216,20 +216,17 @@\n ivos := \n-size\n+0\n %0A    for\n@@ -239,17 +239,18 @@\n t_vivos \n-%3E\n+!=\n  1)%7B%0A   \n@@ -347,18 +347,133 @@\n ivos\n---%0A       \n+ = 0%0A       for i := range elementos%7B%0A            if(elementos%5Bi%5D != 0)%7B%0A                count_vivos++%0A            %7D%0A       %7D\n %0A   \n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-23_19-34-01",
+            "content": "@@ -200,18 +200,8 @@\n  %7D%0A%0A\n-    pos--%0A\n %0A   \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-23_20-01-23",
+            "content": "@@ -81,25 +81,17 @@\n , &pos)%0A\n-    %0A    \n+%0A\n %0A    ele\n@@ -195,20 +195,16 @@\n 1%0A    %7D%0A\n-    \n %0A    pos\n@@ -206,25 +206,27 @@\n   pos--%0A\n-    \n %0A    \n+count_\n vivos :=\n@@ -240,16 +240,22 @@\n    for (\n+count_\n vivos %3E \n@@ -270,68 +270,20 @@\n     \n-fmt.Print(toString(elementos, pos))%0A        %0A        morto :\n+%0A       pos \n = pr\n@@ -309,33 +309,32 @@\n os, pos)%0A       \n- \n elementos%5Bmorto%5D\n@@ -331,13 +331,11 @@\n tos%5B\n-morto\n+pos\n %5D = \n@@ -344,17 +344,22 @@\n %0A       \n- \n+count_\n vivos--%0A\n@@ -377,11 +377,65 @@\n     \n-if(\n+fmt.Print(toString(elementos, pos, %22%3E%22))%0A       if(count_\n vivo\n@@ -746,30 +746,58 @@\n  int\n-) %7B%0A    fmt.Print(\n+, sep string) string%7B%0A    str := %22%22%0A    str += \n %22%5B%22\n-)\n %0A   \n@@ -832,17 +832,16 @@\n os); i++\n- \n %7B%0A      \n@@ -858,25 +858,24 @@\n ntos%5Bi%5D != 0\n- \n %7B%0A          \n@@ -880,57 +880,26 @@\n     \n-if i == pos %7B%0A               \n+str +=\n  fmt.\n-P\n+Sp\n rint\n-f(%22%25d%3E %22, \n+(\n elem\n@@ -924,16 +924,18 @@\n     \n-%7D else %7B\n+str += %22 %22\n %0A   \n@@ -939,24 +939,26 @@\n         \n+%7D%0A\n         \n fmt.Prin\n@@ -953,39 +953,21 @@\n     \n-fmt.Printf(%22%25d %22, elementos%5Bi%5D)\n+if i == pos %7B\n %0A   \n@@ -967,33 +967,42 @@\n s %7B%0A            \n-%7D\n+str += sep\n %0A        %7D%0A    %7D\n@@ -1010,22 +1010,33 @@\n     \n-fmt.Print(%22%5D%5Cn%22)\n+str += %22%5D%5Cn%22%0A    return str\n %0A%7D\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-23_20-09-01",
+            "content": "@@ -270,16 +270,26 @@\n         \n+fmt.Print(\n toString\n@@ -296,32 +296,33 @@\n (elementos, pos)\n+)\n %0A        %0A      \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_20-09-44",
+            "content": "@@ -82,24 +82,29 @@\n  &pos)%0A    %0A\n+    %0A\n     elemento\n@@ -308,58 +308,8 @@\n    %0A\n-        if(vivos == 1)%7B%0A         break%0A        %7D%0A%0A\n     \n@@ -402,24 +402,69 @@\n --%0A       %0A \n+      if(vivos == 1)%7B%0A        break%0A       %7D%0A\n        pos =\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_20-11-05",
+            "content": "@@ -132,32 +132,33 @@\n  for i := 0; i %3C\n+=\n  len(elementos);\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_20-11-46",
+            "content": "@@ -746,17 +746,16 @@\n Print(%22%5B\n- \n %22)%0A    f\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_20-12-06",
+            "content": "@@ -252,17 +252,17 @@\n vivos %3E \n-0\n+1\n )%7B%0A     \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_20-12-28",
+            "content": "@@ -235,32 +235,43 @@\n := size%0A    for \n+(vivos %3E 0)\n %7B%0A        toStri\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-23_20-12-51",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var size, pos int\n    fmt.Scan(&size, &pos)\n    \n    elementos := make([]int, size)\n    for i := 0; i < len(elementos); i++{\n        elementos[i] = i + 1\n    }\n    \n    pos--\n    \n    vivos := size\n    for {\n        toString(elementos, pos)\n        \n        if(vivos == 1){\n         break\n        }\n\n        morto := procurar_vivo(elementos, pos)\n        elementos[morto] = 0\n\n        vivos--\n       \n        pos = procurar_vivo(elementos, pos)\n    }\n}\n\nfunc procurar_vivo(elementos []int, pos int) int {\n    for {\n        pos = (pos + 1) % len(elementos)\n        \n        if elementos[pos] != 0 {\n            return pos\n        }\n    }\n}\n\nfunc toString(elementos []int, pos int) {\n    fmt.Print(\"[ \")\n    for i := 0; i < len(elementos); i++ {\n        if elementos[i] != 0 {\n            if i == pos {\n                fmt.Printf(\"%d> \", elementos[i])\n            } else {\n                fmt.Printf(\"%d \", elementos[i])\n            }\n        }\n    }\n    fmt.Print(\"]\\n\")\n}",
+            "lines": "53"
         }
     ]
 }

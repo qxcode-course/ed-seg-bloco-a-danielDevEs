@@ -3,27 +3,51 @@ import "fmt"
 func main() {
     var size, pos int
     fmt.Scan(&size, &pos)
-
-    vivos := make([]int, size)
-    for i := 1; i < len(vivos); i++{
-        vivos[i - 1] = i
+    
+    elementos := make([]int, size)
+    for i := 0; i < len(elementos); i++{
+        elementos[i] = i + 1
     }
-
-    fmt.Println(vivos)
-    i := 0
+    
+    pos--
+    
+    vivos := size
     for {
-        if vivos[i] == 0 {
-            continue
+        toString(elementos, pos)
+        
+        if(vivos == 1){
+         break
         }
-        if vivos[i] == pos{
-            prox := vivos[i + 1] % size
-            vivos[prox] = 0
-        }
-        i++
-        if i > size {
-            i = i % size
-        }
-        fmt.Println(vivos)
+
+        morto := procurar_vivo(elementos, pos)
+        elementos[morto] = 0
+
+        vivos--
+       
+        pos = procurar_vivo(elementos, pos)
     }
 }
-    
+
+func procurar_vivo(elementos []int, pos int) int {
+    for {
+        pos = (pos + 1) % len(elementos)
+        
+        if elementos[pos] != 0 {
+            return pos
+        }
+    }
+}
+
+func toString(elementos []int, pos int) {
+    fmt.Print("[ ")
+    for i := 0; i < len(elementos); i++ {
+        if elementos[i] != 0 {
+            if i == pos {
+                fmt.Printf("%d> ", elementos[i])
+            } else {
+                fmt.Printf("%d ", elementos[i])
+            }
+        }
+    }
+    fmt.Print("]\n")
+}
