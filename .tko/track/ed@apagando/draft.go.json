@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-24_16-19-01",
+            "content": "@@ -194,20 +194,16 @@\n ti%0A%09%7D%0A%0A%09\n-var \n deixaram\n@@ -203,19 +203,20 @@\n eixaram \n-int\n+:= 0\n %0A%09fmt.Sc\n@@ -266,20 +266,16 @@\n %5Dint)%0A%0A%09\n-var \n identi_D\n@@ -281,19 +281,20 @@\n Deixado \n-int\n+:= 0\n %0A%09for i \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-24_16-20-27",
+            "content": "@@ -63,17 +63,16 @@\n mt.Scan(\n-&\n qtdpesso\n@@ -158,25 +158,24 @@\n %0A%09%09fmt.Scan(\n-&\n identi)%0A%09%09fi\n@@ -339,9 +339,8 @@\n can(\n-&\n iden\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-26_09-27-25",
+            "content": "@@ -223,17 +223,16 @@\n mt.Scan(\n-&\n deixaram\n@@ -439,13 +439,17 @@\n eixada)%0A\n+%0A%09%0A%09\n   %0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-26_09-28-35",
+            "content": "@@ -393,16 +393,17 @@\n xado%0A%09%7D%0A\n+%0A\n %09fmt.Pri\n@@ -411,338 +411,42 @@\n tln(\n-retirar(fila, fila_deixada))%0A  %0A%7D%0A%0Afunc retirar(fila map%5Bint%5Dint, deixaram map%5Bint%5Dint) %5B%5Dint %7B%0A%09valores := make(map%5Bint%5Dbool)%0A%09fila_Atualizada := %5B%5Dint%7B%7D%0A%09for _, v := range deixaram %7B%0A%09%09valores%5Bv%5D = true%0A%09%7D%0A%09for _, v := range fila %7B%0A%09%09if !valores%5Bv%5D %7B%0A%09%09%09fila_Atualizada = append(fila_Atualizada, v)%0A%09%09%7D%0A%09%7D%0A%09return fila_Atualizada\n+fila)%0A%09fmt.Println(fila_deixada)%0A  \n %0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-26_10-02-30",
+            "content": "@@ -37,25 +37,24 @@\n ) %7B%0A%09var qtd\n-_\n pessoas int%0A\n@@ -67,17 +67,16 @@\n can(&qtd\n-_\n pessoas)\n@@ -100,24 +100,25 @@\n ap%5Bint%5Dint)%0A\n+%0A\n %09identi := 0\n@@ -138,17 +138,16 @@\n  i %3C qtd\n-_\n pessoas;\n@@ -200,20 +200,16 @@\n %7D%0A%0A%09var \n-qtd_\n deixaram\n@@ -224,20 +224,16 @@\n t.Scan(&\n-qtd_\n deixaram\n@@ -270,17 +270,22 @@\n nt%5Dint)%0A\n-%09\n+%0A%09var \n identi_D\n@@ -291,20 +291,19 @@\n Deixado \n-:= 0\n+int\n %0A%09for i \n@@ -316,12 +316,8 @@\n i %3C \n-qtd_\n deix\n@@ -393,17 +393,16 @@\n xado%0A%09%7D%0A\n-%0A\n %09fmt.Pri\n@@ -406,25 +406,16 @@\n Println(\n-ToString(\n retirar(\n@@ -434,17 +434,16 @@\n eixada))\n-)\n %0A  %0A%7D%0A%0Af\n@@ -533,16 +533,44 @@\n t%5Dbool)%0A\n+%09fila_Atualizada := %5B%5Dint%7B%7D%0A\n %09for _, \n@@ -617,37 +617,8 @@\n e%0A%09%7D\n-%0A%0A%09fila_atualizada := %5B%5Dint%7B%7D\n %0A%09fo\n@@ -663,25 +663,25 @@\n %5D %7B%0A%09%09%09fila_\n-a\n+A\n tualizada = \n@@ -688,25 +688,25 @@\n append(fila_\n-a\n+A\n tualizada, v\n@@ -714,17 +714,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%0A\n %09return \n@@ -731,148 +731,17 @@\n ila_\n-atualizada%0A%7D%0A%0Afunc ToString(fila_atualizada %5B%5Dint)%7B%0A%09for _, v := range fila_atualizada %7B%0A%09%09fmt.Print(fila_atualizada%5Bv%5D)%0A%09%7D%0A%09fmt.Print(%22%5Cn%22)%0A%7D%0A\n+Atualizada%0A%7D\n %0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-26_10-08-15",
+            "content": "@@ -405,16 +405,28 @@\n do%0A%09%7D%0A%0A%09\n+fmt.Println(\n ToString\n@@ -454,16 +454,17 @@\n eixada))\n+)\n %0A  %0A%7D%0A%0Af\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-26_10-08-44",
+            "content": "@@ -409,20 +409,8 @@\n %7D%0A%0A%09\n-fmt.Println(\n ToSt\n@@ -442,17 +442,16 @@\n eixada))\n-)\n %0A  %0A%7D%0A%0Af\n@@ -791,27 +791,9 @@\n int)\n- string%7B%0A%09str := %22%22\n+%7B\n %0A%09fo\n@@ -832,21 +832,13 @@\n %7B%0A%09%09\n-str += \n fmt.\n-Sp\n+P\n rint\n@@ -866,31 +866,23 @@\n %09%7D%0A%09\n-str += %22%5Cn%22%0A%09return str\n+fmt.Print(%22%5Cn%22)\n %0A%7D%0A%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-26_10-10-12",
+            "content": "@@ -829,24 +829,22 @@\n for \n-i := 0; i %3C len(\n+_, v := range \n fila\n@@ -858,14 +858,8 @@\n zada\n-); i++\n  %7B%0A%09\n@@ -893,17 +893,17 @@\n alizada%5B\n-i\n+v\n %5D)%0A%09%7D%0A%09s\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-26_10-10-48",
+            "content": "@@ -909,21 +909,8 @@\n i%5D)%0A\n-%09%09str += %22 %22%0A\n %09%7D%0A%09\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-26_10-11-09",
+            "content": "@@ -97,26 +97,19 @@\n ake(\n-%5B%5Dint, qtd_pessoas\n+map%5Bint%5Dint\n )%0A%09i\n@@ -271,27 +271,19 @@\n ake(\n-%5B%5Dint, qtd_deixaram\n+map%5Bint%5Dint\n )%0A%09i\n@@ -479,16 +479,28 @@\n rar(fila\n+ map%5Bint%5Dint\n , deixar\n@@ -502,17 +502,23 @@\n eixaram \n-%5B\n+map%5Bint\n %5Dint) %5B%5D\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-26_10-14-13",
+            "content": "@@ -918,16 +918,29 @@\n  %22 %22%0A%09%7D%0A\n+%09str += %22%5Cn%22%0A\n %09return \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-26_10-14-38",
+            "content": "@@ -17,30 +17,14 @@\n ort \n-(%0A%09\n %22fmt%22%0A\n-%09%22strings%22%0A)%0A\n func\n@@ -775,25 +775,26 @@\n oString(fila\n-A\n+_a\n tualizada %5B%5D\n@@ -808,60 +808,48 @@\n ring\n- \n %7B%0A%09\n-var sb strings.Builder%0A\n+str := %22%22\n %0A%09for i\n-, v\n  := \n-range \n+0; i %3C len(\n fila\n-A\n+_a\n tual\n@@ -857,106 +857,84 @@\n zada\n- %7B%0A%09%09if i %3E 0 %7B%0A%09%09%09sb.WriteString(%22 %22)%0A%09%09%7D%0A%09%09sb.WriteString(fmt.Sprint(v))%0A%09%7D%0A%0A%09return sb.String()\n+); i++ %7B%0A%09%09str += fmt.Sprint(fila_atualizada%5Bi%5D)%0A%09%09str += %22 %22%0A%09%7D%0A%09return str\n %0A%7D%0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-26_10-17-54",
+            "content": "@@ -17,14 +17,30 @@\n ort \n+(%0A%09\n %22fmt%22%0A\n+%09%22strings%22%0A)%0A\n func\n@@ -791,26 +791,25 @@\n oString(fila\n-_a\n+A\n tualizada %5B%5D\n@@ -823,48 +823,60 @@\n ring\n+ \n %7B%0A%09\n-str := %22%22\n+var sb strings.Builder%0A\n %0A%09for i\n+, v\n  := \n-0; i %3C len(\n+range \n fila\n-_a\n+A\n tual\n@@ -884,74 +884,86 @@\n zada\n-); i++ %7B%0A%09%09str += fmt.Sprint(fila_atualizada%5Bi%5D)%0A%09%09str += %22 %22\n+ %7B%0A%09%09if i %3E 0 %7B%0A%09%09%09sb.WriteString(%22 %22)%0A%09%09%7D%0A%09%09sb.WriteString(fmt.Sprint(v))\n %0A%09%7D%0A\n-%09\n %0A%09re\n@@ -968,14 +968,22 @@\n return s\n-tr\n+b.String()\n %0A%7D%0A%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-26_10-18-31",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar qtd_pessoas int\n\tfmt.Scan(&qtd_pessoas)\n\n\tfila := make([]int, qtd_pessoas)\n\tidenti := 0\n\tfor i := 0; i < qtd_pessoas; i++{\n\t\tfmt.Scan(&identi)\n\t\tfila[i] = identi\n\t}\n\n\tvar qtd_deixaram int\n\tfmt.Scan(&qtd_deixaram)\n\n\tfila_deixada := make([]int, qtd_deixaram)\n\tidenti_Deixado := 0\n\tfor i := 0; i < qtd_deixaram; i++{\n\t\tfmt.Scan(&identi_Deixado)\n\t\tfila_deixada[i] = identi_Deixado\n\t}\n\n\tfmt.Println(ToString(retirar(fila, fila_deixada)))\n  \n}\n\nfunc retirar(fila, deixaram []int) []int {\n\tvalores := make(map[int]bool)\n\tfor _, v := range deixaram {\n\t\tvalores[v] = true\n\t}\n\n\tfila_atualizada := []int{}\n\tfor _, v := range fila {\n\t\tif !valores[v] {\n\t\t\tfila_atualizada = append(fila_atualizada, v)\n\t\t}\n\t}\n\n\treturn fila_atualizada\n}\n\nfunc ToString(fila_atualizada []int) string{\n\tstr := \"\"\n\tfor i := 0; i < len(fila_atualizada); i++ {\n\t\tstr += fmt.Sprint(fila_atualizada[i])\n\t\tstr += \" \"\n\t}\n\t\n\treturn str\n}\n\n",
+            "lines": "53"
+        }
+    ]
+}
