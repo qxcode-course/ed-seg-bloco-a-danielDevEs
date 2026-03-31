@@ -24,11 +24,11 @@ tasks:
   ed@gomos: '{self:1, rate:100, study:90, friend:nao se aplica}'
   ed@princesa: '{self:1, rate:100, study:180, concept:1}'
   ed@apagando: '{self:1, rate:100, study:70, concept:1}'
-  ed@manipulacao: '{rate:42}'
+  ed@manipulacao: '{self:1, rate:100, study:184, concept:1, refactor:1}'
 flags:
-  panel: 0
+  panel: 1
   inbox: 1
-  show_panel: 0
+  show_panel: 1
   task_graph_mode: 0
   show_time: 0
 lang: go

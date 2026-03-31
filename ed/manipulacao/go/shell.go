@@ -29,20 +29,18 @@ func getCalmWomen(vet []int) []int {
 }
 
 func sortVet(vet []int) []int {
-	aux := 0
-	for i := 0; i < len(vet) - 1 -i; i++{
-		if vet[i] < vet[i+1]{
-			aux = vet[i]
-			vet[i] = vet[i+ 1]
-			vet[i + 1] = aux
-		}
-	}
-	return vet
+	return quickSortOriginal(vet, 0, len(vet) - 1)
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return vet
+	return quickSortAlterado(vet, 0, len(vet) - 1)
+}
+
+func abs(num int) int {
+	if num < 0 {
+		return -num
+	}
+	return num
 }
 
 func reverse(vet []int) []int {
@@ -53,22 +51,81 @@ func reverse(vet []int) []int {
 	return invert
 }
 
-func unique(vet []int) []int {
-	unicos := []int{}
-	unicos = append(unicos, vet[0])
-	for i := 1; i < len(vet) - 1; i++{
-		for j := 0; j < len(unicos); j++{
-			if(vet[i] != vet[j]){
-				unicos = append(unicos, vet[i])
-			}
+func quickSortAlterado(v []int, low, high int) []int{
+	if low < high {
+		p := partitionAlterada(v, low, high) 
+
+		quickSortAlterado(v, low, p-1)
+		quickSortAlterado(v, p+1, high)
+	}
+	return v
+}
+
+func quickSortOriginal(v []int, low, high int) []int{
+	if low < high {
+		p := partitionOriginal(v, low, high) 
+
+		quickSortOriginal(v, low, p-1)
+		quickSortOriginal(v, p+1, high)
+	}
+	return v
+}
+func partitionOriginal(v []int, low, high int) int{
+	pivot := v[high]
+	i := low - 1
+
+	for j := low; j < high; j++ {
+		if v[j] < pivot {
+			i++
+			v[i], v[j] = v[j], v[i]
 		}
 	}
+
+	v[i+1], v[high] = v[high], v[i+1]
+
+	return i+1
+}
+
+func partitionAlterada(v []int, low, high int) int{
+	pivot := v[high]
+	i := low - 1
+
+	for j := low; j < high; j++ {
+		if abs(v[j]) < abs(pivot) {
+			i++
+			v[i], v[j] = v[j], v[i]
+		}
+	}
+
+	v[i+1], v[high] = v[high], v[i+1]
+
+	return i+1
+}
+
+func unique(vet []int) []int {
+	freq := make(map[int]int)
+	unicos := []int{}
+
+	for _, num := range vet{
+		if freq[num] == 0 {
+			unicos = append(unicos, num)
+		}
+		freq[num]++
+	}
+
 	return unicos
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return vet
+	freq := make(map[int]int)
+	repetidos := []int{}
+	for _, num := range vet{
+		if freq[num] >= 1 {
+			repetidos = append(repetidos, num)
+		}
+		freq[num]++
+	}
+	return repetidos
 }
 
 func main() {
