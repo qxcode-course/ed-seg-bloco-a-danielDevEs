@@ -217,8 +217,48 @@
         },
         {
             "label": "2026-03-30_21-47-00",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\thomens := []int{}\n\tfor i := range vet{\n\t\tif vet[i] > 0{\n\t\t\thomens = append(homens, vet[i])\n\t\t}\n\t}\n\treturn homens\n}\n\nfunc getCalmWomen(vet []int) []int {\n\tmulheres_calmas := []int{}\n\tfor v := range vet{\n\t\tif vet[v] < 0 && vet[v] > -10{\n\t\t\tmulheres_calmas = append(mulheres_calmas, vet[v])\n\t\t}\n\t}\n\treturn mulheres_calmas\n}\n\nfunc sortVet(vet []int) []int {\n\treturn quickSortOriginal(vet, 0, len(vet) - 1)\n}\n\nfunc sortStress(vet []int) []int {\n\treturn quickSortAlterado(vet, 0, len(vet) - 1)\n}\n\nfunc abs(num int) int {\n\tif num < 0 {\n\t\treturn -num\n\t}\n\treturn num\n}\n\nfunc reverse(vet []int) []int {\n\tinvert := []int{}\n\tfor i := len(vet) - 1; i >= 0; i--{\n\t\tinvert = append(invert, vet[i])\n\t}\n\treturn invert\n}\n\nfunc quickSortAlterado(v []int, low, high int) []int{\n\tif low < high {\n\t\tp := partitionAlterada(v, low, high) \n\n\t\tquickSortAlterado(v, low, p-1)\n\t\tquickSortAlterado(v, p+1, high)\n\t}\n\treturn v\n}\n\nfunc quickSortOriginal(v []int, low, high int) []int{\n\tif low < high {\n\t\tp := partitionOriginal(v, low, high) \n\n\t\tquickSortOriginal(v, low, p-1)\n\t\tquickSortOriginal(v, p+1, high)\n\t}\n\treturn v\n}\nfunc partitionOriginal(v []int, low, high int) int{\n\tpivot := v[high]\n\ti := low - 1\n\n\tfor j := low; j < high; j++ {\n\t\tif v[j] < pivot {\n\t\t\ti++\n\t\t\tv[i], v[j] = v[j], v[i]\n\t\t}\n\t}\n\n\tv[i+1], v[high] = v[high], v[i+1]\n\n\treturn i+1\n}\n\nfunc partitionAlterada(v []int, low, high int) int{\n\tpivot := v[high]\n\ti := low - 1\n\n\tfor j := low; j < high; j++ {\n\t\tif abs(v[j]) < abs(pivot) {\n\t\t\ti++\n\t\t\tv[i], v[j] = v[j], v[i]\n\t\t}\n\t}\n\n\tv[i+1], v[high] = v[high], v[i+1]\n\n\treturn i+1\n}\n\nfunc unique(vet []int) []int {\n\tfreq := make(map[int]int)\n\tunicos := []int{}\n\n\tfor _, num := range vet{\n\t\tif freq[num] == 0 {\n\t\t\tunicos = append(unicos, num)\n\t\t}\n\t\tfreq[num]++\n\t}\n\n\treturn unicos\n}\n\nfunc repeated(vet []int) []int {\n\tfreq := make(map[int]int)\n\trepetidos := []int{}\n\tfor _, num := range vet{\n\t\tif freq[num] >= 1 {\n\t\t\trepetidos = append(repetidos, num)\n\t\t}\n\t\tfreq[num]++\n\t}\n\treturn repetidos\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n\n",
+            "content": "@@ -908,16 +908,17 @@\n w, high)\n+ \n %0A%0A%09%09quic\n@@ -1107,27 +1107,12 @@\n igh)\n-%0A%09%09// 1: p = 0\n+ \n %0A%0A%09\n-//\n %09qui\n@@ -1404,38 +1404,8 @@\n i+1%5D\n-%0A%09// 1: -99, 3, -1, -50, -1, 5\n %0A%0A%09r\n",
             "lines": "191"
+        },
+        {
+            "label": "2026-03-31_16-33-32",
+            "content": "@@ -1119,16 +1119,18 @@\n p = 0%0A%0A%09\n+//\n %09quickSo\n@@ -1154,18 +1154,16 @@\n , p-1)%0A%09\n-//\n %09quickSo\n",
+            "lines": "193"
+        },
+        {
+            "label": "2026-03-31_16-34-26",
+            "content": "@@ -1117,32 +1117,16 @@\n : p = 0%0A\n-%09%09fmt.Println(v)\n %0A%09%09quick\n@@ -1152,33 +1152,18 @@\n , p-1)%0A%09\n-%09fmt.Println(v)%0A%09\n+//\n %09quickSo\n@@ -1191,25 +1191,8 @@\n gh)%0A\n-%09%09fmt.Println(v)%0A\n %09%7D%0A%09\n",
+            "lines": "193"
+        },
+        {
+            "label": "2026-03-31_16-36-12",
+            "content": "@@ -1119,19 +1119,16 @@\n p = 0%0A%09%09\n-// \n fmt.Prin\n@@ -1220,19 +1220,16 @@\n high)%0A%09%09\n-// \n fmt.Prin\n",
+            "lines": "195"
+        },
+        {
+            "label": "2026-03-31_16-38-30",
+            "content": "@@ -1172,19 +1172,16 @@\n  p-1)%0A%09%09\n-// \n fmt.Prin\n@@ -1219,24 +1219,27 @@\n +1, high)%0A%09%09\n+// \n fmt.Println(\n",
+            "lines": "195"
+        },
+        {
+            "label": "2026-03-31_16-39-38",
+            "content": "@@ -1119,16 +1119,19 @@\n p = 0%0A%09%09\n+// \n fmt.Prin\n@@ -1226,18 +1226,16 @@\n high)%0A%09%09\n-//\n fmt.Prin\n",
+            "lines": "195"
+        },
+        {
+            "label": "2026-03-31_16-40-35",
+            "content": "@@ -1119,18 +1119,16 @@\n p = 0%0A%09%09\n-//\n fmt.Prin\n@@ -1498,31 +1498,16 @@\n , -1, 5%0A\n-%09fmt.Println(v)\n %0A%09return\n",
+            "lines": "195"
+        },
+        {
+            "label": "2026-03-31_16-42-42",
+            "content": "@@ -1167,24 +1167,27 @@\n low, p-1)%0A%09%09\n+// \n fmt.Println(\n@@ -1500,16 +1500,32 @@\n , -1, 5%0A\n+%09fmt.Println(v)%0A\n %09return \n",
+            "lines": "195"
+        },
+        {
+            "label": "2026-03-31_16-43-48",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\thomens := []int{}\n\tfor i := range vet{\n\t\tif vet[i] > 0{\n\t\t\thomens = append(homens, vet[i])\n\t\t}\n\t}\n\treturn homens\n}\n\nfunc getCalmWomen(vet []int) []int {\n\tmulheres_calmas := []int{}\n\tfor v := range vet{\n\t\tif vet[v] < 0 && vet[v] > -10{\n\t\t\tmulheres_calmas = append(mulheres_calmas, vet[v])\n\t\t}\n\t}\n\treturn mulheres_calmas\n}\n\nfunc sortVet(vet []int) []int {\n\treturn quickSortOriginal(vet, 0, len(vet) - 1)\n}\n\nfunc sortStress(vet []int) []int {\n\treturn quickSortAlterado(vet, 0, len(vet) - 1)\n}\n\nfunc abs(num int) int {\n\tif num < 0 {\n\t\treturn -num\n\t}\n\treturn num\n}\n\nfunc reverse(vet []int) []int {\n\tinvert := []int{}\n\tfor i := len(vet) - 1; i >= 0; i--{\n\t\tinvert = append(invert, vet[i])\n\t}\n\treturn invert\n}\n\nfunc quickSortAlterado(v []int, low, high int) []int{\n\tif low < high {\n\t\tp := partitionAlterada(v, low, high)\n\n\t\tquickSortAlterado(v, low, p-1)\n\t\tquickSortAlterado(v, p+1, high)\n\t}\n\treturn v\n}\n\nfunc quickSortOriginal(v []int, low, high int) []int{\n\tif low < high {\n\t\tp := partitionOriginal(v, low, high)\n\t\t// 1: p = 0\n\t\t//fmt.Println(v)\n\t\tquickSortOriginal(v, low, p-1)\n\t\tfmt.Println(v)\n\t\tquickSortOriginal(v, p+1, high)\n\t\t//fmt.Println(v)\n\t}\n\treturn v\n}\nfunc partitionOriginal(v []int, low, high int) int{\n\tpivot := v[high]\n\ti := low - 1\n\n\tfor j := low; j < high; j++ {\n\t\tif v[j] < pivot {\n\t\t\ti++\n\t\t\tv[i], v[j] = v[j], v[i]\n\t\t}\n\t}\n\n\tv[i+1], v[high] = v[high], v[i+1]\n\t// 1: -99, 3, -1, -50, -1, 5\n\treturn i+1\n}\n\nfunc partitionAlterada(v []int, low, high int) int{\n\tpivot := v[high]\n\ti := low - 1\n\n\tfor j := low; j < high; j++ {\n\t\tif abs(v[j]) < abs(pivot) {\n\t\t\ti++\n\t\t\tv[i], v[j] = v[j], v[i]\n\t\t}\n\t}\n\n\tv[i+1], v[high] = v[high], v[i+1]\n\n\treturn i+1\n}\n\nfunc unique(vet []int) []int {\n\tfreq := make(map[int]int)\n\tunicos := []int{}\n\n\tfor _, num := range vet{\n\t\tif freq[num] == 0 {\n\t\t\tunicos = append(unicos, num)\n\t\t}\n\t\tfreq[num]++\n\t}\n\n\treturn unicos\n}\n\nfunc repeated(vet []int) []int {\n\tfreq := make(map[int]int)\n\trepetidos := []int{}\n\tfor _, num := range vet{\n\t\tif freq[num] >= 1 {\n\t\t\trepetidos = append(repetidos, num)\n\t\t}\n\t\tfreq[num]++\n\t}\n\treturn repetidos\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n\n",
+            "lines": "194"
         }
     ]
 }

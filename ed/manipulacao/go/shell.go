@@ -53,7 +53,7 @@ func reverse(vet []int) []int {
 
 func quickSortAlterado(v []int, low, high int) []int{
 	if low < high {
-		p := partitionAlterada(v, low, high) 
+		p := partitionAlterada(v, low, high)
 
 		quickSortAlterado(v, low, p-1)
 		quickSortAlterado(v, p+1, high)
@@ -63,10 +63,12 @@ func quickSortAlterado(v []int, low, high int) []int{
 
 func quickSortOriginal(v []int, low, high int) []int{
 	if low < high {
-		p := partitionOriginal(v, low, high) 
+		p := partitionOriginal(v, low, high)
 
 		quickSortOriginal(v, low, p-1)
+
 		quickSortOriginal(v, p+1, high)
+
 	}
 	return v
 }
@@ -82,7 +84,6 @@ func partitionOriginal(v []int, low, high int) int{
 	}
 
 	v[i+1], v[high] = v[high], v[i+1]
-
 	return i+1
 }
 
@@ -105,7 +106,7 @@ func partitionAlterada(v []int, low, high int) int{
 func unique(vet []int) []int {
 	freq := make(map[int]int)
 	unicos := []int{}
-
+   
 	for _, num := range vet{
 		if freq[num] == 0 {
 			unicos = append(unicos, num)
