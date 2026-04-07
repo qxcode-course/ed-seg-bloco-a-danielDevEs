@@ -1,0 +1,189 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-03_16-12-35",
+            "content": "@@ -118,32 +118,47 @@\n curr(vet %5B%5Dint) \n+map%5Bint%5Dint %7B//\n %5B%5DPair %7B%0A%09freq :\n@@ -221,35 +221,16 @@\n %0A%09%7D%0A\n-%09fmt.Println(freq)%0A\n %09return \n nil%0A\n@@ -217,35 +217,36 @@\n s%5D++%0A%09%7D%0A%09return \n-nil\n+freq\n %0A%7D%0A%0Afunc teams(v\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-04-03_16-13-45",
+            "content": "@@ -157,20 +157,19 @@\n map%5Bint%5D\n-bool\n+int\n )%0A%09for p\n@@ -196,24 +196,14 @@\n req%5B\n-vet%5Bpos%5D%5D = true\n+pos%5D++\n %0A%09%7D%0A\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-04-03_16-19-20",
+            "content": "@@ -36,21 +36,14 @@\n mt%22%0A\n-%09%22net%22%0A\n %09%22os%22%0A\n+\n %09%22st\n@@ -107,70 +107,8 @@\n %0A%7D%0A%0A\n-%0Afunc abs(n int) int %7B%0A%09if n %3C 0%7B%0A%09%09return -n%0A%09%7D%0A%09return n%0A%7D%0A%0A\n func\n@@ -197,20 +197,16 @@\n req%5B\n-abs(\n vet%5Bpos%5D\n )%5D =\n@@ -201,17 +201,16 @@\n vet%5Bpos%5D\n-)\n %5D = true\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-04-03_16-20-31",
+            "content": "@@ -32,16 +32,23 @@\n %0A%09%22fmt%22%0A\n+%09%22net%22%0A\n %09%22os%22%0A%09%22\n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-04-03_16-20-48",
+            "content": "@@ -223,20 +223,18 @@\n int%5D\n-int\n+bool\n )%0A%09for\n- _,\n  pos\n@@ -254,29 +254,8 @@\n %7B%0A%09%09\n-freq%5Babs(pos)%5D++%0A%09%09//\n freq\n",
+            "lines": "144"
+        },
+        {
+            "label": "2026-04-03_16-25-01",
+            "content": "@@ -228,26 +228,8 @@\n nt)%0A\n-%09var ocur %5B%5DPair%0A%0A\n %09for\n@@ -273,62 +273,8 @@\n %5D++%0A\n-%09%09ocur = append(ocur, Pair%7BOne: pos, Two: freq%5Bpos%5D%7D)%0A\n %09%09//\n@@ -307,10 +307,8 @@\n %0A%09%7D%0A\n-%09%0A\n %09fmt\n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-04-03_16-33-04",
+            "content": "@@ -404,20 +404,19 @@\n %09return \n-ocur\n+nil\n %0A%7D%0A%0Afunc\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-04-03_16-33-21",
+            "content": "@@ -291,74 +291,8 @@\n %5D++%0A\n-%09%09//freq%5Babs(vet%5Bpos%5D)%5D = true%0A%09%7D%0A%09for _, elemento := range freq%7B%0A\n %09%09oc\n@@ -319,24 +319,19 @@\n ir%7BOne: \n-elemento\n+pos\n , Two: f\n@@ -338,19 +338,45 @@\n req%5B\n-elemento%5D%7D)\n+pos%5D%7D)%0A%09%09//freq%5Babs(vet%5Bpos%5D)%5D = true\n %0A%09%7D%0A\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-04-03_16-34-53",
+            "content": "@@ -325,16 +325,19 @@\n %0A%09%7D%0A%09for\n+ _,\n  element\n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-04-03_16-35-27",
+            "content": "@@ -325,27 +325,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(freq)%0A\n %09for\n@@ -419,16 +419,35 @@\n %7D)%0A%09%7D%0A%09%0A\n+%09fmt.Println(freq)%0A\n %09return \n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-04-03_16-41-18",
+            "content": "@@ -322,18 +322,16 @@\n rue%0A%09%7D%0A%09\n-//\n fmt.Prin\n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-04-03_16-43-12",
+            "content": "@@ -318,24 +318,26 @@\n  = true%0A%09%7D%0A%09\n+//\n fmt.Println(\n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-04-03_16-43-42",
+            "content": "@@ -42,16 +42,8 @@\n os%22%0A\n-%09%22sort%22%0A\n %09%22st\n@@ -373,92 +373,8 @@\n eq%7B%0A\n-%09%09sort.Slice(ocur, func(i, j int) bool %7B%0A    %09return ocur%5Bi%5D.One %3C ocur%5Bj%5D.One%0A%09%09%7D)%0A\n %09%09oc\n@@ -438,18 +438,16 @@\n %7D)%0A%09%7D%0A%09%0A\n-%09%0A\n %09return \n",
+            "lines": "151"
+        },
+        {
+            "label": "2026-04-03_16-47-00",
+            "content": "@@ -330,18 +330,16 @@\n rue%0A%09%7D%0A%09\n-//\n fmt.Prin\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-04-03_16-47-19",
+            "content": "@@ -384,76 +384,8 @@\n q%7B%0A%09\n-%09ocur = append(ocur, Pair%7BOne: elemento, Two: freq%5Belemento%5D%7D)%0A%09%7D%0A%09%0A\n %09sor\n@@ -420,16 +420,20 @@\n  bool %7B%0A\n+    \n %09return \n@@ -462,12 +462,82 @@\n One%0A\n+%09\n %09%7D)%0A\n+%09%09ocur = append(ocur, Pair%7BOne: elemento, Two: freq%5Belemento%5D%7D)%0A%09%7D%0A%09%0A\n %09%0A%09r\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-04-03_16-49-14",
+            "content": "@@ -177,480 +177,8 @@\n %0A%7D%0A%0A\n-func quickSort(pares %5B%5DPair, low, high int) %5B%5DPair%7B%0A%09if low %3C high%7B%0A%09%09p := partition(pares, low, high)%0A%0A%09%09quickSort(pares, low, p-1)%0A%09%09quickSort(pares, p+1, high)%0A%09%7D%0A%09return pares%0A%7D%0A%0Afunc partition(pares %5B%5DPair, low, high int) int%7B%0A%09pivot := pares%5Bhigh%5D%0A%09i := low - 1%0A%09%0A%09for j := low; j %3C high; j++%7B%0A%09%09if pares%5Bj%5D.One %3C pivot.One%7B%0A%09%09%09i++%0A%09%09%09pares%5Bi%5D.One, pares%5Bj%5D.One = pares%5Bj%5D.One, pares%5Bi%5D.One%0A%09%09%7D%0A%09%7D%0A%0A%0A%09pares%5Bi+1%5D, pares%5Bhigh%5D = pares%5Bhigh%5D, pares%5Bi+1%5D%0A%09return i+1%0A%7D%0A%0A\n func\n@@ -205,16 +205,16 @@\n %5DPair %7B%0A\n+\n %09freq :=\n@@ -449,19 +449,16 @@\n )%0A%09%7D%0A%09%0A%09\n-// \n sort.Sli\n@@ -489,19 +489,16 @@\n bool %7B%0A%09\n-// \n return o\n@@ -527,13 +527,12 @@\n ne%0A%09\n-// \n %7D)\n+%0A%09\n %0A%09re\n@@ -540,25 +540,12 @@\n urn \n-quickSort(\n ocur\n-)%0A%09\n %0A%7D%0A%0A\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-04-03_17-01-56",
+            "content": "@@ -1033,22 +1033,8 @@\n ocur\n-, 0, len(freq)\n )%0A%09%0A\n",
+            "lines": "182"
+        },
+        {
+            "label": "2026-04-03_17-02-29",
+            "content": "@@ -38,16 +38,24 @@\n %22%0A%09%22os%22%0A\n+%09%22sort%22%0A\n %09%22strcon\n",
+            "lines": "182"
+        },
+        {
+            "label": "2026-04-03_17-02-42",
+            "content": "@@ -1035,20 +1035,16 @@\n en(freq)\n- - 1\n )%0A%09%0A%7D%0A%0Af\n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-04-03_17-03-23",
+            "content": "@@ -904,32 +904,119 @@\n lemento%5D%7D)%0A%09%7D%0A%09%0A\n+%09// sort.Slice(ocur, func(i, j int) bool %7B%0A%09// return ocur%5Bi%5D.One %3C ocur%5Bj%5D.One%0A%09// %7D)%0A\n %09return quickSor\n@@ -1082,290 +1082,27 @@\n  %7B%0A%09\n-freq := make(map%5Bint%5Dint)%0A%09var teams %5B%5DPair%0A%0A%09for _, pos := range\n+_ =\n  vet\n-%7B\n %0A%09\n-%09freq%5Bpos%5D++%0A%09%09//freq%5Babs(vet%5Bpos%5D)%5D = true%0A%09%7D%0A%09//fmt.Println(freq)%0A%09for elemento := range freq%7B%0A%09%09teams = append(teams, Pair%7BOne: elemento, Two: freq%5Belemento%5D%7D)%0A%09%7D%0A%09%0A%09return quickSort(teams, 0, len(freq) - 1)\n+return nil\n %0A%7D%0A%0A\n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-04-03_17-05-16",
+            "content": "@@ -1036,23 +1036,22 @@\n %5B%5DPair%0A%0A\n-%0A\n %09for \n-i\n+_\n , pos :=\n@@ -1068,87 +1068,50 @@\n %7B%0A%09%09\n-teams = append(teams, Pair%7BOne: i%7D)%0A%09%09if(pos == vet%5Bi%5D + 1)%7B%0A%09%09%09\n+freq%5Bpos%5D++%0A%09%09//\n freq%5B\n-pos%5D++%0A%09%09%7D\n+abs(vet%5Bpos%5D)%5D = true\n %0A%09%7D%0A\n@@ -1160,16 +1160,16 @@\n e freq%7B%0A\n-\n %09%09teams \n@@ -1189,16 +1189,31 @@\n s, Pair%7B\n+One: elemento, \n Two: fre\n",
+            "lines": "189"
+        },
+        {
+            "label": "2026-04-03_17-23-33",
+            "content": "@@ -1063,16 +1063,54 @@\n ge vet%7B%0A\n+%09%09teams = append(teams, Pair%7BOne: i%7D)%0A\n %09%09if(pos\n@@ -1145,24 +1145,26 @@\n %5D++%0A%09%09%7D%0A%09%7D%0A%09\n+//\n fmt.Println(\n",
+            "lines": "192"
+        },
+        {
+            "label": "2026-04-03_17-25-52",
+            "content": "@@ -1047,45 +1047,36 @@\n or i\n- := 0; i %3C len(vet); i++\n+, pos := range vet\n %7B%0A%09%09if(\n-vet%5Bi%5D\n+pos\n  == \n@@ -1096,22 +1096,19 @@\n %09%09%09freq%5B\n-vet%5Bi%5D\n+pos\n %5D++%0A%09%09%7D%0A\n",
+            "lines": "191"
+        },
+        {
+            "label": "2026-04-03_17-26-47",
+            "content": "@@ -1119,37 +1119,8 @@\n %5D++%0A\n-%09%09%7D else %7B%0A%09%09%09freq%5Bvet%5Bi%5D%5D++%0A\n %09%09%7D%0A\n",
+            "lines": "191"
+        },
+        {
+            "label": "2026-04-03_17-29-24",
+            "content": "@@ -1115,16 +1115,45 @@\n t%5Bi%5D%5D++%0A\n+%09%09%7D else %7B%0A%09%09%09freq%5Bvet%5Bi%5D%5D++%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "193"
+        },
+        {
+            "label": "2026-04-03_17-31-03",
+            "content": "@@ -1039,33 +1039,24 @@\n air%0A\n-%09unic := 1\n+%0A\n %0A%09for \n-v\n+i\n  := \n-1; v\n+0; i\n  %3C l\n@@ -1068,17 +1068,17 @@\n t); \n-v\n+i\n ++%7B%0A%09%09if\n  vet\n@@ -1077,18 +1077,14 @@\n %09%09if\n- \n+(\n vet%5B\n-v - 1\n+i\n %5D ==\n@@ -1092,83 +1092,90 @@\n vet%5B\n-v%5D%7B%0A%09%09%09unic++%0A%09%09%09teams = append(teams, Pair%7BOne: v, Two: unic%7D)%0A%09%09%7D else\n+i%5D + 1)%7B%0A%09%09%09freq%5Bvet%5Bi%5D%5D++%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(freq)%0A%09for elemento := range freq\n %7B%0A\n-%09\n %09%09te\n@@ -1203,35 +1203,33 @@\n air%7B\n-One: v, Two: 1\n+Two: freq%5Belemento%5D\n %7D)%0A\n-%09\n %09%7D%0A\n-%09%7D%0A%0A%09%0A\n %09%0A%09r\n",
+            "lines": "191"
+        },
+        {
+            "label": "2026-04-03_17-42-43",
+            "content": "@@ -1147,33 +1147,24 @@\n  Pair%7BOne: v\n-et%5Bv - 1%5D\n , Two: unic%7D\n@@ -1211,25 +1211,16 @@\n r%7BOne: v\n-et%5Bv - 1%5D\n , Two: 1\n",
+            "lines": "191"
+        },
+        {
+            "label": "2026-04-03_17-43-27",
+            "content": "@@ -1107,24 +1107,8 @@\n t%5Bv%5D\n- && len(vet) %3E 1\n %7B%0A%09%09\n",
+            "lines": "191"
+        },
+        {
+            "label": "2026-04-03_17-43-55",
+            "content": "@@ -1260,20 +1260,8 @@\n 1%7D)%0A\n-%09%09%09unic = 1%0A\n %09%09%7D%0A\n",
+            "lines": "191"
+        },
+        {
+            "label": "2026-04-03_17-45-11",
+            "content": "@@ -1036,19 +1036,16 @@\n %5B%5DPair%0A%09\n-// \n unic := \n@@ -1047,19 +1047,16 @@\n c := 1%0A%09\n-// \n for v :=\n@@ -1079,19 +1079,16 @@\n ; v++%7B%0A%09\n-// \n %09if vet%5B\n@@ -1122,19 +1122,16 @@\n ) %3E 1%7B%0A%09\n-// \n %09%09unic++\n@@ -1132,19 +1132,16 @@\n unic++%0A%09\n-// \n %09%09teams \n@@ -1191,19 +1191,16 @@\n unic%7D)%0A%09\n-// \n %09%7D else%7B\n@@ -1201,19 +1201,16 @@\n  else%7B%0A%09\n-// \n %09%09teams \n@@ -1257,19 +1257,16 @@\n o: 1%7D)%0A%09\n-// \n %09%09unic =\n@@ -1273,313 +1273,10 @@\n  1%0A%09\n-// %09%7D%0A%09// %7D%0A%09count := 1%0A%09storageCount := %5B%5Dint%7B%7D%0A%09for i := 1; i %3C len(vet); i++%7B%0A%09%09teams = append(teams, Pair%7BOne: i%7D)%0A%09%09if vet%5Bi - 1%5D == vet%5Bi%5D%7B%0A%09%09%09count++%0A%09%09%7D else %7B%0A%09%09%09storageCount = append(storageCount, count)%0A%09%09%09count = 1%0A%09%09%7D%0A%09%7D%0A%0A%09for _, v := range storageCount%7B%0A%09%09teams = append(teams, Pair%7BTwo: v%7D)\n+%09%7D\n %0A%09%7D%0A\n",
+            "lines": "192"
+        },
+        {
+            "label": "2026-04-03_18-01-38",
+            "content": "@@ -1309,37 +1309,8 @@\n / %7D%0A\n-%09unics := make(map%5Bint%5Dbool)%0A\n %09cou\n@@ -1317,16 +1317,16 @@\n nt := 1%0A\n+\n %09storage\n@@ -1380,30 +1380,43 @@\n %7B%0A%09%09\n-unics%5Bvet%5Bi-1%5D%5D = true\n+teams = append(teams, Pair%7BOne: i%7D)\n %0A%09%09i\n@@ -1531,71 +1531,8 @@\n %0A%09%7D%0A\n-%09for u := range unics%7B%0A%09%09teams = append(teams, Pair%7BOne: u%7D)%0A%09%7D\n %0A%09fo\n",
+            "lines": "207"
+        },
+        {
+            "label": "2026-04-03_18-05-29",
+            "content": "@@ -1547,35 +1547,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(storageCount)%0A\n %09for\n",
+            "lines": "210"
+        },
+        {
+            "label": "2026-04-03_18-07-29",
+            "content": "@@ -1387,17 +1387,16 @@\n = 1; i %3C\n-=\n  len(vet\n",
+            "lines": "211"
+        },
+        {
+            "label": "2026-04-03_18-08-31",
+            "content": "@@ -1383,24 +1383,25 @@\n  i := 1; i %3C\n+=\n  len(vet); i\n@@ -1480,23 +1480,8 @@\n lse \n-if i %3C len(vet)\n %7B%0A%09%09\n@@ -1524,27 +1524,16 @@\n  count)%0A\n-%09%09%7D else %7B%0A\n %09%09%09count\n",
+            "lines": "211"
+        },
+        {
+            "label": "2026-04-03_18-11-01",
+            "content": "@@ -1457,24 +1457,8 @@\n t%5Bi%5D\n- && i %3C len(vet)\n %7B%0A%09%09\n@@ -1475,16 +1475,31 @@\n %09%7D else \n+if i %3C len(vet)\n %7B%0A%09%09%09sto\n@@ -1538,16 +1538,27 @@\n  count)%0A\n+%09%09%7D else %7B%0A\n %09%09%09count\n",
+            "lines": "212"
+        },
+        {
+            "label": "2026-04-03_18-12-11",
+            "content": "@@ -1469,20 +1469,16 @@\n len(vet)\n- - 1\n %7B%0A%09%09%09cou\n",
+            "lines": "211"
+        },
+        {
+            "label": "2026-04-03_18-12-39",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Pair struct {\n\tOne int\n\tTwo int\n}\n\n\nfunc abs(n int) int {\n\tif n < 0{\n\t\treturn -n\n\t}\n\treturn n\n}\n\nfunc quickSort(pares []Pair, low, high int) []Pair{\n\tif low < high{\n\t\tp := partition(pares, low, high)\n\n\t\tquickSort(pares, low, p-1)\n\t\tquickSort(pares, p+1, high)\n\t}\n\treturn pares\n}\n\nfunc partition(pares []Pair, low, high int) int{\n\tpivot := pares[high]\n\ti := low - 1\n\t\n\tfor j := low; j < high; j++{\n\t\tif pares[j].One < pivot.One{\n\t\t\ti++\n\t\t\tpares[i].One, pares[j].One = pares[j].One, pares[i].One\n\t\t}\n\t}\n\n\n\tpares[i+1], pares[high] = pares[high], pares[i+1]\n\treturn i+1\n}\n\nfunc occurr(vet []int) []Pair {\n\tfreq := make(map[int]int)\n\tvar ocur []Pair\n\n\tfor _, pos := range vet{\n\t\tfreq[abs(pos)]++\n\t\t//freq[abs(vet[pos])] = true\n\t}\n\t//fmt.Println(freq)\n\tfor elemento := range freq{\n\t\tocur = append(ocur, Pair{One: elemento, Two: freq[elemento]})\n\t}\n\t\n\treturn quickSort(ocur, 0, len(freq) - 1)\n\t\n}\n\nfunc teams(vet []int) []Pair {\n\tfreq := make(map[int]int)\n\tvar teams []Pair\n\t// unic := 1\n\t// for v := 1; v < len(vet); v++{\n\t// \tif vet[v - 1] == vet[v] && len(vet) > 1{\n\t// \t\tunic++\n\t// \t\tteams = append(teams, Pair{One: vet[v - 1], Two: unic})\n\t// \t} else{\n\t// \t\tteams = append(teams, Pair{One: vet[v - 1], Two: 1})\n\t// \t\tunic = 1\n\t// \t}\n\t// }\n\tunics := make(map[int]bool)\n\tcount := 1\n\tstorageCount := []int{}\n\tfor i := 1; i < len(vet); i++{\n\t\tunics[vet[i-1]] = true\n\t\tif vet[i - 1] == vet[i] && i < len(vet) - 1{\n\t\t\tcount++\n\t\t} else {\n\t\t\tstorageCount = append(storageCount, count)\n\t\t\tcount = 1\n\t\t}\n\t}\n\tfmt.Println(storageCount)\n\tfor u := range unics{\n\t\tteams = append(teams, Pair{One: u})\n\t}\n\tfor _, v := range storageCount{\n\t\tteams = append(teams, Pair{Two: v})\n\t}\n\n\t\n\t\n\treturn quickSort(teams, 0, len(freq) - 1)\n}\n\nfunc mnext(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc alone(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc couple(vet []int) int {\n\t_ = vet\n\treturn 0\n}\n\nfunc hasSubseq(vet []int, seq []int, pos int) bool {\n\t_ = vet\n\t_ = seq\n\t_ = pos\n\treturn false\n}\n\nfunc subseq(vet []int, seq []int) int {\n\t_ = vet\n\t_ = seq\n\treturn -1\n}\n\nfunc erase(vet []int, posList []int) []int {\n\t_ = vet\n\t_ = posList\n\treturn nil\n}\n\nfunc clear(vet []int, value int) []int {\n\t_ = vet\n\t_ = value\n\treturn nil\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"occurr\":\n\t\t\tprintSlice(occurr(str2vet(args[1])))\n\t\tcase \"teams\":\n\t\t\tprintSlice(teams(str2vet(args[1])))\n\t\tcase \"mnext\":\n\t\t\tprintSlice(mnext(str2vet(args[1])))\n\t\tcase \"alone\":\n\t\t\tprintSlice(alone(str2vet(args[1])))\n\t\tcase \"erase\":\n\t\t\tprintSlice(erase(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"clear\":\n\t\t\tval, _ := strconv.Atoi(args[2])\n\t\t\tprintSlice(clear(str2vet(args[1]), val))\n\t\tcase \"subseq\":\n\t\t\tfmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"couple\":\n\t\t\tfmt.Println(couple(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"Invalid command\")\n\t\t}\n\t}\n}\n\n// Fun\u00e7\u00f5es auxiliares\n\nfunc str2vet(str string) []int {\n\tif str == \"[]\" {\n\t\treturn nil\n\t}\n\tstr = str[1 : len(str)-1]\n\tparts := strings.Split(str, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tnum, _ := strconv.Atoi(strings.TrimSpace(part))\n\t\tvet = append(vet, num)\n\t}\n\treturn vet\n}\n\nfunc printSlice[T any](vet []T) {\n\tfmt.Print(\"[\")\n\tfor i, x := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(x)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc (p Pair) String() string {\n\treturn fmt.Sprintf(\"(%v, %v)\", p.One, p.Two)\n}\n",
+            "lines": "211"
+        }
+    ]
+}

@@ -15,12 +15,14 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@basic
+- ed@rec
 - ed@map_set
 flags:
-  inbox: inbox
+  inbox: all
   panel: help
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@basic
+selected: ed@fractais_png

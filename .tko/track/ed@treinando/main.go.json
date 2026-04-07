@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_14-40-07",
+            "content": "@@ -174,16 +174,139 @@\n n %22%22%0A%7D%0A%0A\n+func trade(vet %5B%5Dint) %5B%5Dint%7B%0A%09for v := range vet%7B%0A%09%09vet%5Bv%5D, vet%5Blen(vet) - v%5D = vet%5Blen(vet) - v%5D, vet%5Bv%5D%0A%09%7D%0A%09return vet%0A%7D%0A\n // rever\n@@ -433,111 +433,27 @@\n %7B%0A%09%09\n-return%0A%09%7D%0A%09for v := range vet%7B%0A%09%09vet%5Bv%5D, vet%5Blen(vet) - v%5D = vet%5Blen(vet) - v%5D, vet%5Bv%5D%0A%09%7D%0A%09reverse(vet)\n+vet = trade(vet)%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-04-06_14-43-25",
+            "content": "@@ -246,26 +246,8 @@\n ) %7B%0A\n-%09fmt.Println(vet)%0A\n %09if \n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-04-06_14-44-56",
+            "content": "@@ -95,17 +95,24 @@\n ring %7B%0A%09\n+_ = vet\n %0A\n-\n %09return \n@@ -244,15 +244,27 @@\n nt) \n-%5B%5Dint %7B\n+%7B%0A%09fmt.Println(vet)\n %0A%09if\n@@ -330,20 +330,16 @@\n %09%09return\n- vet\n %0A%09%7D%0A%09for\n@@ -414,16 +414,16 @@\n t%5Bv%5D%0A%09%7D%0A\n+\n %09reverse\n@@ -432,20 +432,8 @@\n et)%0A\n-%09return vet%0A\n %7D%0A%0A/\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-06_14-47-39",
+            "content": "@@ -244,16 +244,58 @@\n nt %7B%0A%09if\n+ vet%5Blen(vet)/2%5D == vet%5Blen(vet)/2 + 1%5D %7C%7C\n  len(vet\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-06_14-48-49",
+            "content": "@@ -263,24 +263,8 @@\n = 1 \n-%7C%7C len(vet) == 2\n %7B%0A%09%09\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-06_14-49-29",
+            "content": "@@ -278,17 +278,8 @@\n  == \n-len(vet)/\n 2%7B%0A%09\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-06_14-50-15",
+            "content": "@@ -99,134 +99,19 @@\n  %7B%0A%09\n-str := %22%22%0A%09i := 0%0A%09if i == len(vet) - 1%7B%0A%09%09return %22%5B%22 + str + %22%5D%5Cn%22%0A%09%7D%0A%09str += fmt.Sprint(vet%5Bi%5D)%0A%09i++%0A%09tostr(vet)%0A%09return str\n+%0A%09return %22%22\n %0A%7D%0A%0A\n@@ -258,16 +258,42 @@\n et) == 1\n+ %7C%7C len(vet) == len(vet)/2\n %7B%0A%09%09retu\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-06_14-56-01",
+            "content": "@@ -134,33 +134,16 @@\n vet) - 1\n- %7C%7C len(vet) == 0\n %7B%0A%09%09retu\n@@ -377,25 +377,8 @@\n == 1\n- %7C%7C len(vet) == 0\n %7B%0A%09%09\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-04-06_14-56-55",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc tostr(vet []int) string {\n\tstr := \"\"\n\ti := 0\n\tif i == len(vet) - 1 || len(vet) == 0{\n\t\treturn \"[\" + str + \"]\\n\"\n\t}\n\tstr += fmt.Sprint(vet[i])\n\ti++\n\ttostr(vet)\n\treturn str\n}\n\nfunc tostrrev(vet []int) string {\n\t_ = vet\n\treturn \"\"\n}\n\n// reverse: inverte os elementos do slice\nfunc reverse(vet []int) []int {\n\tif len(vet) == 1 || len(vet) == 0{\n\t\treturn vet\n\t}\n\tfor v := range vet{\n\t\tvet[v], vet[len(vet) - v] = vet[len(vet) - v], vet[v]\n\t}\n\treverse(vet)\n\treturn vet\n}\n\n// sum: soma dos elementos do slice\nfunc sum(vet []int) int {\n\t_ = vet\n\treturn 0\n}\n\n// mult: produto dos elementos do slice\nfunc mult(vet []int) int {\n\t_ = vet\n\treturn 0\n}\n\n// min: retorna o \u00edndice e valor do menor valor\n// crie uma fun\u00e7\u00e3o recursiva interna do modelo\n// var rec func(v []int) (int, int)\n// para fazer uma recurs\u00e3o que retorna valor e \u00edndice\nfunc min(vet []int) int {\n\t_ = vet\n\treturn 0\n}\n\nfunc main() {\n\tvar vet []int\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(\"$\" + line)\n\n\t\tswitch args[0] {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"read\":\n\t\t\tvet = nil\n\t\t\tfor _, arg := range args[1:] {\n\t\t\t\tif val, err := strconv.Atoi(arg); err == nil {\n\t\t\t\t\tvet = append(vet, val)\n\t\t\t\t}\n\t\t\t}\n\t\tcase \"tostr\":\n\t\t\tfmt.Println(tostr(vet))\n\t\tcase \"torev\":\n\t\t\tfmt.Println(tostrrev(vet))\n\t\tcase \"reverse\":\n\t\t\treverse(vet)\n\t\tcase \"sum\":\n\t\t\tfmt.Println(sum(vet))\n\t\tcase \"mult\":\n\t\t\tfmt.Println(mult(vet))\n\t\tcase \"min\":\n\t\t\tfmt.Println(min(vet))\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "98"
+        }
+    ]
+}
