@@ -1,0 +1,35 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func randInt(min, max int) int {
+	return min + rand.Intn(max-min+1)
+}
+
+func embua(pen *Pen, dis float64){
+	ang := 90.0
+	if(dis < 5){
+		return
+	}
+	pen.SetRGB(float64(randInt(100, 200)), float64(randInt(100, 200)), float64(randInt(100, 200)))
+	pen.Walk(dis)
+	pen.Right(ang)
+	
+	embua(pen, dis - 5)
+	
+	
+}
+
+func main() {
+	pen := NewPen(500, 500)
+	pen.SetPosition(50, 50)
+	pen.SetHeading(0)
+	pen.SetLineWidth(5)
+	embua(pen, 400.0)
+	
+	pen.SavePNG("tree.png")
+	fmt.Println("PNG file created successfully.")
+}
