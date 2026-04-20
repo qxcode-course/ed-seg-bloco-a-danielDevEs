@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-20_08-53-02",
+            "content": "@@ -97,11 +97,11 @@\n (b, \n-a%25b\n+b%25a\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-20_08-53-28",
+            "content": "@@ -97,11 +97,11 @@\n (b, \n-b%25a\n+a%25b\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-20_08-54-19",
+            "content": "@@ -90,17 +90,17 @@\n urn mdc(\n-a\n+b\n , b%25a)%0A%7D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-20_08-55-13",
+            "content": "@@ -95,13 +95,13 @@\n dc(a\n-%25b\n , b\n+%25a\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-20_08-55-48",
+            "content": "@@ -97,22 +97,8 @@\n (a%25b\n- + (b * (a/b))\n , b)\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-20_08-56-20",
+            "content": "@@ -61,9 +61,10 @@\n f(a \n-%3E\n+%3C=\n  0)%7B\n@@ -95,12 +95,26 @@\n dc(a\n+%25b + (b * (a/b))\n , \n-a%25\n b)%0A%7D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-20_08-57-41",
+            "content": "@@ -61,10 +61,9 @@\n f(a \n-%3C=\n+%3E\n  0)%7B\n@@ -89,17 +89,17 @@\n urn mdc(\n-b\n+a\n , a%25b)%0A%7D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-20_09-00-35",
+            "content": "@@ -59,11 +59,11 @@\n %09if(\n-b =\n+a %3C\n = 0)\n@@ -73,17 +73,17 @@\n %09return \n-a\n+b\n %0A%09%7D%0A%09ret\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-20_09-01-48",
+            "content": "@@ -55,27 +55,8 @@\n t %7B%0A\n-%09fmt.Println(a, b)%0A\n %09if(\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-20_09-03-24",
+            "content": "@@ -51,16 +51,35 @@\n ) int %7B%0A\n+%09fmt.Println(a, b)%0A\n %09if(b ==\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-20_09-04-33",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) int {\n\tif(b == 0){\n\t\treturn a\n\t}\n\treturn mdc(b, a%b)\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n",
+            "lines": "18"
+        }
+    ]
+}
