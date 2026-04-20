@@ -15,8 +15,8 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@backtrack
 - ed@rec
+- ed@backtrack
 flags:
   inbox: all
   panel: graph
