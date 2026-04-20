@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-20_09-06-57",
+            "content": "@@ -270,17 +270,17 @@\n mento*0.\n-2\n+5\n , x, y)%0A\n@@ -323,14 +323,12 @@\n ento\n- * 0.2\n+*0.5\n , x,\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-20_09-07-29",
+            "content": "@@ -270,17 +270,17 @@\n mento*0.\n-7\n+2\n , x, y)%0A\n@@ -324,17 +324,17 @@\n nto * 0.\n-7\n+2\n , x, y)%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-20_09-07-37",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc trigo(pen *Pen, comprimento float64, x, y float64){\n\tif comprimento < 10{\n\t\treturn\n\t}\n\tpen.Walk(comprimento)\n\t\t\t\t\n\tpen.Right(40)\n\ttrigo(pen, comprimento*0.7, x, y)\n\t\t\n\tpen.Left(80)\n\ttrigo(pen, comprimento * 0.7, x, y)\n\t\t\n\tpen.Right(40)\n\tpen.Walk(-comprimento)\n}\n\nfunc main() {\n\tpen := NewPen(1500, 1500)\n\tpen.SetPosition(750, 1500)\n\tpen.SetHeading(90)\n\t\n\ttrigo(pen, 400, 550, 550)\n\t\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "37"
+        }
+    ]
+}

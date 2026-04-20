@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func randInt(min, max int) int {
+	return min + rand.Intn(max-min+1)
+}
+
+func blossom(pen *Pen, comprimento float64){
+	if comprimento < 1{
+		return
+	}
+	for range 5{
+		pen.Walk(comprimento)
+		pen.Right(72)
+		pen.Walk(-comprimento)
+		blossom(pen, comprimento*0.35)
+	}
+}
+
+func main() {
+	pen := NewPen(1500, 1500)
+	pen.SetPosition(750, 1000)
+	pen.SetHeading(90)
+	
+	blossom(pen, 400)
+	
+	pen.SavePNG("tree.png")
+	fmt.Println("PNG file created successfully.")
+}

@@ -1,0 +1,41 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func randInt(min, max int) int {
+	return min + rand.Intn(max-min+1)
+}
+
+func quadradoso(pen *Pen, lado float64, x, y float64){
+	if lado < 1{
+		return
+	}
+	pen.SetPosition(x, y)
+	for range 4{
+		pen.Walk(lado)
+		pen.Right(90)
+	}
+	lado5 := lado / 5
+	x1, y1 := x + lado - lado5, y - lado5
+	x2, y2 := x + lado - lado5, y + lado - lado5
+	x3, y3 := x - lado5, y + lado - lado5
+	x4, y4 := x - lado5, y - lado5
+	quadradoso(pen, lado * 0.4, x1, y1)
+	quadradoso(pen, lado * 0.4, x2, y2)
+	quadradoso(pen, lado * 0.4, x3, y3)
+	quadradoso(pen, lado * 0.4, x4, y4)
+}
+
+func main() {
+	pen := NewPen(1500, 1500)
+	pen.SetPosition(750, 750)
+	pen.SetHeading(0)
+	
+	quadradoso(pen, 700, 375, 400)
+	
+	pen.SavePNG("tree.png")
+	fmt.Println("PNG file created successfully.")
+}

@@ -512,8 +512,418 @@
         },
         {
             "label": "2026-04-11_15-20-12",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc embua(pen *Pen, dis float64){\n\tang := 90.0\n\tif(dis < 5){\n\t\treturn\n\t}\n\tpen.SetRGB(float64(randInt(100, 200)), float64(randInt(100, 200)), float64(randInt(100, 200)))\n\tpen.Walk(dis)\n\tpen.Right(ang)\n\t\n\tembua(pen, dis - 5)\n\t\n\t\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)\n\tpen.SetPosition(50, 50)\n\tpen.SetHeading(0)\n\tpen.SetLineWidth(5)\n\tembua(pen, 400.0)\n\t\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -115,21 +115,21 @@\n %7D%0A%0Afunc \n-trigo\n+embua\n (pen *Pe\n@@ -131,27 +131,19 @@\n n *Pen, \n-comprimento\n+dis\n  float64\n@@ -150,27 +150,32 @@\n )%7B%0A%09\n-if comprimento %3C 10\n+ang := 90.0%0A%09if(dis %3C 5)\n %7B%0A%09%09\n@@ -189,87 +189,118 @@\n %09%7D%0A%09\n-for range 5%7B%0A%09%09pen.Walk(comprimento)%0A%09%09trigo(pen, comprimento*0.5\n+pen.SetRGB(float64(randInt(100, 200)), float64(randInt(100, 200)), float64(randInt(100, 200))\n )%0A\n-%09\n %09pen.\n-Up(\n+Walk(dis\n )%0A\n-%09\n %09pen\n@@ -310,52 +310,39 @@\n ght(\n-72)%0A%09%09pen.Walk(-comprimento)%0A%09%09pen.Down()\n+ang)%0A%09%0A%09embua(pen, dis - 5)%0A%09\n %0A%09\n-%7D\n %0A%7D%0A%0A\n@@ -374,15 +374,13 @@\n Pen(\n-1\n 500, \n-1\n 500)\n@@ -401,17 +401,14 @@\n ion(\n-7\n 50, \n-1\n 50\n-0\n )%0A%09p\n@@ -425,20 +425,38 @@\n ing(\n-9\n 0)%0A%09\n-%0A%09trigo\n+pen.SetLineWidth(5)%0A%09embua\n (pen\n@@ -460,16 +460,18 @@\n pen, 400\n+.0\n )%0A%09%0A%09pen\n",
             "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-13-11",
+            "content": "@@ -429,17 +429,17 @@\n go(pen, \n-1\n+4\n 00)%0A%09%0A%09p\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-13-43",
+            "content": "@@ -389,18 +389,19 @@\n on(750, \n-75\n+150\n 0)%0A%09pen.\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-14-03",
+            "content": "@@ -231,61 +231,61 @@\n )%0A%09%09\n-pen.Up()%0A%09%09pen.Right(72)%0A%09%09trigo(pen, comprimento*0.5\n+trigo(pen, comprimento*0.5)%0A%09%09pen.Up()%0A%09%09pen.Right(72\n )%0A%09%09\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-14-26",
+            "content": "@@ -256,33 +256,8 @@\n 72)%0A\n-%09%09pen.Walk(-comprimento)%0A\n %09%09tr\n@@ -282,16 +282,41 @@\n to*0.5)%0A\n+%09%09pen.Walk(-comprimento)%0A\n %09%09pen.Do\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-15-12",
+            "content": "@@ -283,11 +283,8 @@\n )%0A%09%09\n-// \n trig\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-15-33",
+            "content": "@@ -235,27 +235,27 @@\n pen.\n-Right(72)%0A%09%09pen.Up(\n+Up()%0A%09%09pen.Right(72\n )%0A%09%09\n@@ -283,23 +283,11 @@\n )%0A%09%09\n-pen.Down()%0A%09%7D%0A%09\n+// \n trig\n@@ -310,16 +310,32 @@\n to*0.5)%0A\n+%09%09pen.Down()%0A%09%7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-16-10",
+            "content": "@@ -245,38 +245,8 @@\n 72)%0A\n-%09%09trigo(pen, comprimento*0.5)%0A\n %09%09pe\n@@ -293,16 +293,45 @@\n wn()%0A%09%7D%0A\n+%09trigo(pen, comprimento*0.5)%0A\n %7D%0A%0Afunc \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-16-35",
+            "content": "@@ -268,17 +268,17 @@\n mento*0.\n-2\n+5\n )%0A%09%09pen.\n@@ -428,17 +428,17 @@\n go(pen, \n-4\n+1\n 00)%0A%09%0A%09p\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-16-51",
+            "content": "@@ -225,16 +225,32 @@\n imento)%0A\n+%09%09pen.Right(72)%0A\n %09%09trigo(\n@@ -271,32 +271,16 @@\n to*0.2)%0A\n-%09%09pen.Right(72)%0A\n %09%09pen.Up\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-17-06",
+            "content": "@@ -410,17 +410,16 @@\n Heading(\n--\n 90)%0A%09%0A%09t\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-17-25",
+            "content": "@@ -410,16 +410,17 @@\n Heading(\n+-\n 90)%0A%09%0A%09t\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-17-31",
+            "content": "@@ -271,16 +271,65 @@\n ght(72)%0A\n+%09%09pen.Up()%0A%09%09pen.Walk(-comprimento)%0A%09%09pen.Down()%0A\n %09%7D%0A%7D%0A%0Afu\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-18-12",
+            "content": "@@ -229,24 +229,8 @@\n to)%0A\n-%09%09pen.Right(72)%0A\n %09%09tr\n@@ -255,16 +255,32 @@\n to*0.2)%0A\n+%09%09pen.Right(72)%0A\n %09%7D%0A%7D%0A%0Afu\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-20_09-18-21",
+            "content": "@@ -275,33 +275,8 @@\n .2)%0A\n-%09%09pen.Walk(-comprimento)%0A\n %09%7D%0A%7D\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-20_09-18-42",
+            "content": "@@ -245,33 +245,8 @@\n 72)%0A\n-%09%09pen.Walk(-comprimento)%0A\n %09%09tr\n@@ -271,16 +271,41 @@\n to*0.2)%0A\n+%09%09pen.Walk(-comprimento)%0A\n %09%7D%0A%7D%0A%0Afu\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-20_09-19-45",
+            "content": "@@ -172,16 +172,17 @@\n ento %3C 1\n+0\n %7B%0A%09%09retu\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-20_09-20-04",
+            "content": "@@ -292,17 +292,17 @@\n mento*0.\n-4\n+2\n )%0A%09%7D%0A%7D%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-20_09-20-15",
+            "content": "@@ -296,9 +296,9 @@\n o*0.\n-3\n+4\n )%0A%09%7D\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-20_09-20-25",
+            "content": "@@ -293,17 +293,16 @@\n ento*0.3\n-5\n )%0A%09%7D%0A%7D%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-20_09-20-32",
+            "content": "@@ -369,10 +369,10 @@\n 50, \n-10\n+75\n 0)%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-20_09-20-51",
+            "content": "@@ -368,17 +368,16 @@\n 750, 100\n-0\n )%0A%09pen.S\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-20_09-20-58",
+            "content": "@@ -117,18 +117,19 @@\n %0Afunc tr\n-ee\n+igo\n (pen *Pe\n@@ -147,22 +147,8 @@\n nto \n-float64, x, y \n floa\n@@ -172,17 +172,16 @@\n ento %3C 1\n-0\n %7B%0A%09%09retu\n@@ -186,16 +186,31 @@\n turn%0A%09%7D%0A\n+%09for range 5%7B%0A%09\n %09pen.Wal\n@@ -229,12 +229,8 @@\n o)%0A%09\n-%09%09%09%0A\n %09pen\n@@ -240,140 +240,70 @@\n ght(\n-40)%0A%09tree(pen, comprimento*0.7, x, y)%0A%09%09%0A%09pen.Left(80)%0A%09tree(pen, comprimento * 0.7, x, y)%0A%09%09%0A%09pen.Right(40)%0A%09pen.Walk(-comprimento)\n+72)%0A%09%09pen.Walk(-comprimento)%0A%09%09trigo(pen, comprimento*0.35)%0A%09%7D\n %0A%7D%0A%0A\n@@ -362,25 +362,25 @@\n ition(750, 1\n-5\n+0\n 00)%0A%09pen.Set\n@@ -396,18 +396,19 @@\n 0)%0A%09%0A%09tr\n-ee\n+igo\n (pen, 40\n@@ -412,18 +412,8 @@\n  400\n-, 550, 550\n )%0A%09%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-20_09-22-59",
+            "content": "@@ -130,19 +130,26 @@\n n *Pen, \n-lad\n+compriment\n o float6\n@@ -170,19 +170,26 @@\n 4)%7B%0A%09if \n-lad\n+compriment\n o %3C 10%7B%0A\n@@ -205,40 +205,141 @@\n %09%7D%0A%09\n-for range 4%7B\n+pen.Walk(comprimento)%0A%09%09%09%09%0A%09pen.Right(40)%0A%09tree(pen, comprimento*0.7, x, y)\n %0A%09%09\n+%0A%09\n pen.\n-Walk(lado\n+Left(80)%0A%09tree(pen, comprimento * 0.7, x, y\n )%0A%09%09\n+%0A%09\n pen.\n@@ -348,14 +348,35 @@\n ght(\n-9\n+4\n 0)%0A%09\n-%7D\n+pen.Walk(-comprimento)\n %0A%7D%0A%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-20_09-24-08",
+            "content": "@@ -302,18 +302,19 @@\n on(750, \n-75\n+150\n 0)%0A%09pen.\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-20_09-24-22",
+            "content": "@@ -345,22 +345,22 @@\n n, 400, \n-7\n+5\n 50, \n-7\n+5\n 50)%0A%09%0A%09p\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-20_09-24-35",
+            "content": "@@ -301,14 +301,14 @@\n ion(\n-5\n+7\n 50, \n-5\n+7\n 50)%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-20_09-24-45",
+            "content": "@@ -306,9 +306,9 @@\n 50, \n-8\n+5\n 50)%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-20_09-24-52",
+            "content": "@@ -302,18 +302,18 @@\n on(550, \n-90\n+85\n 0)%0A%09pen.\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-20_09-25-01",
+            "content": "@@ -303,17 +303,17 @@\n n(550, 9\n-5\n+0\n 0)%0A%09pen.\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-20_09-25-07",
+            "content": "@@ -115,26 +115,20 @@\n %7D%0A%0Afunc \n-quadradoso\n+tree\n (pen *Pe\n@@ -237,121 +237,11 @@\n 90)%0A\n+\n %09%7D%0A\n-%09ladoquatro := lado / 4%0A%09x1, y1 := x + lado - ladoquatro, y - ladoquatro%0A%09quadradoso(pen, lado * 0.4, x1, y1)%0A\n %7D%0A%0Af\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-20_09-27-54",
+            "content": "@@ -446,26 +446,20 @@\n (90)%0A%09%0A%09\n-quadradoso\n+tree\n (pen, 40\n@@ -461,22 +461,22 @@\n n, 400, \n-5\n+7\n 50, \n-9\n+7\n 50)%0A%09%0A%09p\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-20_09-28-10",
+            "content": "@@ -439,16 +439,17 @@\n Heading(\n+9\n 0)%0A%09%0A%09qu\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-20_09-28-24",
+            "content": "@@ -417,14 +417,14 @@\n ion(\n-7\n+5\n 50, \n-7\n+9\n 50)%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-20_09-28-36",
+            "content": "@@ -196,31 +196,8 @@\n %0A%09%7D%0A\n-%09pen.SetPosition(x, y)%0A\n %09for\n@@ -466,22 +466,22 @@\n n, 400, \n-7\n+5\n 50, \n-7\n+9\n 50)%0A%09%0A%09p\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-20_09-28-59",
+            "content": "@@ -341,10 +341,8 @@\n atro\n-/2\n %0A%09qu\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-29-36",
+            "content": "@@ -337,16 +337,18 @@\n doquatro\n+/2\n %0A%09quadra\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-30-02",
+            "content": "@@ -287,17 +287,17 @@\n  lado / \n-5\n+4\n %0A%09x1, y1\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-31-15",
+            "content": "@@ -343,307 +343,42 @@\n ro%0A%09\n-x2, y2 := x + lado - ladoquatro, y + lado + ladoquatro%0A%09x3, y3 := x + lado - ladoquatro, y - ladoquatro%0A%09x4, y4 := x + lado - ladoquatro, y - ladoquatro%0A%09quadradoso(pen, lado * 0.4, x1, y1)%0A%09quadradoso(pen, lado * 0.4, x2, y2)%0A%09quadradoso(pen, lado * 0.4, x3, y3)%0A%09quadradoso(pen, lado * 0.4, x4, y4\n+quadradoso(pen, lado * 0.4, x1, y1\n )%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-20_09-32-36",
+            "content": "@@ -373,33 +373,33 @@\n uatro, y + lado \n--\n++\n  ladoquatro%0A%09x3,\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-32-48",
+            "content": "@@ -270,17 +270,22 @@\n %09%7D%0A%09lado\n-5\n+quatro\n  := lado\n@@ -307,33 +307,38 @@\n  x + lado - lado\n-5\n+quatro\n , y - lado5%0A%09x2,\n@@ -331,17 +331,22 @@\n y - lado\n-5\n+quatro\n %0A%09x2, y2\n@@ -360,25 +360,30 @@\n  lado - lado\n-5\n+quatro\n , y + lado -\n@@ -387,17 +387,22 @@\n o - lado\n-5\n+quatro\n %0A%09x3, y3\n@@ -411,33 +411,43 @@\n = x \n--\n++\n  lado\n-5, y + lado\n+ - ladoquatro, y\n  - lado\n-5\n+quatro\n %0A%09x4\n@@ -469,17 +469,22 @@\n o - lado\n-5\n+quatro\n , y - la\n@@ -485,17 +485,22 @@\n y - lado\n-5\n+quatro\n %0A%09quadra\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-33-48",
+            "content": "@@ -417,24 +417,31 @@\n x4, y4 := x \n++ lado \n - lado5, y -\n@@ -440,23 +440,16 @@\n do5, y -\n- lado -\n  lado5%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-34-14",
+            "content": "@@ -439,17 +439,17 @@\n  - lado \n-+\n+-\n  lado5%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-34-23",
+            "content": "@@ -428,24 +428,31 @@\n  - lado5, y \n+- lado \n + lado5%0A%09qua\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-34-54",
+            "content": "@@ -424,33 +424,33 @@\n := x - lado5, y \n--\n++\n  lado5%0A%09quadrado\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-35-03",
+            "content": "@@ -697,17 +697,17 @@\n so(pen, \n-7\n+4\n 00, 750,\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-35-26",
+            "content": "@@ -177,16 +177,17 @@\n lado %3C 1\n+0\n %7B%0A%09%09retu\n@@ -706,15 +706,15 @@\n 00, \n+7\n 5\n-0\n 0, \n+7\n 5\n-0\n 0)%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-35-46",
+            "content": "@@ -701,17 +701,17 @@\n n, 700, \n-3\n+5\n 00, 500)\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-36-04",
+            "content": "@@ -702,17 +702,17 @@\n , 700, 3\n-5\n+0\n 0, 500)%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-36-12",
+            "content": "@@ -706,17 +706,17 @@\n 0, 350, \n-4\n+5\n 00)%0A%09%0A%09p\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-36-21",
+            "content": "@@ -702,18 +702,18 @@\n , 700, 3\n-7\n 5\n+0\n , 400)%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-36-33",
+            "content": "@@ -115,27 +115,25 @@\n %7D%0A%0Afunc \n-triangulinh\n+quadrados\n o(pen *P\n@@ -225,17 +225,17 @@\n r range \n-3\n+4\n %7B%0A%09%09pen.\n@@ -261,15 +261,337 @@\n ght(\n-120)%0A%09%7D\n+90)%0A%09%7D%0A%09lado5 := lado / 5%0A%09x1, y1 := x + lado - lado5, y - lado5%0A%09x2, y2 := x + lado - lado5, y + lado - lado5%0A%09x3, y3 := x - lado5, y + lado - lado5%0A%09x4, y4 := x - lado5, y - lado5%0A%09quadradoso(pen, lado * 0.4, x1, y1)%0A%09quadradoso(pen, lado * 0.4, x2, y2)%0A%09quadradoso(pen, lado * 0.4, x3, y3)%0A%09quadradoso(pen, lado * 0.4, x4, y4)\n %0A%7D%0A%0A\n@@ -684,19 +684,17 @@\n %0A%09%0A%09\n-triangulinh\n+quadrados\n o(pe\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-38-50",
+            "content": "@@ -143,16 +143,30 @@\n n, lado \n+float64, x, y \n float64)\n@@ -167,16 +167,16 @@\n oat64)%7B%0A\n-\n %09if lado\n@@ -193,16 +193,39 @@\n turn%0A%09%7D%0A\n+%09pen.SetPosition(x, y)%0A\n %09for ran\n@@ -268,38 +268,8 @@\n 20)%0A\n-%09%09triangulinho(pen, lado*0.5)%0A\n %09%7D%0A%7D\n@@ -359,16 +359,16 @@\n ng(0)%0A%09%0A\n-\n %09triangu\n@@ -381,16 +381,26 @@\n pen, 700\n+, 375, 400\n )%0A%09%0A%09pen\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-20_09-39-39",
+            "content": "@@ -321,16 +321,17 @@\n osition(\n+7\n 50, 750)\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-20_09-40-04",
+            "content": "@@ -325,10 +325,9 @@\n ion(\n-30\n+5\n 0, 7\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-20_09-40-20",
+            "content": "@@ -321,17 +321,17 @@\n osition(\n-4\n+3\n 00, 750)\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-20_09-40-27",
+            "content": "@@ -326,17 +326,17 @@\n on(400, \n-5\n+7\n 50)%0A%09pen\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-20_09-40-35",
+            "content": "@@ -115,25 +115,27 @@\n %7D%0A%0Afunc \n-quadrados\n+triangulinh\n o(pen *P\n@@ -147,22 +147,8 @@\n ado \n-float64, x, y \n floa\n@@ -183,31 +183,8 @@\n %0A%09%7D%0A\n-%09pen.SetPosition(x, y)%0A\n %09for\n@@ -190,17 +190,17 @@\n r range \n-4\n+3\n %7B%0A%09%09pen.\n@@ -226,337 +226,45 @@\n ght(\n-9\n+12\n 0)%0A%09\n-%7D%0A%09lado5 := lado / 5%0A%09x1, y1 := x + lado - lado5, y - lado5%0A%09x2, y2 := x + lado - lado5, y + lado - lado5%0A%09x3, y3 := x - lado5, y + lado - lado5%0A%09x4, y4 := x - lado5, y - lado5%0A%09quadradoso(pen, lado * 0.4, x1, y1)%0A%09quadradoso(pen, lado * 0.4, x2, y2)%0A%09quadradoso(pen, lado * 0.4, x3, y3)%0A%09quadradoso(pen, lado * 0.4, x4, y4)\n+%09triangulinho(pen, lado*0.5)%0A%09%7D\n %0A%7D%0A%0A\n@@ -325,14 +325,14 @@\n ion(\n-750, 7\n+400, 5\n 50)%0A\n@@ -357,35 +357,27 @@\n %0A%09%0A%09\n-quadradoso(pen, 700, 375, 4\n+triangulinho(pen, 7\n 00)%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-20_09-41-37",
+            "content": "@@ -20,22 +20,16 @@\n t (%0A\n-    \n+%09\n %22fmt%22%0A\n-    \n+%09\n %22mat\n@@ -72,20 +72,17 @@\n ) int %7B%0A\n-    \n+%09\n return m\n@@ -118,25 +118,26 @@\n func quadrad\n-a\n+os\n o(pen *Pen, \n@@ -165,20 +165,17 @@\n oat64)%7B%0A\n-    \n+%09\n if lado \n@@ -183,34 +183,21 @@\n  1%7B%0A\n-        return%0A    %7D%0A%0A    \n+%09%09return%0A%09%7D%0A%09\n pen.\n@@ -214,20 +214,17 @@\n n(x, y)%0A\n-    \n+%09\n for rang\n@@ -228,24 +228,18 @@\n ange 4%7B%0A\n-        \n+%09%09\n pen.Walk\n@@ -249,16 +249,10 @@\n do)%0A\n-        \n+%09%09\n pen.\n@@ -265,78 +265,31 @@\n 90)%0A\n-%0A    %7D%0A    pen.FillSquare(lado, lado)%0A%0A%0A    ladoN\n+%09%7D%0A%09lado5\n  := \n-2*(\n lado / \n-3)%0A    \n+5%0A%09\n x1, \n@@ -290,33 +290,32 @@\n %0A%09x1, y1 := x + \n-(\n lado - ladoN), y\n@@ -313,37 +313,22 @@\n lado\n-N)\n+5\n , y - \n-2*(\n lado\n- - ladoN)%0A    \n+5%0A%09\n x2, \n@@ -329,35 +329,32 @@\n %0A%09x2, y2 := x + \n-4*(\n lado - ladoN), y\n@@ -344,35 +344,31 @@\n  lado - lado\n-N)\n+5\n , y \n-- 2*(\n++ \n lado - ladoN\n@@ -366,23 +366,19 @@\n o - lado\n-N)%0A    \n+5%0A%09\n x3, y3 :\n@@ -385,33 +385,21 @@\n = x \n-+ 4*(lado \n - lado\n-N)\n+5\n , y + \n-(\n lado\n@@ -405,23 +405,19 @@\n o - lado\n-N)%0A    \n+5%0A%09\n x4, y4 :\n@@ -424,285 +424,37 @@\n = x \n-+ 4*(lado - ladoN), y + 4*(lado - ladoN)%0A    x5, y5 := x + (lado - ladoN), y + 4*(lado - ladoN)%0A    x6, y6 := x - 2*(lado - ladoN), y + 4*(lado - ladoN)%0A    x7, y7 := x - 2*(lado - ladoN), y + (lado - ladoN)%0A    x8, y8 := x - 2*(lado - ladoN), y - 2*(lado - ladoN)%0A    \n+- lado5, y - lado5%0A%09\n quadrad\n-a\n+os\n o(pe\n@@ -460,18 +460,22 @@\n en, lado\n-/3\n+ * 0.4\n , x1, y1\n@@ -476,28 +476,26 @@\n x1, y1)%0A\n-    \n+%09\n quadrad\n-a\n+os\n o(pen, l\n@@ -497,18 +497,22 @@\n en, lado\n-/3\n+ * 0.4\n , x2, y2\n@@ -517,160 +517,55 @@\n y2)%0A\n-    \n+%09\n quadrad\n-ao(pen, lado/3, x3, y3)%0A    quadradao(pen, lado/3, x4, y4)%0A    quadradao(pen, lado/3, x5, y5)%0A    quadradao(pen, lado/3, x6, y6)%0A    \n+oso(pen, lado * 0.4, x3, y3)%0A%09\n quadrad\n-a\n+os\n o(pe\n@@ -575,55 +575,23 @@\n lado\n-/3, x7, y7)%0A    quadradao(pen, lado/3, x8, y8)%0A\n+ * 0.4, x4, y4)\n %0A%7D%0A%0A\n@@ -604,20 +604,17 @@\n ain() %7B%0A\n-    \n+%09\n pen := N\n@@ -631,20 +631,17 @@\n , 1500)%0A\n-    \n+%09\n pen.SetP\n@@ -658,20 +658,17 @@\n 0, 750)%0A\n-    \n+%09\n pen.SetH\n@@ -681,48 +681,45 @@\n (0)%0A\n-%0A    \n+%09%0A%09\n quadrad\n-a\n+os\n o(pen, \n-4\n+7\n 00, \n-550, 550)%0A%0A    \n+375, 400)%0A%09%0A%09\n pen.\n@@ -742,12 +742,9 @@\n g%22)%0A\n-    \n+%09\n fmt.\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-20_09-43-40",
+            "content": "@@ -354,16 +354,17 @@\n doN := 2\n+*\n (lado / \n@@ -397,32 +397,33 @@\n  - ladoN), y - 2\n+*\n (lado - ladoN)%0A \n@@ -432,32 +432,33 @@\n  x2, y2 := x + 4\n+*\n (lado - ladoN), \n@@ -454,32 +454,33 @@\n  - ladoN), y - 2\n+*\n (lado - ladoN)%0A \n@@ -489,32 +489,33 @@\n  x3, y3 := x + 4\n+*\n (lado - ladoN), \n@@ -548,24 +548,25 @@\n  y4 := x + 4\n+*\n (lado - lado\n@@ -566,32 +566,33 @@\n  - ladoN), y + 4\n+*\n (lado - ladoN)%0A \n@@ -621,32 +621,33 @@\n  - ladoN), y + 4\n+*\n (lado - ladoN)%0A \n@@ -656,32 +656,33 @@\n  x6, y6 := x - 2\n+*\n (lado - ladoN), \n@@ -686,16 +686,17 @@\n ), y + 4\n+*\n (lado - \n@@ -713,32 +713,33 @@\n  x7, y7 := x - 2\n+*\n (lado - ladoN), \n@@ -772,24 +772,25 @@\n  y8 := x - 2\n+*\n (lado - lado\n@@ -798,16 +798,17 @@\n ), y - 2\n+*\n (lado - \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-20_09-45-05",
+            "content": "@@ -20,16 +20,22 @@\n t (%0A\n-%09\n+    \n %22fmt%22%0A\n-%09\n+    \n %22mat\n@@ -78,17 +78,20 @@\n ) int %7B%0A\n-%09\n+    \n return m\n@@ -124,27 +124,24 @@\n %7D%0A%0Afunc \n-triangulinh\n+quadrada\n o(pen *P\n@@ -160,38 +160,94 @@\n at64\n-)%7B%0A%09if lado %3C 1%7B%0A%09%09return%0A%09%7D%0A%09\n+, x, y float64)%7B%0A    if lado %3C 1%7B%0A        return%0A    %7D%0A%0A    pen.SetPosition(x, y)%0A    \n for \n@@ -256,13 +256,19 @@\n nge \n-3%7B%0A%09%09\n+4%7B%0A        \n pen.\n@@ -278,18 +278,24 @@\n k(lado)%0A\n-%09%09\n+        \n pen.Righ\n@@ -300,45 +300,793 @@\n ght(\n-120)%0A%09%09triangulinho(pen, lado*0.5)%0A%09%7D\n+90)%0A%0A    %7D%0A    pen.FillSquare(lado, lado)%0A%0A%0A    ladoN := 2(lado / 3)%0A    x1, y1 := x + (lado - ladoN), y - 2(lado - ladoN)%0A    x2, y2 := x + 4(lado - ladoN), y - 2(lado - ladoN)%0A    x3, y3 := x + 4(lado - ladoN), y + (lado - ladoN)%0A    x4, y4 := x + 4(lado - ladoN), y + 4(lado - ladoN)%0A    x5, y5 := x + (lado - ladoN), y + 4(lado - ladoN)%0A    x6, y6 := x - 2(lado - ladoN), y + 4(lado - ladoN)%0A    x7, y7 := x - 2(lado - ladoN), y + (lado - ladoN)%0A    x8, y8 := x - 2(lado - ladoN), y - 2(lado - ladoN)%0A    quadradao(pen, lado/3, x1, y1)%0A    quadradao(pen, lado/3, x2, y2)%0A    quadradao(pen, lado/3, x3, y3)%0A    quadradao(pen, lado/3, x4, y4)%0A    quadradao(pen, lado/3, x5, y5)%0A    quadradao(pen, lado/3, x6, y6)%0A    quadradao(pen, lado/3, x7, y7)%0A    quadradao(pen, lado/3, x8, y8)%0A\n %0A%7D%0A%0A\n@@ -1099,17 +1099,20 @@\n ain() %7B%0A\n-%09\n+    \n pen := N\n@@ -1129,17 +1129,20 @@\n , 1500)%0A\n-%09\n+    \n pen.SetP\n@@ -1153,19 +1153,22 @@\n ion(\n-400, 5\n+750, 7\n 50)%0A\n-%09\n+    \n pen.\n@@ -1185,37 +1185,48 @@\n (0)%0A\n-%09%0A%09triangulinho(pen, 700)%0A%09%0A%09\n+%0A    quadradao(pen, 400, 550, 550)%0A%0A    \n pen.\n@@ -1249,9 +1249,12 @@\n g%22)%0A\n-%09\n+    \n fmt.\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-20_09-45-41",
+            "content": "@@ -142,27 +142,13 @@\n en, \n-rai\n+lad\n o \n-float64, x, y \n floa\n@@ -157,19 +157,19 @@\n 4)%7B%0A%09if \n-rai\n+lad\n o %3C 1%7B%0A%09\n@@ -183,32 +183,88 @@\n %0A%09%7D%0A\n+%09for range 3%7B\n %0A\n+%09\n %09pen.\n-DrawCircle(raio\n+Walk(lado)%0A%09%09pen.Right(120)%0A%09%09triangulinho(pen, lado*0.5\n )%0A%09\n+%7D\n %0A%7D%0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-20_09-46-29",
+            "content": "@@ -336,18 +336,8 @@\n  700\n-, 400, 500\n )%0A%09%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-20_09-46-42",
+            "content": "@@ -329,17 +329,17 @@\n ho(pen, \n-1\n+7\n 00, 400,\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-20_09-46-49",
+            "content": "@@ -338,15 +338,15 @@\n 00, \n-75\n+40\n 0, \n-7\n 5\n+0\n 0)%0A%09\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-20_09-46-59",
+            "content": "@@ -198,32 +198,8 @@\n %09%7D%0A%0A\n-%09pen.SetPosition(x, y)%0A%0A\n %09pen\n@@ -262,16 +262,43 @@\n , 1500)%0A\n+%09pen.SetPosition(400, 550)%0A\n %09pen.Set\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-20_09-47-15",
+            "content": "@@ -199,454 +199,52 @@\n %7D%0A%0A%09\n-func bolabola(pen *Pen, raio float64, x, y float64)%7B%0A    if raio %3C 5 %7B%0A        return%0A    %7D%0A%0A    ang := 0.0%0A%0A    for i := 0; i %3C 6; i++ %7B%0A        theta := ang * math.Pi / 180.0%0A%0A        newX := x + raio * math.Cos(theta)%0A        newY := y + raio * math.Sin(theta)%0A%0A        pen.Up()%0A        pen.SetPosition(newX, newY)%0A        pen.Down()%0A%0A        pen.DrawCircle(raio * 0.4)%0A%0A        bolabola(pen, raio*0.4, newX, newY)%0A%0A        ang += 60.0%0A    %7D%0A%7D\n+pen.SetPosition(x, y)%0A%0A%09pen.DrawCircle(raio)\n %0A%09%0A%7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-20_09-49-42",
+            "content": "@@ -200,21 +200,24 @@\n %0A%0A%09func \n-floco\n+bolabola\n (pen *Pe\n@@ -714,12 +714,19 @@\n %0A%09%0A%09\n-floc\n+triangulinh\n o(pe\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-20_09-49-56",
+            "content": "@@ -574,21 +574,24 @@\n         \n-floco\n+bolabola\n (pen, ra\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-20_09-50-03",
+            "content": "@@ -111,28 +111,35 @@\n +1)%0A%7D%0A%0Afunc \n-floc\n+triangulinh\n o(pen *Pen, \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-20_09-50-18",
+            "content": "@@ -160,16 +160,94 @@\n oat64)%7B%0A\n+%09if raio %3C 1%7B%0A%09%09return%0A%09%7D%0A%0A%09func floco(pen *Pen, raio float64, x, y float64)%7B%0A\n     if r\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-20_09-50-31",
+            "content": "@@ -553,16 +553,19 @@\n   %7D%0A%7D%0A%09%0A\n+%7D%0A%0A\n func mai\n@@ -621,54 +621,8 @@\n 0)%0A%09\n-pen.SetPosition(750, 750)%0A%09pen.DrawCircle(100)\n %0A%09fl\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-20_09-51-04",
+            "content": "@@ -29,16 +29,21 @@\n %22%0A%09%22math\n+/rand\n %22%0A)%0A%0Afun\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-20_09-51-12",
+            "content": "@@ -35,21 +35,8 @@\n th%22%0A\n-%09%22math/rand%22%0A\n )%0A%0Af\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-20_09-51-23",
+            "content": "@@ -236,15 +236,26 @@\n for \n-range 6\n+i := 0; i %3C 6; i++\n  %7B%0A \n@@ -664,17 +664,17 @@\n wCircle(\n-3\n+1\n 00)%0A%09flo\n@@ -685,9 +685,9 @@\n en, \n-3\n+1\n 00, \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-20_09-52-06",
+            "content": "@@ -508,9 +508,9 @@\n o*0.\n-2\n+4\n , ne\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-20_09-52-24",
+            "content": "@@ -474,17 +474,17 @@\n aio * 0.\n-2\n+4\n )%0A%0A     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-20_09-52-30",
+            "content": "@@ -474,17 +474,17 @@\n aio * 0.\n-3\n+2\n )%0A%0A     \n@@ -504,17 +504,17 @@\n  raio*0.\n-3\n+2\n , newX, \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-20_09-52-43",
+            "content": "@@ -182,17 +182,17 @@\n  raio %3C \n-1\n+5\n  %7B%0A     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-20_09-53-15",
+            "content": "@@ -475,17 +475,16 @@\n io * 0.3\n-5\n )%0A%0A     \n@@ -505,17 +505,16 @@\n raio*0.3\n-5\n , newX, \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-20_09-53-28",
+            "content": "@@ -182,17 +182,17 @@\n  raio %3C \n-5\n+1\n  %7B%0A     \n@@ -475,17 +475,17 @@\n io * 0.3\n-3\n+5\n )%0A%0A     \n@@ -506,17 +506,17 @@\n raio*0.3\n-3\n+5\n , newX, \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-20_09-53-44",
+            "content": "@@ -475,17 +475,17 @@\n io * 0.3\n-4\n+3\n )%0A%0A     \n@@ -506,17 +506,17 @@\n raio*0.3\n-4\n+3\n , newX, \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-20_09-53-55",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc floco(pen *Pen, raio float64, x, y float64){\n    if raio < 5 {\n        return\n    }\n\n    ang := 0.0\n\n    for range 6 {\n        theta := ang * math.Pi / 180.0\n\n        newX := x + raio * math.Cos(theta)\n        newY := y + raio * math.Sin(theta)\n\n        pen.Up()\n        pen.SetPosition(newX, newY)\n        pen.Down()\n\n        pen.DrawCircle(raio * 0.34)\n\n        floco(pen, raio*0.34, newX, newY)\n\n        ang += 60.0\n    }\n}\n\t\nfunc main() {\n\tpen := NewPen(1500, 1500)\n\tpen.SetHeading(0)\n\tpen.SetPosition(750, 750)\n\tpen.DrawCircle(300)\n\tfloco(pen, 300, 750, 750)\n\t\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "47"
         }
     ]
 }

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-20_09-11-57",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc trigo(pen *Pen, comprimento float64){\n\tif comprimento < 10{\n\t\treturn\n\t}\n\tfor range 5{\n\t\tpen.Walk(comprimento)\n\t\ttrigo(pen, comprimento)\n\t\tpen.Up()\n\t\tpen.Right(72)\n\t\tpen.Walk(-comprimento)\n\t\tpen.Down()\n\t}\n}\n\nfunc main() {\n\tpen := NewPen(1500, 1500)\n\tpen.SetPosition(750, 1500)\n\tpen.SetHeading(90)\n\t\n\ttrigo(pen, 400)\n\t\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "35"
+        }
+    ]
+}

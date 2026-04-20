@@ -1,0 +1,55 @@
+package main
+
+import (
+    "fmt"
+    "math/rand"
+)
+
+func randInt(min, max int) int {
+    return min + rand.Intn(max-min+1)
+}
+
+func quadradao(pen *Pen, lado float64, x, y float64){
+    if lado < 1{
+        return
+    }
+
+    pen.SetPosition(x, y)
+    for range 4{
+        pen.Walk(lado)
+        pen.Right(90)
+
+    }
+    pen.FillSquare(lado, lado)
+
+
+    ladoN := 2*(lado / 3)
+    x1, y1 := x + (lado - ladoN), y - 2*(lado - ladoN)
+    x2, y2 := x + 4*(lado - ladoN), y - 2*(lado - ladoN)
+    x3, y3 := x + 4*(lado - ladoN), y + (lado - ladoN)
+    x4, y4 := x + 4*(lado - ladoN), y + 4*(lado - ladoN)
+    x5, y5 := x + (lado - ladoN), y + 4*(lado - ladoN)
+    x6, y6 := x - 2*(lado - ladoN), y + 4*(lado - ladoN)
+    x7, y7 := x - 2*(lado - ladoN), y + (lado - ladoN)
+    x8, y8 := x - 2*(lado - ladoN), y - 2*(lado - ladoN)
+    quadradao(pen, lado/3, x1, y1)
+    quadradao(pen, lado/3, x2, y2)
+    quadradao(pen, lado/3, x3, y3)
+    quadradao(pen, lado/3, x4, y4)
+    quadradao(pen, lado/3, x5, y5)
+    quadradao(pen, lado/3, x6, y6)
+    quadradao(pen, lado/3, x7, y7)
+    quadradao(pen, lado/3, x8, y8)
+
+}
+
+func main() {
+    pen := NewPen(1500, 1500)
+    pen.SetPosition(750, 750)
+    pen.SetHeading(0)
+
+    quadradao(pen, 400, 550, 550)
+
+    pen.SavePNG("tree.png")
+    fmt.Println("PNG file created successfully.")
+}
