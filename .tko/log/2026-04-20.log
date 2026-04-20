@@ -1,0 +1,46 @@
+2026-04-20 07:55:08, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:55:12, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:55:13, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:55:14, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:55:15, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:55:15, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:55:16, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:34, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:37, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:37, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:37, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:38, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:38, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:38, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:38, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:39, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:39, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:39, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:40, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:40, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:41, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:56:48, MOVE, v:1, k:ed@priminhos, mode:DOWN
+2026-04-20 07:56:50, MOVE, v:1, k:ed@priminhos, mode:PICK
+2026-04-20 07:57:13, MOVE, v:1, k:ed@priminhos, mode:BACK
+2026-04-20 07:57:17, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-20 07:57:21, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-20 07:57:17, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-04-20 07:57:17, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-04-20 07:55:08, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-04-20 07:56:41, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-04-20 07:55:50, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-04-20 07:56:48, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-04-20 07:56:48, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-04-20 07:56:48, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-04-20 07:58:55, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-04-20 08:03:52, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:23
+2026-04-20 08:03:38, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-04-20 08:03:44, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-04-20 08:04:43, EXEC, v:1, k:ed@resto, mode:FULL, rate:0
+2026-04-20 08:04:44, EXEC, v:1, k:ed@resto, mode:FREE
+2026-04-20 08:39:42, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-20 08:39:44, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:23
+2026-04-20 08:40:50, EXEC, v:1, k:ed@resto, mode:FULL, size:24, fail:COMP
+2026-04-20 08:40:57, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:24
+2026-04-20 08:41:09, EXEC, v:1, k:ed@resto, mode:FULL, rate:100, size:24
+2026-04-20 08:41:20, MOVE, v:1, k:ed@resto, mode:BACK

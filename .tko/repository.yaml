@@ -14,13 +14,14 @@ sources:
   writeable: false
   quests: null
   tasks: null
-expanded: []
+expanded:
+- ed@rec
 flags:
-  inbox: inbox
-  panel: help
-  show_panel: 'true'
+  inbox: all
+  panel: graph
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ''
-selected_index: 0
+selected: ed@resto
+selected_index: 6

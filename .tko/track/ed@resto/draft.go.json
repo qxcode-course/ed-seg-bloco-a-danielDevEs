@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-20_08-03-52",
+            "content": "@@ -115,17 +115,16 @@\n   if n %3C\n-=\n  0%7B%0A    \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-20_08-39-44",
+            "content": "@@ -124,46 +124,8 @@\n  0%7B%0A\n-        fmt.Print(n, %22 %22, rest, %22%5Cn%22)%0A\n     \n@@ -163,19 +163,8 @@\n %25 2%0A\n-    n /= 2%0A\n     \n@@ -193,16 +193,27 @@\n , %22%5Cn%22)%0A\n+    n /= 2%0A\n     rest\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-20_08-40-50",
+            "content": "@@ -132,10 +132,8 @@\n     \n-//\n fmt.\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-20_08-40-57",
+            "content": "@@ -210,29 +210,16 @@\n  n /= 2%0A\n-    resto(n)%0A\n     fmt.\n@@ -244,10 +244,23 @@\n , %22%5Cn%22)%0A\n+    resto(n)%0A\n %7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-20_08-41-09",
+            "content": "package main\nimport \"fmt\"\n\n\n\n\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    resto(n)\n}\n\nfunc resto(n int){\n    if n <= 0{\n        //fmt.Print(n, \" \", rest, \"\\n\")\n        return\n    }\n    rest := n % 2\n    n /= 2\n    resto(n)\n    fmt.Print(n, \" \", rest, \"\\n\")\n}\n",
+            "lines": "24"
+        }
+    ]
+}
