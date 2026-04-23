@@ -8,46 +8,72 @@ import (
 	"strings"
 )
 
-func tostr(vet []int) string {
-	str := ""
-	i := 0
-	if i == len(vet) - 1 || len(vet) == 0{
-		return "[" + str + "]\n"
+func str(vet []int, i int) string{
+	stri := ""
+	if i == len(vet){
+		return stri
 	}
-	str += fmt.Sprint(vet[i])
-	str += ","
-	i++
-	tostr(vet)
-	return str
+	stri += fmt.Sprint(vet[i])
+	if(i < len(vet) - 1){
+		stri += ", "
+	}
+	return stri + str(vet, i + 1)
+
 }
 
+func tostr(vet []int) string {
+	return "[" + str(vet, 0) + "]"
+}
+
+func strIn(vet []int, i int) string{
+	stri := ""
+	if i == -1{
+		return stri
+	}
+	stri += fmt.Sprint(vet[i])
+	if(i > 0){
+		stri += ", "
+	}
+	return stri + strIn(vet, i - 1)
+
+}
 func tostrrev(vet []int) string {
-	_ = vet
-	return ""
+	return "[" + strIn(vet, len(vet)- 1) + "]"
 }
 
 // reverse: inverte os elementos do slice
-func reverse(vet []int) []int {
-	if len(vet) == 1 || len(vet) == 0{
+func reversevet(vet []int, i, f int) []int{
+	if i > f{
 		return vet
 	}
-	for v := range vet{
-		vet[v], vet[len(vet) - v] = vet[len(vet) - v], vet[v]
-	}
-	reverse(vet)
-	return vet
+	vet[i], vet[f] = vet[f], vet[i]
+	return reversevet(vet, i+1, f-1)
+}
+func reverse(vet []int) []int {
+	return reversevet(vet, 0, len(vet) - 1)
 }
 
 // sum: soma dos elementos do slice
+func soma(vet []int, i int) int{
+	if(i == len(vet)){
+		return 0
+	}
+	return vet[i] + soma(vet, i + 1)
+}
 func sum(vet []int) int {
-	_ = vet
-	return 0
+	return soma(vet, 0)
 }
 
 // mult: produto dos elementos do slice
+
+func multi(vet []int, i int) int{
+	if(i == len(vet)){
+		return 1
+	}
+	return vet[i] * multi(vet, i + 1)
+}
 func mult(vet []int) int {
-	_ = vet
-	return 0
+	return multi(vet, 0)
 }
 
 // min: retorna o índice e valor do menor valor
@@ -55,8 +81,28 @@ func mult(vet []int) int {
 // var rec func(v []int) (int, int)
 // para fazer uma recursão que retorna valor e índice
 func min(vet []int) int {
-	_ = vet
-	return 0
+	if len(vet) == 0 {
+		return -1
+	}
+
+	var rec func(i int) (int, int)
+
+	rec = func(i int) (int, int) {
+		if i == len(vet)-1 {
+			return i, vet[i]
+		}
+
+		idx, val := rec(i + 1)
+
+		if vet[i] <= val {
+			return i, vet[i]
+		}
+
+		return idx, val
+	}
+
+	idx, _ := rec(0)
+	return idx
 }
 
 func main() {

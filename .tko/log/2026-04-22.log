@@ -1,0 +1,20 @@
+2026-04-22 08:25:41, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-22 08:27:00, SELF, v:1, k:ed@fractais_png, self:1, rate:100, study:300, concept:1, refactor:1
+2026-04-22 08:27:07, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-04-22 08:28:08, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-22 08:25:41, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-22 08:25:48, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-22 08:25:43, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-22 08:25:43, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-22 08:27:15, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-22 08:27:20, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-04-22 08:28:08, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-22 08:30:23, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-22 08:31:33, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:115
+2026-04-22 08:32:05, EXEC, v:1, k:ed@treinando, mode:FULL, rate:33, size:116
+2026-04-22 08:35:25, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-22 08:32:04, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-22 08:36:42, EXEC, v:1, k:ed@treinando, mode:FULL, size:118, fail:COMP
+2026-04-22 08:36:52, EXEC, v:1, k:ed@treinando, mode:FULL, rate:50, size:118
+2026-04-22 08:36:51, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-22 08:36:52, MOVE, v:1, k:ed@treinando, mode:EDIT

@@ -9,21 +9,19 @@ import (
 )
 
 
-func soma(vet []int) []int{
-	soma := []int{}
-	for v := 0; v < len(vet) - 1; v++ {
-		soma = append(soma, vet[v] + vet[v + 1])
-	}
-	return soma
-}
+
 func processa(vet []int) {
-	aux := []int{}
-	if len(vet) > 0 {
-		aux = soma(vet)
-		processa(aux)
+	if(len(vet) == 1){
 		fmt.Println(Join(vet, " "))
-		vet = aux
+		return
 	}
+	aux := []int{}
+	for i := 0; i < len(vet)-1; i++ {
+		aux = append(aux, vet[i] + vet[i+1])
+	}
+	processa(aux)
+	fmt.Println(Join(vet, " "))
+	
 
 	// 1. defina o ponto de parada
 	// 2. monte o vetor auxiliar com os resultados das somas

@@ -25,7 +25,7 @@ func NewPen(width, height int) *Pen {
 	}
 }
 
-func (t *Pen) Walk(dist float64) {
+func (t *Pen) Waqlk(dist float64) {
 	newX := t.x + dist*math.Cos(t.angle*math.Pi/180)
 	newY := t.y - dist*math.Sin(t.angle*math.Pi/180)
 	if t.penDown {
