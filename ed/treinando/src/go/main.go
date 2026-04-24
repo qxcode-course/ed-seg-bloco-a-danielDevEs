@@ -54,26 +54,26 @@ func reverse(vet []int) []int {
 }
 
 // sum: soma dos elementos do slice
-func soma(vet []int, i int) int{
-	if(i == len(vet)){
+
+func sum(vet []int) int {
+	if len(vet) == 0{
 		return 0
 	}
-	return vet[i] + soma(vet, i + 1)
-}
-func sum(vet []int) int {
-	return soma(vet, 0)
+	if len(vet) == 1{
+		return vet[0]
+	}
+	return vet[0] + sum(vet[1:])
 }
 
 // mult: produto dos elementos do slice
-
-func multi(vet []int, i int) int{
-	if(i == len(vet)){
+func mult(vet []int) int {
+	if len(vet) == 0{
 		return 1
 	}
-	return vet[i] * multi(vet, i + 1)
-}
-func mult(vet []int) int {
-	return multi(vet, 0)
+	if len(vet) == 1{
+		return vet[0]
+	}
+	return vet[0] * mult(vet[1:])
 }
 
 // min: retorna o índice e valor do menor valor

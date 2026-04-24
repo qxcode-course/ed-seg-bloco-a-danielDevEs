@@ -1,0 +1,154 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-23_10-26-50",
+            "content": "@@ -698,194 +698,194 @@\n %7B%0A%09%09\n-startPos = getNeig(startPos)%5B0%5D%0A%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A%09%7D%0A%09if match(grid, getNeig(startPos)%5B1%5D, ' ')%7B%0A%09%09startPos = getNeig(startPos)%5B1%5D%0A%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'\n+grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A%09%09startPos = getNeig(startPos)%5B0%5D%0A%09%7D%0A%09if match(grid, getNeig(startPos)%5B1%5D, ' ')%7B%0A%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A%09%09startPos = getNeig(startPos)%5B1%5D\n %0A%09%7D%0A\n@@ -932,42 +932,8 @@\n ')%7B%0A\n-%09%09startPos = getNeig(startPos)%5B2%5D%0A\n %09%09gr\n@@ -961,24 +961,58 @@\n os.c%5D = '.'%0A\n+%09%09startPos = getNeig(startPos)%5B2%5D%0A\n %09%7D%0A%09if match\n@@ -1052,42 +1052,8 @@\n %7B%0A%09%09\n-startPos = getNeig(startPos)%5B3%5D%0A%09%09\n grid\n@@ -1082,16 +1082,50 @@\n c%5D = '.'\n+%0A%09%09startPos = getNeig(startPos)%5B3%5D\n %0A%09%7D%0A%09sea\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-04-23_10-29-51",
+            "content": "@@ -1045,9 +1045,9 @@\n %5D, '\n-#\n+ \n ')%7B%0A\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-04-23_10-31-31",
+            "content": "@@ -652,150 +652,8 @@\n %0A%09%7D%0A\n-%09if match(grid, startPos, 'I')%7B%0A%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A%09%7D%0A%09if match(grid, endPos, 'F')%7B%0A%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A%09%7D%0A\n %09if \n@@ -1037,25 +1037,25 @@\n rtPos)%5B3%5D, '\n- \n+#\n ')%7B%0A%09%09startP\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-04-23_10-33-18",
+            "content": "@@ -761,26 +761,30 @@\n rid%5B\n-end\n+start\n Pos.\n-c%5D%5Bend\n+l%5D%5Bstart\n Pos.\n-l\n+c\n %5D = \n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-04-23_10-33-49",
+            "content": "@@ -764,17 +764,17 @@\n %5BendPos.\n-l\n+c\n %5D%5BendPos\n@@ -770,25 +770,25 @@\n s.c%5D%5BendPos.\n-c\n+l\n %5D = '.'%0A%09%7D%0A%09\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-04-23_10-34-00",
+            "content": "@@ -1727,35 +1727,32 @@\n c%5D == 'I' %7B%0A%09%09%09%09\n-// \n grid%5Bl%5D%5Bc%5D = ' '\n@@ -1812,19 +1812,16 @@\n ' %7B%0A%09%09%09%09\n-// \n grid%5Bl%5D%5B\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-04-23_10-36-48",
+            "content": "@@ -671,25 +671,25 @@\n  startPos, '\n- \n+I\n ')%7B%0A%09%09grid%5Bs\n@@ -745,17 +745,17 @@\n ndPos, '\n- \n+F\n ')%7B%0A%09%09gr\n@@ -864,16 +864,53 @@\n Pos)%5B0%5D%0A\n+%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A\n %09%7D%0A%09if m\n@@ -982,16 +982,53 @@\n Pos)%5B1%5D%0A\n+%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A\n %09%7D%0A%09if m\n@@ -1100,16 +1100,53 @@\n Pos)%5B2%5D%0A\n+%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A\n %09%7D%0A%09if m\n@@ -1218,17 +1218,53 @@\n Pos)%5B3%5D%0A\n+%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'\n %0A\n-\n %09%7D%0A%09sear\n@@ -1727,32 +1727,35 @@\n c%5D == 'I' %7B%0A%09%09%09%09\n+// \n grid%5Bl%5D%5Bc%5D = ' '\n@@ -1811,20 +1811,23 @@\n = 'F' %7B%0A\n-\n %09%09%09%09\n+// \n grid%5Bl%5D%5B\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-04-23_10-38-48",
+            "content": "@@ -555,17 +555,17 @@\n rtPos, '\n- \n+I\n ') %7C%7C !m\n@@ -580,25 +580,25 @@\n d, endPos, '\n- \n+F\n ')%7B%0A%09%09return\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-23_10-39-15",
+            "content": "@@ -721,55 +721,8 @@\n '.'%0A\n-%09%7D else %7B%0A%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '?'%0A\n %09%7D%0A%09\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-23_10-40-25",
+            "content": "@@ -551,24 +551,53 @@\n  startPos, '\n+ ') %7C%7C !match(grid, endPos, '\n  ')%7B%0A%09%09retur\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-04-23_10-41-13",
+            "content": "@@ -582,86 +582,8 @@\n %0A%09%7D%0A\n-%09if !match(grid, endPos, ' ') && !match(grid, endPos, '.')%7B%0A%09%09return false%0A%09%7D%0A\n %09if \n@@ -691,16 +691,62 @@\n  '.'%0A%09%7D \n+else %7B%0A%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '?'%0A%09%7D\n %0A%09if mat\n@@ -880,30 +880,26 @@\n rtPos)%5B0%5D%0A%09%7D\n- else \n+%0A%09\n if match(gri\n@@ -961,30 +961,26 @@\n rtPos)%5B1%5D%0A%09%7D\n- else \n+%0A%09\n if match(gri\n@@ -1046,22 +1046,18 @@\n s)%5B2%5D%0A%09%7D\n- else \n+%0A%09\n if match\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-04-23_10-43-47",
+            "content": "@@ -36,16 +36,8 @@\n mt%22%0A\n-%09%22math%22%0A\n %09%22os\n@@ -407,629 +407,8 @@\n e%0A%7D%0A\n-func melhorCaminho(caminhos %5B%5DPos, endPos Pos) Pos%7B%0A%09var menor Pos%0A%0A%09distPoints := math.Sqrt( (math.Pow(float64(endPos.c) - float64(caminhos%5B0%5D.c), 2)) + (math.Pow(float64(endPos.l) - float64(caminhos%5B0%5D.l), 2)) )%0A%09menor = caminhos%5B0%5D%0A%09for i:= 1; i %3C len(caminhos); i++%7B%0A%09%09if distPoints %3C math.Sqrt((math.Pow(float64(endPos.c) - float64(caminhos%5Bi%5D.c), 2)) + (math.Pow(float64(endPos.l) - float64(caminhos%5Bi%5D.l), 2)) )%7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09distPoints = math.Sqrt((math.Pow(float64(endPos.c) - float64(caminhos%5Bi%5D.c), 2)) + (math.Pow(float64(endPos.l) - float64(caminhos%5Bi%5D.l), 2)) )%0A%09%09menor = caminhos%5Bi%5D%0A%09%7D%0A%09return menor%0A%7D\n %0A// \n@@ -531,61 +531,8 @@\n l %7B%0A\n-%09melhor := melhorCaminho(getNeig(startPos), endPos)%0A%0A\n %09if \n@@ -882,43 +882,8 @@\n ' ')\n- &&  getNeig(startPos)%5B0%5D == melhor\n %7B%0A%09%09\n@@ -967,43 +967,8 @@\n ' ')\n- &&  getNeig(startPos)%5B1%5D == melhor\n %7B%0A%09%09\n@@ -1052,43 +1052,8 @@\n ' ')\n- &&  getNeig(startPos)%5B2%5D == melhor\n %7B%0A%09%09\n@@ -1137,43 +1137,8 @@\n ' ')\n- &&  getNeig(startPos)%5B3%5D == melhor\n %7B%0A%09%09\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-23_11-18-59",
+            "content": "@@ -1211,29 +1211,8 @@\n Pos)\n-%0A%09fmt.Println(melhor)\n %0A%0A%09i\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-04-23_11-20-16",
+            "content": "@@ -411,19 +411,16 @@\n value%0A%7D%0A\n-// \n func mel\n@@ -463,19 +463,16 @@\n s) Pos%7B%0A\n-// \n %09var men\n@@ -479,19 +479,16 @@\n or Pos%0A%0A\n-// \n %09distPoi\n@@ -625,19 +625,16 @@\n , 2)) )%0A\n-// \n %09menor =\n@@ -646,19 +646,16 @@\n nhos%5B0%5D%0A\n-// \n %09for i:=\n@@ -682,19 +682,16 @@\n ); i++%7B%0A\n-// \n %09%09if dis\n@@ -831,19 +831,16 @@\n  2)) )%7B%0A\n-// \n %09%09%09conti\n@@ -847,18 +847,12 @@\n nue%0A\n-// \n %09%09%7D%0A\n-// \n %09%09di\n@@ -992,19 +992,16 @@\n , 2)) )%0A\n-// \n %09%09menor \n@@ -1018,17 +1018,11 @@\n %5Bi%5D%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09ret\n@@ -1031,19 +1031,16 @@\n n menor%0A\n-// \n %7D%0A// Fun\n@@ -1157,18 +1157,16 @@\n bool %7B%0A%09\n-//\n melhor :\n@@ -1209,18 +1209,16 @@\n ndPos)%0A%09\n-//\n fmt.Prin\n@@ -1277,32 +1277,33 @@\n rn false%0A%09%7D%0A%09if \n+!\n match(grid, endP\n@@ -1311,9 +1311,38 @@\n s, '\n-#\n+ ') && !match(grid, endPos, '.\n ')%7B%0A\n@@ -1585,12 +1585,9 @@\n ' ')\n-%7B //\n+ \n &&  \n@@ -1694,35 +1694,32 @@\n rtPos)%5B1%5D, ' ') \n-%7B//\n &&  getNeig(star\n@@ -1814,35 +1814,32 @@\n rtPos)%5B2%5D, ' ') \n-%7B//\n &&  getNeig(star\n@@ -1946,11 +1946,8 @@\n  ') \n-%7B//\n &&  \n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-04-23_13-16-25",
+            "content": "@@ -33,18 +33,16 @@\n %09%22fmt%22%0A%09\n-//\n %22math%22%0A%09\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-04-23_13-16-44",
+            "content": "@@ -33,16 +33,18 @@\n %09%22fmt%22%0A%09\n+//\n %22math%22%0A%09\n@@ -413,16 +413,19 @@\n value%0A%7D%0A\n+// \n func mel\n@@ -468,16 +468,19 @@\n s) Pos%7B%0A\n+// \n %09var men\n@@ -487,16 +487,19 @@\n or Pos%0A%0A\n+// \n %09distPoi\n@@ -636,16 +636,19 @@\n , 2)) )%0A\n+// \n %09menor =\n@@ -660,16 +660,19 @@\n nhos%5B0%5D%0A\n+// \n %09for i:=\n@@ -699,16 +699,19 @@\n ); i++%7B%0A\n+// \n %09%09if dis\n@@ -851,16 +851,19 @@\n  2)) )%7B%0A\n+// \n %09%09%09conti\n@@ -866,20 +866,26 @@\n ontinue%0A\n+// \n %09%09%7D%0A\n+// \n %09%09distPo\n@@ -1021,16 +1021,19 @@\n , 2)) )%0A\n+// \n %09%09menor \n@@ -1046,19 +1046,25 @@\n nhos%5Bi%5D%0A\n-%09%7D%0A\n+// %09%7D%0A// \n %09return \n@@ -1069,16 +1069,19 @@\n n menor%0A\n+// \n %7D%0A// Fun\n@@ -1198,16 +1198,18 @@\n bool %7B%0A%09\n+//\n melhor :\n@@ -1252,16 +1252,18 @@\n ndPos)%0A%09\n+//\n fmt.Prin\n@@ -1592,25 +1592,28 @@\n os)%5B0%5D, ' ')\n- \n+%7B //\n &&  getNeig(\n@@ -1712,32 +1712,35 @@\n rtPos)%5B1%5D, ' ') \n+%7B//\n &&  getNeig(star\n@@ -1835,32 +1835,35 @@\n rtPos)%5B2%5D, ' ') \n+%7B//\n &&  getNeig(star\n@@ -1966,16 +1966,19 @@\n %5D, ' ') \n+%7B//\n &&  getN\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-04-23_18-17-44",
+            "content": "@@ -430,31 +430,16 @@\n Caminho(\n-grid %5B%5D%5B%5Drune, \n caminhos\n@@ -474,151 +474,16 @@\n r me\n-lh\n+n\n or Pos%0A\n-%09validos := %5B%5DPos%7B%7D%0A%09%0A%09for i := range caminhos%7B%0A%09%09if match(grid, caminhos%5Bi%5D, ' ')%7B%0A%09%09%09validos = append(validos, caminhos%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A\n %0A%09di\n@@ -632,72 +632,26 @@\n %0A%09me\n-lh\n+n\n or = \n-validos%5B0%5D%0A%09if len(validos) == 1%7B%0A%09%09return valid\n+caminh\n os%5B0%5D%0A\n-%09%7D%0A\n %09for\n@@ -666,21 +666,22 @@\n i %3C len(\n-valid\n+caminh\n os); i++\n@@ -740,37 +740,38 @@\n os.c) - float64(\n-valid\n+caminh\n os%5Bi%5D.c), 2)) + \n@@ -800,37 +800,38 @@\n os.l) - float64(\n-valid\n+caminh\n os%5Bi%5D.l), 2)) )%7B\n@@ -906,29 +906,30 @@\n ) - float64(\n-valid\n+caminh\n os%5Bi%5D.c), 2)\n@@ -974,13 +974,14 @@\n t64(\n-valid\n+caminh\n os%5Bi\n@@ -996,18 +996,17 @@\n ) )%0A%09%09me\n-lh\n+n\n or = cam\n@@ -1027,18 +1027,17 @@\n eturn me\n-lh\n+n\n or%0A%7D%0A// \n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-04-23_18-25-38",
+            "content": "@@ -1374,22 +1374,16 @@\n Caminho(\n-grid, \n getNeig(\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-04-23_18-25-56",
+            "content": "@@ -632,43 +632,8 @@\n %09%7D%0A%0A\n-%09fmt.Println(%22Validos: %22, validos)%0A\n %0A%09di\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-04-23_18-28-12",
+            "content": "@@ -1860,34 +1860,8 @@\n %5B0%5D%0A\n-%09%09fmt.Println(%22entrei 0%22)%0A\n %09%7D e\n@@ -1934,32 +1934,32 @@\n )%5B1%5D == melhor%7B%0A\n+\n %09%09startPos = get\n@@ -1980,34 +1980,8 @@\n %5B1%5D%0A\n-%09%09fmt.Println(%22entrei 1%22)%0A\n %09%7D e\n@@ -2100,34 +2100,8 @@\n %5B2%5D%0A\n-%09%09fmt.Println(%22entrei 2%22)%0A\n %09%7D e\n@@ -2174,32 +2174,32 @@\n )%5B3%5D == melhor%7B%0A\n+\n %09%09startPos = get\n@@ -2219,34 +2219,8 @@\n )%5B3%5D\n-%0A%09%09fmt.Println(%22entrei 3%22)\n %0A%0A%09%7D\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-04-23_18-30-35",
+            "content": "@@ -1229,21 +1229,22 @@\n elhor = \n-valid\n+caminh\n os%5Bi%5D%0A%09%7D\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-04-23_18-31-24",
+            "content": "@@ -33,19 +33,16 @@\n %09%22fmt%22%0A%09\n-// \n %22math%22%0A%09\n@@ -411,19 +411,16 @@\n value%0A%7D%0A\n-// \n func mel\n@@ -478,19 +478,16 @@\n s) Pos%7B%0A\n-// \n %09var mel\n@@ -494,19 +494,16 @@\n hor Pos%0A\n-// \n %09validos\n@@ -516,19 +516,16 @@\n Pos%7B%7D%0A%09%0A\n-// \n %09for i :\n@@ -542,19 +542,16 @@\n minhos%7B%0A\n-// \n %09%09if mat\n@@ -578,19 +578,16 @@\n , ' ')%7B%0A\n-// \n %09%09%09valid\n@@ -624,25 +624,16 @@\n i%5D)%0A\n-// \n %09%09%7D%0A\n-// \n %09%7D%0A%0A\n-// \n %09fmt\n@@ -664,19 +664,16 @@\n lidos)%0A%0A\n-// \n %09distPoi\n@@ -810,19 +810,16 @@\n , 2)) )%0A\n-// \n %09melhor \n@@ -831,19 +831,16 @@\n idos%5B0%5D%0A\n-// \n %09if len(\n@@ -854,19 +854,16 @@\n ) == 1%7B%0A\n-// \n %09%09return\n@@ -874,25 +874,19 @@\n idos%5B0%5D%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09for i:=\n@@ -912,19 +912,16 @@\n ); i++%7B%0A\n-// \n %09%09if dis\n@@ -1059,19 +1059,16 @@\n  2)) )%7B%0A\n-// \n %09%09%09conti\n@@ -1075,18 +1075,12 @@\n nue%0A\n-// \n %09%09%7D%0A\n-// \n %09%09di\n@@ -1218,19 +1218,16 @@\n , 2)) )%0A\n-// \n %09%09melhor\n@@ -1244,17 +1244,11 @@\n %5Bi%5D%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09ret\n@@ -1258,19 +1258,16 @@\n  melhor%0A\n-// \n %7D%0A// Fun\n@@ -1384,19 +1384,16 @@\n bool %7B%0A%09\n-// \n melhor :\n@@ -1442,19 +1442,16 @@\n ndPos)%0A%09\n-// \n fmt.Prin\n@@ -1743,19 +1743,16 @@\n '.'%0A%09%7D%0A%09\n-// \n if match\n@@ -1814,35 +1814,32 @@\n %5B0%5D == melhor%7B%0A%09\n-// \n %09startPos = getN\n@@ -1856,19 +1856,16 @@\n os)%5B0%5D%0A%09\n-// \n %09fmt.Pri\n@@ -1878,27 +1878,24 @@\n entrei 0%22)%0A%09\n-// \n %7D else if ma\n@@ -1960,35 +1960,32 @@\n %5B1%5D == melhor%7B%0A%09\n-// \n %09startPos = getN\n@@ -2002,19 +2002,16 @@\n os)%5B1%5D%0A%09\n-// \n %09fmt.Pri\n@@ -2024,27 +2024,24 @@\n entrei 1%22)%0A%09\n-// \n %7D else if ma\n@@ -2106,35 +2106,32 @@\n %5B2%5D == melhor%7B%0A%09\n-// \n %09startPos = getN\n@@ -2148,19 +2148,16 @@\n os)%5B2%5D%0A%09\n-// \n %09fmt.Pri\n@@ -2174,19 +2174,16 @@\n ei 2%22)%0A%09\n-// \n %7D else i\n@@ -2260,19 +2260,16 @@\n elhor%7B%0A%09\n-// \n %09startPo\n@@ -2294,19 +2294,16 @@\n os)%5B3%5D%0A%09\n-// \n %09fmt.Pri\n@@ -2321,19 +2321,16 @@\n i 3%22)%0A%0A%09\n-// \n %7D%0A%09searc\n@@ -2341,160 +2341,16 @@\n id, \n-getNeig(startPos)%5B0%5D, endPos)%0A%09search(grid, getNeig(startPos)%5B1%5D, endPos)%0A%09search(grid, getNeig(startPos)%5B2%5D, endPos)%0A%09search(grid, getNeig(startPos)%5B3%5D\n+startPos\n , en\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-04-23_18-45-20",
+            "content": "@@ -1717,81 +1717,8 @@\n ')%7B%0A\n-%09%09if(startPos.c %3E endPos.c %7C%7CstartPos.l %3E endPos.l)%7B%0A%09%09%09return false%0A%09%09%7D%0A\n %09%09gr\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-04-23_18-47-47",
+            "content": "@@ -1729,17 +1729,17 @@\n rtPos.c \n-%3C\n+%3E\n  endPos.\n@@ -1753,17 +1753,17 @@\n rtPos.l \n-%3C\n+%3E\n  endPos.\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-04-23_18-48-07",
+            "content": "@@ -1740,19 +1740,18 @@\n ndPos.c \n-&& \n+%7C%7C\n startPos\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-04-23_18-48-20",
+            "content": "@@ -1729,17 +1729,17 @@\n rtPos.c \n-%3E\n+%3C\n  endPos.\n@@ -1740,18 +1740,18 @@\n ndPos.c \n-%7C%7C\n+&&\n  startPo\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-04-23_18-48-40",
+            "content": "@@ -1729,17 +1729,17 @@\n rtPos.c \n-%3C\n+%3E\n  endPos.\n@@ -1754,17 +1754,17 @@\n rtPos.l \n-%3E\n+%3C\n  endPos.\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-04-23_18-48-54",
+            "content": "@@ -417,16 +417,934 @@\n ue%0A%7D%0A// \n+func melhorCaminho(grid %5B%5D%5B%5Drune, caminhos %5B%5DPos, endPos Pos) Pos%7B%0A// %09var melhor Pos%0A// %09validos := %5B%5DPos%7B%7D%0A%09%0A// %09for i := range caminhos%7B%0A// %09%09if match(grid, caminhos%5Bi%5D, ' ')%7B%0A// %09%09%09validos = append(validos, caminhos%5Bi%5D)%0A// %09%09%7D%0A// %09%7D%0A%0A// %09fmt.Println(%22Validos: %22, validos)%0A%0A// %09distPoints := math.Sqrt( (math.Pow(float64(endPos.c) - float64(caminhos%5B0%5D.c), 2)) + (math.Pow(float64(endPos.l) - float64(caminhos%5B0%5D.l), 2)) )%0A// %09melhor = validos%5B0%5D%0A// %09if len(validos) == 1%7B%0A// %09%09return validos%5B0%5D%0A// %09%7D%0A// %09for i:= 1; i %3C len(validos); i++%7B%0A// %09%09if distPoints %3C math.Sqrt((math.Pow(float64(endPos.c) - float64(validos%5Bi%5D.c), 2)) + (math.Pow(float64(endPos.l) - float64(validos%5Bi%5D.l), 2)) )%7B%0A// %09%09%09continue%0A// %09%09%7D%0A// %09%09distPoints = math.Sqrt((math.Pow(float64(endPos.c) - float64(validos%5Bi%5D.c), 2)) + (math.Pow(float64(endPos.l) - float64(validos%5Bi%5D.l), 2)) )%0A// %09%09melhor = validos%5Bi%5D%0A// %09%7D%0A// %09return melhor%0A// %7D%0A// \n Fun%C3%A7%C3%A3o r\n@@ -1446,58 +1446,8 @@\n dPos\n- Pos) bool %7B%0Afunc search(grid %5B%5D%5B%5Drune, atual, fim\n  Pos\n@@ -1463,37 +1463,89 @@\n %09// \n-fora do grid ou n%C3%A3o %C3%A9 caminho\n+melhor := melhorCaminho(grid, getNeig(startPos), endPos)%0A%09// fmt.Println(melhor)%0A\n %0A%09if\n@@ -1562,20 +1562,22 @@\n id, \n-atual\n+startPos\n , ' ')\n- \n %7B%0A%09%09\n@@ -1596,315 +1596,1105 @@\n %0A%09%7D%0A\n-%0A%09// chegou no fim%0A%09if atual == fim %7B%0A%09%09grid%5Batual.l%5D%5Batual.c%5D = '.'%0A%09%09return true%0A%09%7D%0A%0A%09// marca como visitado%0A\n+%09if match(grid, endPos, '#')%7B%0A%09%09return false%0A%09%7D%0A%09if startPos == endPos%7B%0A%09%09return true%0A%09%7D%0A%09if match(grid, startPos, ' ')%7B%0A%09%09if(startPos.c %3C endPos.c %7C%7C startPos.l %3E endPos.l)%7B%0A%09%09%09return false%0A%09%09%7D%0A%09\n %09grid%5B\n-atual.l%5D%5Batual.c%5D = '.'%0A%0A%09for _, viz := range getNeig(atual) %7B%0A%09%09if search(grid, viz, fim) %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%7D%0A%0A%09// backtracking (desmarca se n%C3%A3o deu certo)%0A%09grid%5Batual.l%5D%5Batual.c%5D = ' '\n+startPos.l%5D%5BstartPos.c%5D = '.'%0A%09%7D %0A%09if match(grid, endPos, ' ')%7B%0A%09%09grid%5BendPos.l%5D%5BendPos.c%5D = '.'%0A%09%7D%0A%09// if match(grid, getNeig(startPos)%5B0%5D, ' ') &&  getNeig(startPos)%5B0%5D == melhor%7B%0A%09// %09startPos = getNeig(startPos)%5B0%5D%0A%09// %09fmt.Println(%22entrei 0%22)%0A%09// %7D else if match(grid, getNeig(startPos)%5B1%5D, ' ') &&  getNeig(startPos)%5B1%5D == melhor%7B%0A%09// %09startPos = getNeig(startPos)%5B1%5D%0A%09// %09fmt.Println(%22entrei 1%22)%0A%09// %7D else if match(grid, getNeig(startPos)%5B2%5D, ' ') &&  getNeig(startPos)%5B2%5D == melhor%7B%0A%09// %09startPos = getNeig(startPos)%5B2%5D%0A%09// %09fmt.Println(%22entrei 2%22)%0A%09// %7D else if match(grid, getNeig(startPos)%5B3%5D, ' ') &&  getNeig(startPos)%5B3%5D == melhor%7B%0A%09// %09startPos = getNeig(startPos)%5B3%5D%0A%09// %09fmt.Println(%22entrei 3%22)%0A%0A%09// %7D%0A%09search(grid, getNeig(startPos)%5B0%5D, endPos)%0A%09search(grid, getNeig(startPos)%5B1%5D, endPos)%0A%09search(grid, getNeig(startPos)%5B2%5D, endPos)%0A%09search(grid, getNeig(startPos)%5B3%5D, endPos)\n %0A%09re\n@@ -2705,18 +2705,16 @@\n  false%0A%7D\n-%0A%7D\n %0A%0Afunc m\n",
+            "lines": "130"
+        },
+        {
+            "label": "2026-04-23_20-52-49",
+            "content": "@@ -537,16 +537,66 @@\n  bool %7B%0A\n+func search(grid %5B%5D%5B%5Drune, atual, fim Pos) bool %7B%0A\n %09// fora\n@@ -638,24 +638,21 @@\n h(grid, \n-startPos\n+atual\n , ' ') %7B\n@@ -697,56 +697,44 @@\n %09if \n-startPos == endPos %7B%0A%09%09grid%5BstartPos.l%5D%5BstartPos\n+atual == fim %7B%0A%09%09grid%5Batual.l%5D%5Batual\n .c%5D \n@@ -787,36 +787,30 @@\n o%0A%09grid%5B\n-startPos.l%5D%5BstartPos\n+atual.l%5D%5Batual\n .c%5D = '.\n@@ -841,24 +841,21 @@\n getNeig(\n-startPos\n+atual\n ) %7B%0A%09%09if\n@@ -873,22 +873,19 @@\n d, viz, \n-endPos\n+fim\n ) %7B%0A%09%09%09r\n@@ -958,28 +958,22 @@\n rid%5B\n-startPos.l%5D%5BstartPos\n+atual.l%5D%5Batual\n .c%5D \n@@ -994,16 +994,17 @@\n false%0A%7D%0A\n+%7D\n %0A%0Afunc m\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-04-23_20-54-13",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t// \"math\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc getNeig(p Pos) []Pos {\n\treturn []Pos{{p.l, p.c - 1}, {p.l - 1, p.c}, {p.l, p.c + 1}, {p.l + 1, p.c}}\n}\n\nfunc inside(grid [][]rune, p Pos) bool {\n\treturn !(p.l < 0 || p.l >= len(grid) || p.c < 0 || p.c >= len(grid[0]))\n}\n\nfunc match(grid [][]rune, p Pos, value rune) bool {\n\treturn inside(grid, p) && grid[p.l][p.c] == value\n}\n// Fun\u00e7\u00e3o recursiva que tenta encontrar o caminho do in\u00edcio ao fim\nfunc search(grid [][]rune, startPos, endPos Pos) bool {\n\t// fora do grid ou n\u00e3o \u00e9 caminho\n\tif !match(grid, startPos, ' ') {\n\t\treturn false\n\t}\n\n\t// chegou no fim\n\tif startPos == endPos {\n\t\tgrid[startPos.l][startPos.c] = '.'\n\t\treturn true\n\t}\n\n\t// marca como visitado\n\tgrid[startPos.l][startPos.c] = '.'\n\n\tfor _, viz := range getNeig(startPos) {\n\t\tif search(grid, viz, endPos) {\n\t\t\treturn true\n\t\t}\n\t}\n\n\t// backtracking (desmarca se n\u00e3o deu certo)\n\tgrid[startPos.l][startPos.c] = ' '\n\treturn false\n}\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tnl_nc := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(nl_nc, \"%d %d\", &nl, &nc)\n\tgrid := make([][]rune, nl)\n\n\t// L\u00ea a gridriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tgrid[i] = []rune(scanner.Text())\n\t}\n\n\t// Procura posi\u00e7\u00f5es de in\u00edcio e endPos e conserta para _\n\tvar startPos, endPos Pos\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif grid[l][c] == 'I' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tstartPos = Pos{l, c}\n\t\t\t}\n\t\t\tif grid[l][c] == 'F' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tendPos = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(grid, startPos, endPos)\n\n\t// Imprime o labirinto final\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "88"
+        }
+    ]
+}

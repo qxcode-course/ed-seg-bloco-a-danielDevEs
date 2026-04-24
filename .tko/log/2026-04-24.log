@@ -1,0 +1,56 @@
+2026-04-24 19:24:35, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-24 19:24:35, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-24 19:24:54, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-24 19:25:51, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-04-24 19:29:22, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-04-24 19:29:42, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-24 19:29:50, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-24 19:29:53, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:77, size:23
+2026-04-24 19:31:21, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:77, size:22
+2026-04-24 19:31:46, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:22
+2026-04-24 19:34:22, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-04-24 19:29:50, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-04-24 19:31:45, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-04-24 19:34:28, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:24
+2026-04-24 19:35:10, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:0, size:23
+2026-04-24 19:36:16, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:0, size:25
+2026-04-24 19:37:21, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100, size:25
+2026-04-24 19:38:20, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-24 19:38:27, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:20
+2026-04-24 19:38:29, MOVE, v:1, k:ed@vetequals, mode:DOWN
+2026-04-24 19:38:30, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-24 19:37:20, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-04-24 19:37:21, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-04-24 19:38:31, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 19:38:29, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 19:38:54, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 19:43:37, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:0, size:52
+2026-04-24 19:43:49, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:0, size:52
+2026-04-24 19:44:18, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 19:43:49, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 19:45:14, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:52
+2026-04-24 19:47:17, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:55
+2026-04-24 19:48:58, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:50, size:58
+2026-04-24 19:48:56, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 19:48:57, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 19:50:57, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:50, size:58
+2026-04-24 19:51:11, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:30, size:58
+2026-04-24 19:52:17, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:0, size:58
+2026-04-24 19:52:40, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:30, size:58
+2026-04-24 19:52:39, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 19:52:39, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 19:55:09, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:30, size:58
+2026-04-24 19:56:26, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:57
+2026-04-24 19:56:34, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:57
+2026-04-24 19:58:34, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-24 19:58:42, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:15
+2026-04-24 19:58:55, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-24 19:58:32, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 19:56:33, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-04-24 20:01:45, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100, size:146
+2026-04-24 20:02:09, EXEC, v:1, k:ed@treinando, mode:FULL, rate:83, size:145
+2026-04-24 20:02:42, EXEC, v:1, k:ed@treinando, mode:FULL, rate:83, size:145
+2026-04-24 20:03:07, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100, size:145
+2026-04-24 20:03:25, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-24 20:03:07, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-04-24 20:04:49, MOVE, v:1, k:ed@treinando, mode:BACK

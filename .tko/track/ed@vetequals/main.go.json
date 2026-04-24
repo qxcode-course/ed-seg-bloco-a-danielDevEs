@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-24_19-43-37",
+            "content": "@@ -593,31 +593,35 @@\n rn equals(a%5B\n+0+\n 1:%5D, b%5B\n+0+\n 1:%5D)%0A%7D%0A%0Afunc\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-24_19-43-49",
+            "content": "@@ -198,54 +198,8 @@\n l %7B%0A\n-%09if EhVazio(a) && EhVazio(b)%7B%0A%09%09return true%0A%09%7D\n %0A%09//\n@@ -545,16 +545,50 @@\n liares%0A%09\n+if(a%5B0%5D == b%5B0%5D)%7B%0A%09%09return true%0A%09%7D\n %0A%09return\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-24_19-45-14",
+            "content": "@@ -594,44 +594,8 @@\n res%0A\n-%09if(a%5B0%5D == b%5B0%5D)%7B%0A%09%09return true%0A%09%7D%0A\n %09%0A%09r\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-24_19-47-17",
+            "content": "@@ -245,90 +245,8 @@\n %0A%09%7D%0A\n-%09if (EhVazio(a) && !EhVazio(b)) %7C%7C (!EhVazio(a) && EhVazio(b))%7B%0A%09%09return false%0A%09%7D%0A\n %09// \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-24_19-48-58",
+            "content": "@@ -713,43 +713,8 @@\n %09%7D%0A%09\n-println(%22a: %22, a%5B1:%5D, %22b: %22, b%5B1:%5D)\n %0A%09re\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-24_19-50-57",
+            "content": "@@ -709,21 +709,17 @@\n rue%0A%09%7D%0A%09\n-fmt.P\n+p\n rintln(%22\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-24_19-51-11",
+            "content": "@@ -195,19 +195,16 @@\n bool %7B%0A%09\n-// \n if EhVaz\n@@ -225,19 +225,16 @@\n io(b)%7B%0A%09\n-// \n %09return \n@@ -239,19 +239,16 @@\n n true%0A%09\n-// \n %7D%0A%09if (E\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-24_19-52-17",
+            "content": "@@ -195,16 +195,19 @@\n bool %7B%0A%09\n+// \n if EhVaz\n@@ -224,24 +224,27 @@\n hVazio(b)%7B%0A%09\n+// \n %09return true\n@@ -245,16 +245,19 @@\n n true%0A%09\n+// \n %7D%0A%09if (E\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-24_19-52-40",
+            "content": "@@ -693,32 +693,8 @@\n %5B0%5D)\n- && equals(a%5B1:%5D, b%5B1:%5D)\n %7B%0A%09%09\n@@ -757,21 +757,36 @@\n %09return \n-false\n+equals(a%5B1:%5D, b%5B1:%5D)\n %0A%7D%0A%0Afunc\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-24_19-55-09",
+            "content": "@@ -242,19 +242,16 @@\n rue%0A%09%7D%0A%09\n-// \n if (EhVa\n@@ -306,19 +306,16 @@\n o(b))%7B%0A%09\n-// \n %09return \n@@ -321,19 +321,16 @@\n  false%0A%09\n-// \n %7D%0A%09// n%C3%A3\n@@ -728,24 +728,65 @@\n urn true%0A%09%7D%0A\n+%09fmt.Println(%22a: %22, a%5B1:%5D, %22b: %22, b%5B1:%5D)%0A\n %09return fals\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-24_19-56-26",
+            "content": "@@ -242,16 +242,19 @@\n rue%0A%09%7D%0A%09\n+// \n if (EhVa\n@@ -305,24 +305,27 @@\n Vazio(b))%7B%0A%09\n+// \n %09return fals\n@@ -327,16 +327,19 @@\n  false%0A%09\n+// \n %7D%0A%09// n%C3%A3\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-24_19-56-34",
+            "content": " package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc EhVazio(vet []int) bool {\n\treturn fmt.Sprint(vet) == \"[]\"\n}\n\n// n\u00e3o altere a assinatura\nfunc equals(a []int, b []int) bool {\n\tif EhVazio(a) && EhVazio(b){\n\t\treturn true\n\t}\n\tif (EhVazio(a) && !EhVazio(b)) || (!EhVazio(a) && EhVazio(b)){\n\t\treturn false\n\t}\n\t// n\u00e3o use a fun\u00e7\u00e3o len para ver ou comparar os tamanhos\n\t// utilize a fun\u00e7\u00e3o EhVazio para ver se o vetor \u00e9 vazio\n\t// voc\u00ea s\u00f3 pode consultar o primeiro elemento do vetor\n\t// e n\u00e3o pode usar nenhum tipo de la\u00e7o\n\t// Use recursao para consultar os outros elementos equals(a[1:], b[1:])\n\t// n\u00e3o altere o prot\u00f3tipo da fun\u00e7\u00e3o nem crie fun\u00e7\u00f5es auxiliares\n\tif(a[0] == b[0]) && equals(a[1:], b[1:]){\n\t\treturn true\n\t}\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tscanner.Scan()\n\tvet1 := str2slice(scanner.Text())\n\tscanner.Scan()\n\tvet2 := str2slice(scanner.Text())\n\tif equals(vet1, vet2) {\n\t\tfmt.Println(\"iguais\")\n\t} else {\n\t\tfmt.Println(\"diferentes\")\n\t}\n}\n\nfunc str2slice(line string) []int {\n\tparts := strings.Fields(line)\n\tnums := make([]int, 0)\n\tfor i := 1; i < len(parts)-1; i++ {\n\t\tvalue, _ := strconv.Atoi(parts[i])\n\t\tnums = append(nums, value)\n\t}\n\treturn nums\n}\n",
+            "lines": "57"
+        }
+    ]
+}

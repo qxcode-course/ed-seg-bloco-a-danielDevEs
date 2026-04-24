@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	// "math"
 	"os"
 )
 
@@ -21,12 +22,28 @@ func inside(grid [][]rune, p Pos) bool {
 func match(grid [][]rune, p Pos, value rune) bool {
 	return inside(grid, p) && grid[p.l][p.c] == value
 }
-
 // Função recursiva que tenta encontrar o caminho do início ao fim
 func search(grid [][]rune, startPos, endPos Pos) bool {
-	_, _, _ = grid, startPos, endPos
+	if !match(grid, startPos, ' ') {
+		return false
+	}
+
+	if startPos == endPos {
+		grid[startPos.l][startPos.c] = '.'
+		return true
+	}
+
+	grid[startPos.l][startPos.c] = '.'
+
+	for _, viz := range getNeig(startPos) {
+		if search(grid, viz, endPos) {
+			return true
+		}
+	}
+	grid[startPos.l][startPos.c] = ' '
 	return false
 }
+
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
