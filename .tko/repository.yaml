@@ -15,14 +15,17 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@rec
 - ed@backtrack
+- sandbox@sandbox
+- ed@vector
+- ed@rec
+- ed@list
 flags:
   inbox: all
-  panel: skills
-  show_panel: 'false'
+  panel: graph
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@treinando
-selected_index: 5
+selected: ed@vetbuild
+selected_index: 38

@@ -1,0 +1,17 @@
+2026-04-27 15:55:16, MOVE, v:1, k:ed@magicsearch, mode:DOWN
+2026-04-27 15:55:17, MOVE, v:1, k:ed@magicsearch, mode:DOWN
+2026-04-27 15:56:07, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-04-27 15:55:16, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-27 15:55:16, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-27 15:55:16, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-27 15:55:17, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-27 15:56:07, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-04-27 15:56:07, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-04-27 15:56:18, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-04-27 16:04:53, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-04-27 16:05:29, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-04-27 16:05:34, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:0, size:5
+2026-04-27 16:09:13, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-04-27 16:05:02, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-04-27 16:05:33, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-04-27 16:13:47, MOVE, v:1, k:sandbox@user_001, mode:EDIT

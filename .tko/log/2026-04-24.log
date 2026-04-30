@@ -54,3 +54,8 @@
 2026-04-24 20:03:25, MOVE, v:1, k:ed@treinando, mode:EDIT
 2026-04-24 20:03:07, MOVE, v:1, k:ed@treinando, mode:EDIT
 2026-04-24 20:04:49, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-24 20:06:37, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-24 20:06:39, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100
+2026-04-24 20:06:40, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-24 20:07:23, MOVE, v:1, k:ed@lista_d1, mode:DOWN
+2026-04-24 20:07:38, MOVE, v:1, k:ed@vetbuild, mode:DOWN
