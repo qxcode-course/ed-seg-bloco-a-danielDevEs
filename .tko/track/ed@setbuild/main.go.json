@@ -1,0 +1,139 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-14_10-18-40",
+            "content": "@@ -55,1069 +55,206 @@\n %22%0A)%0A\n-func partition (vet %5B%5Dint, low, high int) int %7B%0A%09pivot := vet%5Bhigh%5D%0A%09i := low - 1%0A%09%0A%09for j := low; j %3C high; j++%7B%0A%09%09if vet%5Bj%5D %3C pivot%7B%0A%09%09%09i++%0A%09%09%09vet%5Bi%5D, vet%5Bj%5D = vet%5Bj%5D, vet%5Bi%5D%0A%09%09%7D%0A%09%09vet%5Bi+1%5D, vet%5Bhigh%5D = vet%5Bhigh%5D, vet%5Bi+1%5D%0A%09%0A%09%09return i + 1%0A%09%7D%0A%09return -1%0A%7D%0Afunc quickSort(vet %5B%5Dint, low, high int) %5B%5Dint%7B%0A%09if low %3C high %7B%0A%09%09pivot := partition(vet, low, high)%0A%0A%0A%09%09quickSort(vet, low, pivot-1)%0A%09%09quickSort(vet, pivot+1, high)%0A%09%7D%0A%09return vet%0A%7D%0A%0A%0Atype Set struct%7B%0A%09data%09%09%5B%5Dint%0A%09size%09%09int%0A%09capacity%09int%0A%7D%0A%0Afunc NewSet(capacity int) *Set%7B%0A%09return &Set%7B%0A%09%09data: %09%09make(%5B%5Dint, capacity),%0A%09%09size: %09%090,%0A%09%09capacity: %09capacity,%0A%09%7D%0A%7D%0A%0Afunc (s *Set) reserve(newCapacity int)%7B%0A%09s.capacity = newCapacity%0A%7D%0A%0Afunc (s *Set) binarySearch(value int) int%7B%0A%09inicio := 0%0A%09fim := s.size - 1%0A%09meio := inicio+fim/2%0A%09if s.data%5Bmeio%5D == value%7B%0A%09%09return meio%0A%09%7D else if s.data%5Bmeio%5D %3C value%7B%0A%09%09inicio = meio + 1 %0A%09%7D else if s.data%5Bmeio%5D %3E value%7B%0A%09%09fim = meio - 1%0A%09%7D%0A%09for true %7B%0A%09%09if inicio %3E fim%7B%0A%09%09%09break%0A%09%09%7D%0A%09%09if s.data%5Binicio%5D == value%7B%0A%09%09%09return inicio%0A%09%09%7D%0A%09%09inicio++%0A%09%7D%0A%09return -1%0A%7D%0A%0A%0A\n+%0Atype Set struct%7B%0A%09data%09%09%5B%5Dint%0A%09size%09%09int%0A%09capacity%09int%0A%7D%0A%0Afunc NewSet(capacity int) *Set%7B%0A%09return &Set%7B%0A%09%09data: %09%09make(%5B%5Dint, capacity),%0A%09%09size: %09%090,%0A%09%09capacity: %09capacity,%0A%09%7D%0A%7D%0A%0Afunc (s *Set)%7B%0A%09%0A%7D\n %0Afun\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-15_08-35-32",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -49,16 +49,16 @@\n trings%22%0A\n+\n )%0Afunc p\n@@ -678,418 +678,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Insert(value int)%7B%0A%09if s.size == s.capacity%7B%0A%09%09s.capacity*=2%0A%09%09newData := NewSet(s.capacity)%0A%09%09for i:= 0; i %3C s.size; i++%7B%0A%09%09%09newData.data%5Bi%5D = s.data%5Bi%5D%0A%09%09%7D%0A%09%09newData.data = quickSort(newData.data, 0, newData.size)%0A%09%7D%0A%7D%0A%0Afunc (s *Set) Show() string%7B%0A%09str := %22%22%0A%09str += %22%5B%22%0A%09for i, el := range s.data%7B%0A%09%09str += fmt.Sprint(el)%0A%09%09if i %3C s.size-1%7B%0A%09%09%09str += %22, %22%0A%09%09%7D%0A%09%7D%0A%09str += %22%5D%5Cn%22%0A%09return str%0A%7D%0A%0A\n func\n@@ -1511,16 +1511,19 @@\n rt%22:%0A%09%09%09\n+// \n for _, p\n@@ -1550,16 +1550,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -1592,67 +1592,27 @@\n %0A%09%09%09\n-%09v.Insert(value)%0A%09%09%09%7D%0A%09%09case %22show%22:%0A%09%09%09fmt.Print(v.Show())\n+// %7D%0A%09%09case %22show%22:\n %0A%09%09c\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-05-15_08-49-47",
+            "content": "@@ -922,42 +922,8 @@\n %0A%09%7D%0A\n-%09s.data%5Bs.size%5D = value%0A%09s.size++%0A\n %7D%0A%0Af\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-05-15_08-51-09",
+            "content": "@@ -946,47 +946,8 @@\n lue%0A\n-%09s.data = quickSort(s.data, 0, s.size)%0A\n %09s.s\n@@ -988,42 +988,8 @@\n ng%7B%0A\n-%09if s.size == 0%7B%0A%09%09return %22%5B%5D%22%0A%09%7D%0A\n %09str\n",
+            "lines": "144"
+        },
+        {
+            "label": "2026-05-15_08-57-13",
+            "content": "@@ -1183,16 +1183,18 @@\n tr += %22%5D\n+%5Cn\n %22%0A%09retur\n@@ -2159,18 +2159,16 @@\n mt.Print\n-ln\n (v.Show(\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-05-15_08-57-40",
+            "content": "@@ -863,19 +863,63 @@\n %7D%0A%09%09\n-s = \n newData\n+.data = quickSort(newData.data, 0, newData.size)\n %0A%09%7D%0A\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-05-15_08-58-31",
+            "content": "@@ -860,21 +860,16 @@\n %0A%09%09%7D%0A%09%09s\n-.data\n  = newDa\n@@ -870,21 +870,16 @@\n  newData\n-.data\n %0A%09%7D%0A%09s.d\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-05-15_08-58-58",
+            "content": "@@ -62,19 +62,16 @@\n ings%22%0A)%0A\n-// \n func par\n@@ -110,19 +110,16 @@\n ) int %7B%0A\n-// \n %09pivot :\n@@ -130,19 +130,16 @@\n t%5Bhigh%5D%0A\n-// \n %09i := lo\n@@ -146,19 +146,16 @@\n w - 1%0A%09%0A\n-// \n %09for j :\n@@ -176,19 +176,16 @@\n h; j++%7B%0A\n-// \n %09%09if vet\n@@ -201,21 +201,15 @@\n ot%7B%0A\n-// \n %09%09%09i++%0A\n-// \n %09%09%09v\n@@ -243,18 +243,12 @@\n %5Bi%5D%0A\n-// \n %09%09%7D%0A\n-// \n %09%09ve\n@@ -289,19 +289,16 @@\n %5Bi+1%5D%0A%09%0A\n-// \n %09%09return\n@@ -304,25 +304,19 @@\n n i + 1%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09return \n@@ -322,16 +322,10 @@\n  -1%0A\n-// %7D%0A// \n+%7D%0A\n func\n@@ -368,19 +368,16 @@\n  %5B%5Dint%7B%0A\n-// \n %09if low \n@@ -385,19 +385,16 @@\n  high %7B%0A\n-// \n %09%09pivot \n@@ -424,19 +424,16 @@\n high)%0A%0A%0A\n-// \n %09%09quickS\n@@ -455,19 +455,16 @@\n ivot-1)%0A\n-// \n %09%09quickS\n@@ -491,17 +491,11 @@\n gh)%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09ret\n@@ -506,429 +506,10 @@\n vet%0A\n-// %7D%0A%0Afunc quickSort(arr %5B%5Dint) %5B%5Dint %7B%0A%09if len(arr) %3C 2 %7B%0A%09%09return arr%0A%09%7D%0A%0A%09pivo := arr%5B0%5D%0A%0A%09var menores %5B%5Dint%0A%09var maiores %5B%5Dint%0A%0A%09for _, v := range arr%5B1:%5D %7B%0A%09%09if v %3C= pivo %7B%0A%09%09%09menores = append(menores, v)%0A%09%09%7D else %7B%0A%09%09%09maiores = append(maiores, v)%0A%09%09%7D%0A%09%7D%0A%0A%09menores = quickSort(menores)%0A%09maiores = quickSort(maiores)%0A%0A%09resultado := append(menores, pivo)%0A%09resultado = append(resultado, maiores...)%0A%0A%09return resultado%0A\n %7D\n+%0A\n %0A%0Aty\n@@ -934,16 +934,27 @@\n t(s.data\n+, 0, s.size\n )%0A%09s.siz\n@@ -993,50 +993,8 @@\n ng%7B%0A\n-%09// s.data = quickSort(s.data, 0, s.size)%0A\n %09if \n@@ -1078,38 +1078,8 @@\n ta%7B%0A\n-%09%09if el == 0%7B%0A%09%09%09continue%0A%09%09%7D%0A\n %09%09st\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-05-15_10-00-41",
+            "content": "@@ -1562,16 +1562,20 @@\n %22%0A%09for i\n+, el\n  := rang\n@@ -1589,25 +1589,18 @@\n a%7B%0A%09%09if \n-s.data%5Bi%5D\n+el\n  == 0%7B%0A%09\n@@ -1634,25 +1634,18 @@\n .Sprint(\n-s.data%5Bi%5D\n+el\n )%0A%09%09if i\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-05-15_18-57-44",
+            "content": "@@ -42,18 +42,8 @@\n os%22%0A\n-%09%22slices%22%0A\n %09%22st\n@@ -62,17 +62,16 @@\n ings%22%0A)%0A\n-%0A\n // func \n@@ -153,16 +153,17 @@\n low - 1%0A\n+%09\n %0A// %09for\n@@ -314,16 +314,17 @@\n et%5Bi+1%5D%0A\n+%09\n %0A// %09%09re\n@@ -471,16 +471,17 @@\n  high)%0A%0A\n+%0A\n // %09%09qui\n@@ -568,19 +568,16 @@\n t%0A// %7D%0A%0A\n-// \n func qui\n@@ -602,19 +602,16 @@\n %5B%5Dint %7B%0A\n-// \n %09if len(\n@@ -621,19 +621,16 @@\n ) %3C 2 %7B%0A\n-// \n %09%09return\n@@ -634,26 +634,20 @@\n urn arr%0A\n-// \n %09%7D%0A%0A\n-// \n %09pivo :=\n@@ -655,19 +655,16 @@\n arr%5B0%5D%0A%0A\n-// \n %09var men\n@@ -674,19 +674,16 @@\n s %5B%5Dint%0A\n-// \n %09var mai\n@@ -694,19 +694,16 @@\n  %5B%5Dint%0A%0A\n-// \n %09for _, \n@@ -723,19 +723,16 @@\n r%5B1:%5D %7B%0A\n-// \n %09%09if v %3C\n@@ -740,19 +740,16 @@\n  pivo %7B%0A\n-// \n %09%09%09menor\n@@ -772,19 +772,16 @@\n res, v)%0A\n-// \n %09%09%7D else\n@@ -783,19 +783,16 @@\n  else %7B%0A\n-// \n %09%09%09maior\n@@ -819,25 +819,16 @@\n  v)%0A\n-// \n %09%09%7D%0A\n-// \n %09%7D%0A%0A\n-// \n %09men\n@@ -853,19 +853,16 @@\n enores)%0A\n-// \n %09maiores\n@@ -884,19 +884,16 @@\n iores)%0A%0A\n-// \n %09resulta\n@@ -920,19 +920,16 @@\n , pivo)%0A\n-// \n %09resulta\n@@ -964,19 +964,16 @@\n es...)%0A%0A\n-// \n %09return \n@@ -982,19 +982,16 @@\n sultado%0A\n-// \n %7D%0A%0Atype \n@@ -1393,14 +1393,21 @@\n e%0A%09s\n-lices.\n+.data = quick\n Sort\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-05-15_19-06-12",
+            "content": "@@ -1724,16 +1724,18 @@\n %3C s.size\n+-1\n %7B%0A%09%09%09str\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-05-15_19-06-38",
+            "content": "@@ -1627,34 +1627,28 @@\n or i := \n-0; i %3C s.size; i++\n+range s.data\n %7B%0A%09%09if s\n@@ -1724,20 +1724,16 @@\n %3C s.size\n- - 1\n %7B%0A%09%09%09str\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-05-15_19-08-00",
+            "content": "@@ -1456,19 +1456,16 @@\n  value%0A%09\n-// \n slices.S\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-05-15_19-10-32",
+            "content": "@@ -39,19 +39,16 @@\n %0A%09%22os%22%0A%09\n-// \n %22slices%22\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-05-15_19-10-45",
+            "content": "@@ -39,16 +39,19 @@\n %0A%09%22os%22%0A%09\n+// \n %22slices%22\n@@ -1463,18 +1463,11 @@\n ue%0A%09\n-s.size++%0A%09\n+// \n slic\n@@ -1482,16 +1482,26 @@\n s.data)%0A\n+%09s.size++%0A\n %7D%0A%0Afunc \n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-05-15_19-11-21",
+            "content": "@@ -1465,16 +1465,37 @@\n .size++%0A\n+%09slices.Sort(s.data)%0A\n %7D%0A%0Afunc \n@@ -1519,34 +1519,55 @@\n tring%7B%0A%09\n-slices.Sort(s.data\n+// s.data = quickSort(s.data, 0, s.size\n )%0A%09if s.\n",
+            "lines": "179"
+        },
+        {
+            "label": "2026-05-15_19-11-56",
+            "content": "@@ -1498,19 +1498,16 @@\n tring%7B%0A%09\n-// \n slices.S\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-05-15_19-12-09",
+            "content": "@@ -39,19 +39,16 @@\n %0A%09%22os%22%0A%09\n-// \n %22slices%22\n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-05-15_19-12-17",
+            "content": "@@ -1438,149 +1438,22 @@\n %0A%09%7D%0A\n-%0A%09pos := 0%0A%0A%09if pos %3C s.size && s.data%5Bpos%5D %3C value%7B%0A%09%09pos++%0A%09%7D%0A%0A%09for i := s.size; i %3E pos; i--%7B%0A%09%09s.data%5Bi%5D = s.data%5Bi-1%5D%0A%09%7D%0A%0A%0A%0A%0A%09s.data%5Bpos\n+%09s.data%5Bs.size\n %5D = \n",
+            "lines": "178"
+        },
+        {
+            "label": "2026-05-15_19-30-19",
+            "content": "@@ -1709,19 +1709,16 @@\n += %22%5B%22%0A%09\n-// \n for i :=\n@@ -1739,19 +1739,16 @@\n ; i++%7B%0A%09\n-// \n %09if s.da\n@@ -1760,19 +1760,16 @@\n  == 0%7B%0A%09\n-// \n %09%09contin\n@@ -1772,26 +1772,20 @@\n ntinue%0A%09\n-// \n %09%7D%0A%09\n-// \n %09str += \n@@ -1807,19 +1807,16 @@\n ta%5Bi%5D)%0A%09\n-// \n %09if i %3C \n@@ -1828,19 +1828,16 @@\n e - 1%7B%0A%09\n-// \n %09%09str +=\n@@ -1847,56 +1847,13 @@\n  %22%0A%09\n-// \n %09%7D%0A%09\n-// %7D%0A%0A%09str += fmt.Sprint(s.data%5B:s.size%5D)\n+%7D\n %0A%09st\n",
+            "lines": "192"
+        },
+        {
+            "label": "2026-05-15_19-38-58",
+            "content": "@@ -1447,19 +1447,18 @@\n  := 0%0A%0A%09\n+i\n f\n-or\n  pos %3C s\n@@ -1709,16 +1709,19 @@\n += %22%5B%22%0A%09\n+// \n for i :=\n@@ -1742,16 +1742,19 @@\n ; i++%7B%0A%09\n+// \n %09if s.da\n@@ -1766,16 +1766,19 @@\n  == 0%7B%0A%09\n+// \n %09%09contin\n@@ -1781,20 +1781,26 @@\n ntinue%0A%09\n+// \n %09%7D%0A%09\n+// \n %09str += \n@@ -1822,16 +1822,19 @@\n ta%5Bi%5D)%0A%09\n+// \n %09if i %3C \n@@ -1846,16 +1846,19 @@\n e - 1%7B%0A%09\n+// \n %09%09str +=\n@@ -1864,21 +1864,64 @@\n = %22, %22%0A%09\n+// \n %09%7D%0A%09\n-%7D\n+// %7D%0A%0A%09str += fmt.Sprint(s.data%5B:s.size%5D)\n %0A%09str +=\n",
+            "lines": "194"
+        },
+        {
+            "label": "2026-05-15_19-41-26",
+            "content": "@@ -1272,43 +1272,8 @@\n t)%7B%0A\n-%09if s.Contains(value)%7B%0A%09%09return%0A%09%7D%0A\n %09if \n@@ -2318,115 +2318,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Contains(value int) bool%7B%0A%09if s.binarySearch(value) != -1%7B%0A%09%09return true%0A%09%7D%0A%09return false%0A%7D%0A%0A\n %0A%0Afu\n",
+            "lines": "192"
+        },
+        {
+            "label": "2026-05-15_19-45-09",
+            "content": "@@ -3064,24 +3064,27 @@\n ntains%22:%0A%09%09%09\n+// \n value, _ := \n@@ -3110,42 +3110,8 @@\n 1%5D)%0A\n-%09%09%09fmt.Println(v.Contains(value))%0A\n %09%09ca\n",
+            "lines": "202"
+        },
+        {
+            "label": "2026-05-15_19-46-26",
+            "content": "@@ -2353,209 +2353,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Erase(value int) bool%7B%0A%09if !s.Contains(value)%7B%0A%09%09return false%0A%09%7D%0A%09pos := s.binarySearch(value)%0A%09for i := pos; i %3C s.size - 1; i++%7B%0A%09%09s.data%5Bi%5D = s.data%5Bi+1%5D%0A%09%7D%0A%09s.size--%0A%09return true%0A%7D%0A%0A%0A\n func\n@@ -3004,24 +3004,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n@@ -3050,93 +3050,8 @@\n 1%5D)%0A\n-%09%09%09err := v.Erase(value)%0A%09%09%09if err == false%7B%0A%09%09%09%09fmt.Println(%22value not found%22)%0A%09%09%09%7D%0A\n %09%09ca\n",
+            "lines": "203"
+        },
+        {
+            "label": "2026-05-15_19-51-52",
+            "content": "@@ -1335,18 +1335,8 @@\n %7B%0A%09%09\n-s.Reserve(\n s.ca\n@@ -1345,13 +1345,11 @@\n city\n- * 2)\n+*=2\n %0A%09%09n\n@@ -2661,76 +2661,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Reserve(newCapacity int)%7B%0A%09v.capacity = newCapacity%0A%7D%0A\n %0A%0Afu\n",
+            "lines": "220"
+        },
+        {
+            "label": "2026-05-15_19-54-13",
+            "content": "@@ -2702,33 +2702,33 @@\n Capacity int)%7B%0A%09\n-s\n+v\n .capacity = newC\n",
+            "lines": "223"
+        },
+        {
+            "label": "2026-05-15_19-54-28",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t// \"slices\"\n\t\"strconv\"\n\t\"strings\"\n)\n\n// func partition (vet []int, low, high int) int {\n// \tpivot := vet[high]\n// \ti := low - 1\n\n// \tfor j := low; j < high; j++{\n// \t\tif vet[j] < pivot{\n// \t\t\ti++\n// \t\t\tvet[i], vet[j] = vet[j], vet[i]\n// \t\t}\n// \t\tvet[i+1], vet[high] = vet[high], vet[i+1]\n\n// \t\treturn i + 1\n// \t}\n// \treturn -1\n// }\n// func quickSort(vet []int, low, high int) []int{\n// \tif low < high {\n// \t\tpivot := partition(vet, low, high)\n\n// \t\tquickSort(vet, low, pivot-1)\n// \t\tquickSort(vet, pivot+1, high)\n// \t}\n// \treturn vet\n// }\n\n// func quickSort(arr []int) []int {\n// \tif len(arr) < 2 {\n// \t\treturn arr\n// \t}\n\n// \tpivo := arr[0]\n\n// \tvar menores []int\n// \tvar maiores []int\n\n// \tfor _, v := range arr[1:] {\n// \t\tif v <= pivo {\n// \t\t\tmenores = append(menores, v)\n// \t\t} else {\n// \t\t\tmaiores = append(maiores, v)\n// \t\t}\n// \t}\n\n// \tmenores = quickSort(menores)\n// \tmaiores = quickSort(maiores)\n\n// \tresultado := append(menores, pivo)\n// \tresultado = append(resultado, maiores...)\n\n// \treturn resultado\n// }\n\ntype Set struct{\n\tdata\t\t[]int\n\tsize\t\tint\n\tcapacity\tint\n}\n\nfunc NewSet(capacity int) *Set{\n\treturn &Set{\n\t\tdata: \t\tmake([]int, capacity),\n\t\tsize: \t\t0,\n\t\tcapacity: \tcapacity,\n\t}\n}\n\nfunc (s *Set) Insert(value int){\n\tif s.Contains(value){\n\t\treturn\n\t}\n\tif s.size == s.capacity{\n\t\ts.Reserve(s.capacity * 2)\n\t\tnewData := NewSet(s.capacity)\n\t\tfor i:= 0; i < s.size; i++{\n\t\t\tnewData.data[i] = s.data[i]\n\t\t}\n\t\ts.data = newData.data\n\t}\n\n\tpos := 0\n\n\tfor pos < s.size && s.data[pos] < value{\n\t\tpos++\n\t}\n\n\tfor i := s.size; i > pos; i--{\n\t\ts.data[i] = s.data[i-1]\n\t}\n\n\n\n\n\ts.data[pos] = value\n\ts.size++\n}\n\nfunc (s *Set) Show() string{\n\t// slices.Sort(s.data)\n\tif s.size == 0{\n\t\treturn \"[]\"\n\t}\n\tstr := \"\"\n\tstr += \"[\"\n\tfor i := 0; i < s.size; i++{\n\t\tif s.data[i] == 0{\n\t\t\tcontinue\n\t\t}\n\t\tstr += fmt.Sprint(s.data[i])\n\t\tif i < s.size - 1{\n\t\t\tstr += \", \"\n\t\t}\n\t}\n\tstr += \"]\"\n\treturn str\n}\n\nfunc (s *Set) reserve(newCapacity int){\n\ts.capacity = newCapacity\n}\n\nfunc (s *Set) binarySearch(value int) int{\n\tinicio := 0\n\tfim := s.size - 1\n\tmeio := inicio+fim/2\n\tif s.data[meio] == value{\n\t\treturn meio\n\t} else if s.data[meio] < value{\n\t\tinicio = meio + 1 \n\t} else if s.data[meio] > value{\n\t\tfim = meio - 1\n\t}\n\tfor true {\n\t\tif inicio > fim{\n\t\t\tbreak\n\t\t}\n\t\tif s.data[inicio] == value{\n\t\t\treturn inicio\n\t\t}\n\t\tinicio++\n\t}\n\treturn -1\n}\n\nfunc (s *Set) Erase(value int) bool{\n\tif !s.Contains(value){\n\t\treturn false\n\t}\n\tpos := s.binarySearch(value)\n\tfor i := pos; i < s.size - 1; i++{\n\t\ts.data[i] = s.data[i+1]\n\t}\n\ts.size--\n\treturn true\n}\n\n\nfunc (s *Set) Contains(value int) bool{\n\tif s.binarySearch(value) != -1{\n\t\treturn true\n\t}\n\treturn false\n}\n\nfunc (s *Set) Reserve(newCapacity int){\n\ts.capacity = newCapacity\n}\n\n\nfunc main() {\n\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewSet(0)\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tv = NewSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range parts[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\tv.Insert(value)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(v.Show())\n\t\tcase \"erase\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\terr := v.Erase(value)\n\t\t\tif err == false{\n\t\t\t\tfmt.Println(\"value not found\")\n\t\t\t}\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tfmt.Println(v.Contains(value))\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "223"
+        }
+    ]
+}

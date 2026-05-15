@@ -1,0 +1,105 @@
+2026-05-15 08:05:28, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-15 08:05:28, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-15 08:07:01, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:28:50, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-15 08:28:50, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:28:50, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:33:45, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:35:32, EXEC, v:1, k:ed@setbuild, mode:FULL, size:115, fail:COMP
+2026-05-15 08:38:17, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:35:06, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:43:33, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:48:47, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:49:47, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:142
+2026-05-15 08:51:09, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:144
+2026-05-15 08:51:07, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:51:08, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:54:42, EXEC, v:1, k:ed@setbuild, mode:FREE
+2026-05-15 08:57:11, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-15 08:57:13, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:148
+2026-05-15 08:57:40, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:148
+2026-05-15 08:58:31, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:148
+2026-05-15 08:58:58, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:148
+2026-05-15 08:59:58, EXEC, v:1, k:ed@setbuild, mode:FREE
+2026-05-15 09:00:00, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 08:58:55, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 09:05:14, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 09:05:19, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:sandbox@user_002, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@fuga, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@manipulacao, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@pintando, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@mumia, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-05-15 09:05:37, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-15 10:00:28, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-15 10:00:41, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:178
+2026-05-15 10:00:28, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 10:00:28, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 10:00:40, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 18:57:42, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-15 18:57:44, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:178
+2026-05-15 19:02:17, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 18:57:42, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 18:57:42, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 18:57:44, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:06:12, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:179
+2026-05-15 19:06:38, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:179
+2026-05-15 19:07:23, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:06:38, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:08:00, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:179
+2026-05-15 19:09:12, EXEC, v:1, k:ed@setbuild, mode:FREE
+2026-05-15 19:10:32, EXEC, v:1, k:ed@setbuild, mode:FULL, size:179, fail:COMP
+2026-05-15 19:10:39, EXEC, v:1, k:ed@setbuild, mode:FULL, fail:COMP
+2026-05-15 19:10:45, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:179
+2026-05-15 19:11:21, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:179
+2026-05-15 19:11:56, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:178
+2026-05-15 19:12:10, EXEC, v:1, k:ed@setbuild, mode:FULL, size:178, fail:COMP
+2026-05-15 19:12:17, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:178
+2026-05-15 19:12:15, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:12:16, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:17:15, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:24:33, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:30:19, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:192
+2026-05-15 19:30:11, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:30:19, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:38:58, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:194
+2026-05-15 19:41:26, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:192
+2026-05-15 19:42:29, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:41:25, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:45:09, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:33, size:202
+2026-05-15 19:46:26, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:66, size:203
+2026-05-15 19:47:28, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:46:25, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:51:52, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100, size:220
+2026-05-15 19:51:48, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:51:51, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:52:01, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-15 19:54:13, EXEC, v:1, k:ed@setbuild, mode:FULL, size:223, fail:COMP
+2026-05-15 19:54:28, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100, size:223
+2026-05-15 19:55:18, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-05-15 19:56:07, SELF, v:1, k:ed@setbuild, self:1, rate:100, study:120, concept:1
