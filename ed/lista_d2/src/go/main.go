@@ -7,10 +7,57 @@ import (
 	"strings"
 )
 
+type linkedDlist struct{
+	root *Node
+	size int
+}
+
+func NewLList() *linkedDlist{
+	l := linkedDlist{}
+
+	l.root = &Node{}
+	l.size = 0
+
+	return &l
+}
+
+
+
+func (l *linkedDlist) Size() int {
+	return l.size
+}
+
+func (l *linkedDlist) Clear(){
+	l.root.next = l.root
+	l.root.prev = l.root
+}
+
+func (l *linkedDlist) PushFront(value int){
+	newNode := &Node{
+		value: value,
+	}
+
+	newNode.next = l.root.prev
+	newNode.prev = l.root
+	
+	l.root.next.prev = l.root
+}
+
+func (l *linkedDlist) PushBack(value int){
+	newNode := &Node{
+		value: value,
+	}
+
+	newNode.next = l.root
+	newNode.prev = l.root.prev.prev
+	
+	l.root.next = newNode
+
+}
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-// 	ll := NewLList()
+	ll := NewLList()
 
 	for {
 		fmt.Print("$")
@@ -29,19 +76,19 @@ func main() {
 
 		switch cmd {
 		case "show":
-			// fmt.Println(ll.String())
+			fmt.Println(ll.String())
 		case "size":
-			// fmt.Println(ll.Size())
+			fmt.Println(ll.Size())
 		case "push_back":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	ll.PushBack(num)
-			// }
+			for _, v := range args[1:] {
+				num, _ := strconv.Atoi(v)
+				ll.PushBack(num)
+			}
 		case "push_front":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	ll.PushFront(num)
-			// }
+			for _, v := range args[1:] {
+				num, _ := strconv.Atoi(v)
+				ll.PushFront(num)
+			}
 		case "pop_back":
 			// ll.PopBack()
 		case "pop_front":
@@ -89,5 +136,9 @@ func main() {
 		default:
 			fmt.Println("fail: comando invalido")
 		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		fmt.Fprintln(os.Stderr, err)
 	}
 }

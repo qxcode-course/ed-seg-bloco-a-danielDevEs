@@ -12,6 +12,7 @@ func (list *List) String() string {
         fmt.Printf("%s ")
     }
     fmt.Println("]")
+    
 }
 
 func pushFront(list *List, value int){

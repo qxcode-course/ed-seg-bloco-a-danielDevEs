@@ -1,5 +1,20 @@
 package main
 
+type Node struct{
+	value int
+	next *Node
+	prev *Node
+	root *Node
+}
+
+func (n *Node) Next() *Node {
+	return n.next
+}
+
+func (n *Node) Prev() *Node {
+	return n.prev
+}
+
 // class Node {
 //     Value int    // Valor é público
 //     next *Node   // o próximo nó da lista

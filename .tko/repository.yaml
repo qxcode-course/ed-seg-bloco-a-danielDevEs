@@ -6,24 +6,20 @@ sources:
   type: local
   writeable: true
   quests: null
-  tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
 expanded:
-- sandbox@sandbox
-- ed@list
-- ed@vector
+- ed@basic
 flags:
   inbox: all
   panel: graph
-  show_panel: 'true'
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
-lang: go
-selected: ed@setbuild
-selected_index: 9
+lang: gotko
+selected: ed@baruel
+selected_index: 7

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-19_16-16-06",
+            "content": "package main\n\ntype Node struct{\n\tvalue int\n\tnext *Node\n\tprev *Node\n}\n",
+            "lines": "7"
+        }
+    ]
+}
