@@ -22,23 +22,23 @@ type linkedList struct{
 }
 
 func newList()*linkedList{
-    ll := linkedList{}
+    l := linkedList{}
 
-    ll.root = &Node{}
-    ll.root.next = ll.root
-    ll.root.prev = ll.root
+    l.root = &Node{}
+    l.root.next = l.root
+    l.root.prev = l.root
 
-    return &ll
+    return &l
 }
 
-func (ll *linkedList) Show() string{
+func (l *linkedList) Show() string{
 	str := ""
 	str += "["
-	for i := ll.root.next; i != ll.root; i = i.next {
+	for i := l.root.next; i != l.root; i = i.next {
 		str += fmt.Sprintf("%d", i.data)
 
-		if i.next != ll.root {
-				str += " "
+		if i.next != l.root {
+				str += ", "
 			}
 	}
 	
@@ -46,9 +46,9 @@ func (ll *linkedList) Show() string{
 	return str
 }
 
-func (ll *linkedList) Size() int{
+func (l *linkedList) Size() int{
 	size := 0
-	for i := ll.root.next; i != ll.root; i = i.next {
+	for i := l.root.next; i != l.root; i = i.next {
 		size++
 	}
 	return size
@@ -114,7 +114,7 @@ func (l *linkedList) Clear(){
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
- 	ll := newList()
+ 	l := newList()
 
 	for {
 		fmt.Print("$")
@@ -133,25 +133,25 @@ func main() {
 
 		switch cmd {
 		case "show":
-			fmt.Println(ll.Show())
+			fmt.Println(l.Show())
 		case "size":
-			fmt.Println(ll.Size())
+			fmt.Println(l.Size())
 		case "push_back":
 			for _, v := range args[1:] {
 				num, _ := strconv.Atoi(v)
-				ll.PushBack(num)
+				l.PushBack(num)
 			}
 		case "push_front":
 			for _, v := range args[1:] {
 				num, _ := strconv.Atoi(v)
-				ll.PushFront(num)
+				l.PushFront(num)
 			}
 		case "pop_back":
-			ll.PopBack()
+			l.PopBack()
 		case "pop_front":
-			ll.PopFront()
+			l.PopFront()
 		case "clear":
-			ll.Clear()
+			l.Clear()
 		case "end":
 			return
 		default:

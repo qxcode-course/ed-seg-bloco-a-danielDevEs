@@ -29,6 +29,7 @@ Implemente a classe do vetor dinâmico.
 <!-- links .cache/drafts -->
 - c
   - [main.c](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/vetbuild/.cache/drafts/c/main.c)
+  - [teste.go](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/vetbuild/.cache/drafts/c/teste.go)
 - cpp
   - [extra.md](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/vetbuild/.cache/drafts/cpp/extra.md)
   - [main.cpp](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/vetbuild/.cache/drafts/cpp/main.cpp)

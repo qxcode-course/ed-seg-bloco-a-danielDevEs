@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-19_19-48-19",
+            "content": "@@ -109,47 +109,8 @@\n e %7B%0A\n-%09if n.next == n.root %7B%0A%09%09return nil%0A%09%7D%0A\n %09ret\n@@ -157,47 +157,8 @@\n e %7B%0A\n-%09if n.prev == n.root %7B%0A%09%09return nil%0A%09%7D%0A\n %09ret\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-19_20-29-35",
+            "content": "package main\n\ntype Node struct{\n\tvalue int\n\tnext *Node\n\tprev *Node\n\troot *Node\n}\n\nfunc (n *Node) Next() *Node {\n\tif n.next == n.root {\n\t\treturn nil\n\t}\n\treturn n.next\n}\n\nfunc (n *Node) Prev() *Node {\n\tif n.prev == n.root {\n\t\treturn nil\n\t}\n\treturn n.prev\n}\n\n// class Node {\n//     Value int    // Valor \u00e9 p\u00fablico\n//     next *Node   // o pr\u00f3ximo n\u00f3 da lista\n//     prev *Node   // o n\u00f3 anterior\n\n//     root *Node   // aponta para o n\u00f3 sentinela da lista da qual ele faz parte\n//     Next() *Node // retorna o pr\u00f3ximo n\u00f3 ou nulo, se o pr\u00f3ximo \u00e9 o root\n//     Prev() *Node // retorna o n\u00f3 anterior ou nulo, se o anterior \u00e9 o root\n// }\n",
+            "lines": "32"
+        }
+    ]
+}

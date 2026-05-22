@@ -8,10 +8,16 @@ type Node struct{
 }
 
 func (n *Node) Next() *Node {
+	if n.next == n.root {
+		return nil
+	}
 	return n.next
 }
 
 func (n *Node) Prev() *Node {
+	if n.prev == n.root {
+		return nil
+	}
 	return n.prev
 }
 

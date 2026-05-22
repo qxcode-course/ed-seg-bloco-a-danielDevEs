@@ -13,13 +13,15 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@list
 - ed@basic
+- ed@vector
 flags:
   inbox: all
   panel: graph
   show_panel: 'false'
-  task_graph_mode: executions
+  task_graph_mode: time
   show_time: 'true'
-lang: gotko
-selected: ed@baruel
-selected_index: 7
+lang: go
+selected: ed@prin_list1
+selected_index: 23
