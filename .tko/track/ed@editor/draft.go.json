@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-21_23-19-36",
+            "content": "@@ -10,351 +10,58 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09// %22os%22%0A%09// %22bufio%22%0A)%0A    %0A// func %C3%89reservada(char rune) bool %7B%0A//     reservadas := %5B%5Drune%7B'%5Cn', '%3C', '%3E', 'D', 'B', 'R'%7D%0A%0A//     for _, c := range reservadas%7B%0A//         if char == c %7B%0A//             return true%0A//         %7D%0A//     %7D%0A%0A//     return false%0A// %7D%0A%0Afunc main() %7B%0A    frase := NewList()%0A%0A    cursor := frase.root\n+%0Afunc main() %7B%0A    frase := %5B%5Drune%7B%7D%0A\n %0A   \n@@ -89,17 +89,16 @@\n ar rune%0A\n-%0A\n         \n@@ -120,17 +120,16 @@\n  &char)%0A\n-%0A\n         \n@@ -141,17 +141,17 @@\n ar == '%5C\n-r\n+n\n ' %7B%0A    \n@@ -162,725 +162,100 @@\n     \n-continue%0A        %7D%0A%0A        if char == '%5Cn'%7B%0A            break%0A        %7D%0A%0A%09%09switch char %7B%0A%0A        case 'R':%0A            frase.Insert(cursor, '%5Cn')%0A%0A%09%09case '%3C':%0A%09%09%09if cursor.prev != frase.root %7B%0A%09%09%09%09cursor = cursor.prev%0A%09%09%09%7D%0A%0A%09%09case '%3E':%0A%09%09%09if cursor != frase.root %7B%0A%09%09%09%09cursor = cursor.next%0A%09%09%09%7D%0A%0A%09%09case 'B':%0A%09%09%09if cursor.prev != frase.root %7B%0A%09%09%09%09frase.Erase(cursor.prev)%0A%09%09%09%7D%0A%0A%09%09case 'D':%0A%09%09%09if cursor != frase.root %7B%0A%09%09%09%09next := cursor.next%0A%09%09%09%09frase.Erase(cursor)%0A%09%09%09%09cursor = next%0A%09%09%09%7D%0A%0A%09%09default:%0A%09%09%09frase.Insert(cursor, char)%0A%09%09%7D%0A%09%7D%0A%0A    for node := frase.Front(); node != frase.root; node = node.next %7B%0A%09%09if node == cursor %7B%0A%09%09%09fmt.Print(%22%7C%22)%0A%09%09%7D%0A%09%09fmt.Printf(%22%25c%22, node.data)%0A%09%7D%0A%09if cursor == frase.root %7B%0A%09%09\n+break%0A        %7D%0A        frase = append(frase, char)%0A    %7D%0A%0A    fmt.Println(frase)%0A%0A%0A%0A%0A%0A%0A    \n fmt.\n@@ -263,15 +263,11 @@\n rint\n-(%22%7C%22)%0A%09%7D\n+ln()\n %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-22_22-04-48",
+            "content": "@@ -1192,24 +1192,6 @@\n %0A%09%7D%0A\n-    fmt.Println()%0A\n %7D%0A\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-05-22_22-05-13",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t// \"os\"\n\t// \"bufio\"\n)\n    \n// func \u00c9reservada(char rune) bool {\n//     reservadas := []rune{'\\n', '<', '>', 'D', 'B', 'R'}\n\n//     for _, c := range reservadas{\n//         if char == c {\n//             return true\n//         }\n//     }\n\n//     return false\n// }\n\nfunc main() {\n    frase := NewList()\n\n    cursor := frase.root\n    for {\n        var char rune\n\n        fmt.Scanf(\"%c\", &char)\n\n        if char == '\\r' {\n            continue\n        }\n\n        if char == '\\n'{\n            break\n        }\n\n\t\tswitch char {\n\n        case 'R':\n            frase.Insert(cursor, '\\n')\n\n\t\tcase '<':\n\t\t\tif cursor.prev != frase.root {\n\t\t\t\tcursor = cursor.prev\n\t\t\t}\n\n\t\tcase '>':\n\t\t\tif cursor != frase.root {\n\t\t\t\tcursor = cursor.next\n\t\t\t}\n\n\t\tcase 'B':\n\t\t\tif cursor.prev != frase.root {\n\t\t\t\tfrase.Erase(cursor.prev)\n\t\t\t}\n\n\t\tcase 'D':\n\t\t\tif cursor != frase.root {\n\t\t\t\tnext := cursor.next\n\t\t\t\tfrase.Erase(cursor)\n\t\t\t\tcursor = next\n\t\t\t}\n\n\t\tdefault:\n\t\t\tfrase.Insert(cursor, char)\n\t\t}\n\t}\n\n    for node := frase.Front(); node != frase.root; node = node.next {\n\t\tif node == cursor {\n\t\t\tfmt.Print(\"|\")\n\t\t}\n\t\tfmt.Printf(\"%c\", node.data)\n\t}\n\tif cursor == frase.root {\n\t\tfmt.Print(\"|\")\n\t}\n    fmt.Println()\n}\n",
+            "lines": "80"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-23_15-00-01",
+            "content": "@@ -1627,20 +1627,19 @@\n %09return \n-fals\n+tru\n e%0A%7D%0A%0A%0Afu\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-23_15-05-21",
+            "content": "@@ -1606,28 +1606,27 @@\n %09%7D%0A%09%09return \n-fals\n+tru\n e%0A%09%7D%0A%0A%09retur\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-23_15-05-40",
+            "content": "@@ -1628,19 +1628,20 @@\n %09return \n-tru\n+fals\n e%0A%7D%0A%0A%0Afu\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-23_15-05-53",
+            "content": "@@ -1632,29 +1632,12 @@\n urn \n-backTracking(0, 0, 1)\n+true\n %0A%7D%0A%0A\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-23_15-07-29",
+            "content": "@@ -45,57 +45,291 @@\n %0A)%0A%0A\n-func exist(board %5B%5D%5B%5Dbyte, word string) bool %7B%0A%0A%09\n+type Frame struct %7B%0A%09r, c int%0A%09value byte%0A%09index int%0A%09visited bool%0A%7D%0A%0A// N%C3%A3o mude a assinatura desta fun%C3%A7%C3%A3o, ela %C3%A9 a fun%C3%A7%C3%A3o chamada pelo LeetCode%0Afunc exist(grid %5B%5D%5B%5Dbyte, word string) bool %7B%0A%09// _, _ = grid, word%0A%09if len(word) == 0%7B%0A%09%09return true%0A%09%7D%0A%0A%09wordbyte := %5B%5Dbyte(word)%0A%0A%09// \n rows\n@@ -346,20 +346,19 @@\n len(\n-boar\n+gri\n d), len(\n boar\n@@ -357,20 +357,19 @@\n len(\n-boar\n+gri\n d%5B0%5D)%0A%0A%09\n type\n@@ -368,78 +368,161 @@\n )%0A%0A%09\n-type Frame struct %7B%0A%09%09r, c  int%0A%09%09index int%0A%09%09path  map%5B%5B2%5Dint%5D\n+// visited := make(%5B%5D%5B%5Dbool, rows)%0A%09// for i := range visited %7B%0A%09// %09visited%5Bi%5D = make(%5B%5Dbool, cols)%0A%09// %7D%0A%0A%09var backTracking func (r, c, index int) \n bool\n-%0A%09%7D\n %0A%0A%09s\n@@ -557,16 +557,19 @@\n for \n+pos\n r := 0; \n r %3C \n@@ -568,30 +568,40 @@\n  0; \n+pos\n r %3C \n-rows; \n+len(grid); pos\n r++\n- \n %7B%0A%09%09for \n c :=\n@@ -600,16 +600,19 @@\n for \n+pos\n c := 0; \n c %3C \n@@ -611,362 +611,342 @@\n  0; \n-c %3C cols; \n+posc %3Clen(grid%5B0%5D); pos\n c++\n- \n %7B%0A\n-%0A\n %09%09%09if \n-board%5Br%5D%5Bc%5D == word%5B0%5D %7B%0A%0A%09%09%09%09path := make(map%5B%5B2%5Dint%5Dbool)%0A%09%09%09%09path%5B%5B2%5Dint%7Br, c%7D%5D = true%0A%0A%09%09%09%09stack.Push(Frame%7B%0A%09%09%09%09%09r:     r,%0A%09%09%09%09%09c:     c,%0A%09%09%09%09%09index: 0,%0A%09%09%09%09%09path:  path,%0A%09%09%09%09%7D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09directions := %5B%5D%5B2%5Dint%7B%0A%09%09%7B1, 0%7D,%0A%09%09%7B-1, 0%7D,%0A%09%09%7B0, 1%7D,%0A%09%09%7B0, -1%7D,%0A%09%7D%0A%0A%09for !stack.IsEmpty() %7B%0A%0A%09%09current := stack.Pop\n+grid%5Bposr%5D%5Bposc%5D == wordbyte%5B0%5D%7B%0A%09%09%09%09stack.Push(Frame%7Br: posr, c: posc, value: grid%5Bposr%5D%5Bposc%5D, index: 0, visited: true%7D)%0A%09%09%09%09// visited = append(visited, true)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09if stack.IsEmpty()%7B%0A%09%09return false%0A%09%7D%0A%0A%09l := 1%0A%0A%09backTracking = func(r, c, index int) bool %7B%0A%0A%09%09for !stack.IsEmpty\n ()\n+%7B\n %0A%0A\n+%09\n %09%09if \n-current.\n inde\n@@ -962,14 +962,16 @@\n word\n-)-1 \n+byte)\n %7B%0A\n+%09\n %09%09%09r\n@@ -987,222 +987,204 @@\n e%0A%09%09\n+%09\n %7D%0A%0A%09%09\n-for _, d := range directions %7B%0A%0A%09%09%09nr := current.r + d%5B0%5D%0A%09%09%09nc := current.c + d%5B1%5D%0A%0A%09%09%09if nr %3C 0 %7C%7C nr %3E= rows %7C%7C%0A%09%09%09%09nc %3C 0 %7C%7C nc %3E= cols %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%0A%09%09%09if current.path%5B%5B2%5Dint%7Bnr, nc%7D%5D %7B%0A%09%09%09%09continu\n+%09if (r %3E len(grid) %7C%7C r %3C 0) %7C%7C(c %3E len(grid%5B0%5D) %7C%7C c %3C 0)%7B%0A%09%09%09%09return false%0A%09%09%09%7D%0A%0A%09%09%09if grid%5Br%5D%5Bc%5D != wordbyte%5Bl%5D %7B%0A%09%09%09%09return false%0A%09%09%09%7D%0A%0A%09%09%09if stack.Top().visited == true%7B%0A%09%09%09%09return fals\n e%0A%09%09\n@@ -1197,316 +1197,417 @@\n %09if \n-boar\n+gri\n d%5B\n-n\n r%5D%5B\n-n\n c%5D \n-!\n+=\n = word\n-%5Bcurrent.index+1%5D %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%0A%09%09%09newPath := make(map%5B%5B2%5Dint%5Dbool)%0A%0A%09%09%09for k, v := range current.path %7B%0A%09%09%09%09newPath%5Bk%5D = v%0A%09%09%09%7D%0A%0A%09%09%09newPath%5B%5B2%5Dint%7Bnr, nc%7D%5D = true%0A%0A%09%09%09stack.Push(Frame%7B%0A%09%09%09%09r:     nr,%0A%09%09%09%09c:     nc,%0A%09%09%09%09index: current.index + 1,%0A%09%09%09%09path:  newPath,%0A%09%09%09%7D)%0A%09%09%7D%0A%09%7D%0A%0A\n+byte%5Bl%5D %7B%0A%09%09%09%09stack.Push(Frame%7Br: r, c: c, value: grid%5Br%5D%5Bc%5D, index: l, visited: true%7D)%0A%09%09%09%09// visited = append(visited, true)%0A%09%09%09%09l++%0A%09%09%09%7D%0A%0A%09%09%09if backTracking(r+1, c, stack.Top().index) %7C%7C%0A%09%09%09   backTracking(r-1, c, stack.Top().index) %7C%7C%0A%09%09%09   backTracking(r, c+1, stack.Top().index) %7C%7C%0A%09%09%09   backTracking(r, c-1, stack.Top().index) %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%0A%09%09%09stack.Pop()%0A%09%09%09continue%0A%0A%09%09%7D%0A%09\n %09ret\n@@ -1616,16 +1616,50 @@\n n false%0A\n+%09%7D%0A%0A%09return backTracking(0, 0, 1)%0A\n %7D%0A%0A%0Afunc\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-23_15-13-00",
+            "content": "@@ -52,19 +52,20 @@\n c exist(\n-gri\n+boar\n d %5B%5D%5B%5Dby\n@@ -112,19 +112,20 @@\n len(\n-gri\n+boar\n d), len(\n grid\n@@ -120,19 +120,20 @@\n d), len(\n-gri\n+boar\n d%5B0%5D)%0A%0A%09\n@@ -247,41 +247,54 @@\n  := \n-range rows%7B%0A%09%09for c := range cols\n+0; r %3C rows; r++ %7B%0A%09%09for c := 0; c %3C cols; c++\n  %7B%0A%0A\n@@ -299,19 +299,20 @@\n %0A%0A%09%09%09if \n-gri\n+boar\n d%5Br%5D%5Bc%5D \n@@ -898,19 +898,20 @@\n %0A%0A%09%09%09if \n-gri\n+boar\n d%5Bnr%5D%5Bnc\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-05-23_16-47-05",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc exist(grid [][]byte, word string) bool {\n\n\trows, cols := len(grid), len(grid[0])\n\n\ttype Frame struct {\n\t\tr, c  int\n\t\tindex int\n\t\tpath  map[[2]int]bool\n\t}\n\n\tstack := NewStack[Frame]()\n\n\tfor r := range rows{\n\t\tfor c := range cols {\n\n\t\t\tif grid[r][c] == word[0] {\n\n\t\t\t\tpath := make(map[[2]int]bool)\n\t\t\t\tpath[[2]int{r, c}] = true\n\n\t\t\t\tstack.Push(Frame{\n\t\t\t\t\tr:     r,\n\t\t\t\t\tc:     c,\n\t\t\t\t\tindex: 0,\n\t\t\t\t\tpath:  path,\n\t\t\t\t})\n\t\t\t}\n\t\t}\n\t}\n\n\tdirections := [][2]int{\n\t\t{1, 0},\n\t\t{-1, 0},\n\t\t{0, 1},\n\t\t{0, -1},\n\t}\n\n\tfor !stack.IsEmpty() {\n\n\t\tcurrent := stack.Pop()\n\n\t\tif current.index == len(word)-1 {\n\t\t\treturn true\n\t\t}\n\n\t\tfor _, d := range directions {\n\n\t\t\tnr := current.r + d[0]\n\t\t\tnc := current.c + d[1]\n\n\t\t\tif nr < 0 || nr >= rows ||\n\t\t\t\tnc < 0 || nc >= cols {\n\t\t\t\tcontinue\n\t\t\t}\n\n\t\t\tif current.path[[2]int{nr, nc}] {\n\t\t\t\tcontinue\n\t\t\t}\n\n\t\t\tif grid[nr][nc] != word[current.index+1] {\n\t\t\t\tcontinue\n\t\t\t}\n\n\t\t\tnewPath := make(map[[2]int]bool)\n\n\t\t\tfor k, v := range current.path {\n\t\t\t\tnewPath[k] = v\n\t\t\t}\n\n\t\t\tnewPath[[2]int{nr, nc}] = true\n\n\t\t\tstack.Push(Frame{\n\t\t\t\tr:     nr,\n\t\t\t\tc:     nc,\n\t\t\t\tindex: current.index + 1,\n\t\t\t\tpath:  newPath,\n\t\t\t})\n\t\t}\n\t}\n\n\treturn false\n}\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "107"
+        }
+    ]
+}

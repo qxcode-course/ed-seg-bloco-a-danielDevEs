@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-21_23-19-36",
+            "content": "@@ -38,12 +38,14 @@\n ata \n-rune\n+string\n %0A   \n@@ -71,16 +71,31 @@\n v *Node%0A\n+    root *Node%0A\n %7D%0A%0Afunc \n@@ -108,33 +108,32 @@\n de) Next() *Node\n- \n %7B%0A%09return n.next\n@@ -163,17 +163,16 @@\n () *Node\n- \n %7B%0A%09retur\n@@ -182,8 +182,54 @@\n .prev%0A%7D%0A\n+%0Afunc (n *Node) End() *Node%7B%0A%09return n.root%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-05-22_22-04-48",
+            "content": "package main\n\ntype Node struct{\n    data rune\n    next *Node\n    prev *Node\n}\n\nfunc (n *Node) Next() *Node {\n\treturn n.next\n}\n\nfunc (n *Node) Prev() *Node {\n\treturn n.prev\n}\n",
+            "lines": "15"
+        }
+    ]
+}

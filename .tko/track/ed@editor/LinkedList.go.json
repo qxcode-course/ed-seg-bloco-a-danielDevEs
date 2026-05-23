@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-21_23-19-36",
+            "content": "@@ -304,587 +304,4 @@\n v%0A%7D%0A\n-%0Afunc (l *LinkedList) PushBack(letter rune)%7B%0A%09l.Insert(l.root, letter)%0A%7D%0A%0Afunc (l *LinkedList) PushFront(letter rune)%7B%0A%09l.Insert(l.root.next, letter)%0A%7D%0A%0Afunc (l *LinkedList) Erase(Oldnode *Node)%7B%0A%09Oldnode.next.prev = Oldnode.Prev()%0A%09Oldnode.prev.next = Oldnode.Next()%0A%09l.size--%0A%7D%0A%0Afunc (l *LinkedList) Insert(it *Node, letter rune) *Node%7B%0A%0A%09prev := it.prev%0A%0A%09newNode := &Node%7B%0A%09%09data: letter,%0A%09%09next: it,%0A%09%09prev: prev,%0A%09%7D%0A%0A%09prev.next = newNode%0A%09it.prev = newNode%0A%0A%09return newNode%0A%7D%0A%0Afunc (l *LinkedList) Replace(node *Node, newValue rune) *Node%7B%0A%09node.data = newValue%0A%09return node%0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-22_22-04-48",
+            "content": "package main\n\ntype LinkedList struct{\n    root *Node\n\tsize int\n}\n\nfunc NewList() *LinkedList{\n\troot := &Node{}\n\troot.next = root\n\troot.prev = root\n\treturn &LinkedList{root: root, size: 0}\n}\n\nfunc (l *LinkedList) Front() *Node{\n\treturn l.root.next\n}\n\nfunc (l *LinkedList) Back() *Node{\n\treturn l.root.prev\n}\n\nfunc (l *LinkedList) PushBack(letter rune){\n\tl.Insert(l.root, letter)\n}\n\nfunc (l *LinkedList) PushFront(letter rune){\n\tl.Insert(l.root.next, letter)\n}\n\nfunc (l *LinkedList) Erase(Oldnode *Node){\n\tOldnode.next.prev = Oldnode.Prev()\n\tOldnode.prev.next = Oldnode.Next()\n\tl.size--\n}\n\nfunc (l *LinkedList) Insert(it *Node, letter rune) *Node{\n\n\tprev := it.prev\n\n\tnewNode := &Node{\n\t\tdata: letter,\n\t\tnext: it,\n\t\tprev: prev,\n\t}\n\n\tprev.next = newNode\n\tit.prev = newNode\n\n\treturn newNode\n}\n\nfunc (l *LinkedList) Replace(node *Node, newValue rune) *Node{\n\tnode.data = newValue\n\treturn node\n}\n",
+            "lines": "56"
+        }
+    ]
+}

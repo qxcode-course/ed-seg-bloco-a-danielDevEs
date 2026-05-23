@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-21_22-15-26",
+            "content": "@@ -148,259 +148,19 @@\n  %7B%0A%09\n-str := %22%22%0A%09// str += %22%5B%22%0A%09// for node := l.Front(); node != nil; node = node.next %7B%0A%09// %09if node == sword %7B%0A%09// %09%09str += fmt.Sprintf(%22%25v%3E %22, node.Value)%0A%09// %09%09continue%0A%09// %09%7D%0A%09// %09str += fmt.Sprintf(%22%25v %22, node.Value)%0A%09// %7D%0A%09// str += %22%5D%22%0A%09return str%0A\n+return %22%22%0A%09\n %0A%7D%0A%0A\n@@ -257,64 +257,18 @@\n  %7B%0A%09\n-if it == l.root%7B%0A%09%09return it.Next()%0A%09%7D%0A%09return it.Next()\n+return nil\n %0A%7D%0A%0A\n@@ -327,20 +327,17 @@\n chosen)%0A\n+\n %09\n-// \n fmt.Prin\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-21_22-42-37",
+            "content": "@@ -155,16 +155,19 @@\n  := %22%22%0A%09\n+// \n str += %22\n@@ -369,16 +369,19 @@\n %0A%09// %7D%0A%09\n+// \n str += %22\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-21_22-43-07",
+            "content": "@@ -167,16 +167,19 @@\n += %22%5B%22%0A%09\n+// \n for node\n@@ -201,22 +201,19 @@\n node != \n-l.root\n+nil\n ; node =\n@@ -226,16 +226,19 @@\n next %7B%0A%09\n+// \n %09if node\n@@ -250,16 +250,19 @@\n word %7B%0A%09\n+// \n %09%09str +=\n@@ -295,16 +295,19 @@\n Value)%0A%09\n+// \n %09%09contin\n@@ -310,20 +310,26 @@\n ntinue%0A%09\n+// \n %09%7D%0A%09\n+// \n %09str += \n@@ -360,16 +360,19 @@\n Value)%0A%09\n+// \n %7D%0A%09str +\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-21_22-43-36",
+            "content": "@@ -164,17 +164,16 @@\n tr += %22%5B\n- \n %22%0A%09for n\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-21_22-44-01",
+            "content": "@@ -503,13 +503,8 @@\n  it.\n-next.\n Next\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-21_22-44-53",
+            "content": "@@ -475,23 +475,16 @@\n %7B%0A%09if it\n-.Next()\n  == l.ro\n@@ -499,19 +499,19 @@\n turn it.\n-roo\n+nex\n t.Next()\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-21_22-46-35",
+            "content": "@@ -503,17 +503,18 @@\n %09return \n-l\n+it\n .root.Ne\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-21_22-48-56",
+            "content": "@@ -510,20 +510,22 @@\n  l.root.\n-n\n+N\n ext\n+()\n %0A%09%7D%0A%09ret\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-21_22-51-52",
+            "content": "@@ -510,22 +510,20 @@\n  l.root.\n-N\n+n\n ext\n-()\n %0A%09%7D%0A%09ret\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-21_22-52-28",
+            "content": "@@ -510,20 +510,22 @@\n  l.root.\n-n\n+N\n ext\n+()\n %0A%09%7D%0A%09ret\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-21_22-54-53",
+            "content": "@@ -24,16 +24,19 @@\n %09%22fmt%22%0A%09\n+// \n %22strings\n@@ -148,54 +148,30 @@\n  %7B%0A%09\n-var sb strings.Builder%0A%0A%09sb.WriteString(\n+str := %22%22%0A%09str += \n %22%5B %22\n-)%0A\n %0A%09fo\n@@ -226,17 +226,16 @@\n .next %7B%0A\n-%0A\n %09%09if nod\n@@ -247,38 +247,30 @@\n sword %7B%0A%09%09%09s\n-b.WriteString(\n+tr += \n fmt.Sprintf(\n@@ -292,39 +292,34 @@\n lue)\n-)\n %0A%09%09\n-%7D else %7B%0A%09%09%09sb.WriteString(\n+%09continue%0A%09%09%7D%0A%09%09str += \n fmt.\n@@ -348,39 +348,23 @@\n lue)\n-)%0A%09%09%7D\n %0A%09%7D%0A\n-%0A\n %09s\n-b.WriteString(\n+tr += \n %22%5D%22\n-)%0A\n %0A%09re\n@@ -373,18 +373,11 @@\n rn s\n-b.String()\n+tr%0A\n %0A%7D%0A%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-21_22-56-53",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tvar sb strings.Builder\n\n\tsb.WriteString(\"[ \")\n\n\tfor node := l.Front(); node != l.root; node = node.next {\n\n\t\tif node == sword {\n\t\t\tsb.WriteString(fmt.Sprintf(\"%v> \", node.Value))\n\t\t} else {\n\t\t\tsb.WriteString(fmt.Sprintf(\"%v \", node.Value))\n\t\t}\n\t}\n\n\tsb.WriteString(\"]\")\n\n\treturn sb.String()\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tif it.Next() == l.root{\n\t\treturn l.root.next\n\t}\n\treturn it.Next()\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\t// fmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "54"
+        }
+    ]
+}

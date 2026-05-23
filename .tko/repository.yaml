@@ -13,15 +13,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- ed@basic
-- ed@vector
+- ed@backtrack
 flags:
   inbox: all
   panel: graph
-  show_panel: 'false'
-  task_graph_mode: time
+  show_panel: 'true'
+  task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@prin_list1
-selected_index: 23
+selected: ed@subset_sum
+selected_index: 6
