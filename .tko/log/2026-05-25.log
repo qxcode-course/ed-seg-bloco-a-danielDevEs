@@ -1,0 +1,63 @@
+2026-05-25 09:04:26, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-25 09:04:26, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-25 09:07:47, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 13:45:44, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-25 13:45:52, EXEC, v:1, k:ed@distancia, mode:FULL, size:108, fail:COMP
+2026-05-25 13:47:26, EXEC, v:1, k:ed@distancia, mode:FULL, size:108, fail:COMP
+2026-05-25 13:42:53, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-25 13:42:53, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-25 13:45:44, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 13:47:23, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 13:47:30, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-25 13:47:35, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-25 13:47:35, EXEC, v:1, k:ed@distancia, mode:FULL, fail:COMP
+2026-05-25 13:47:45, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:106
+2026-05-25 13:48:15, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:106
+2026-05-25 13:48:29, EXEC, v:1, k:ed@distancia, mode:FULL, rate:57, size:106
+2026-05-25 13:48:27, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 13:48:28, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 13:53:55, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-25 13:54:47, MOVE, v:1, k:ed@ilhas, mode:DOWN
+2026-05-25 13:54:50, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-05-25 13:54:57, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-25 13:54:47, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-25 13:58:41, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-25 14:00:40, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-25 14:44:12, MOVE, v:1, k:ed@cercado, mode:DOWN
+2026-05-25 14:44:15, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-25 14:44:11, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-25 14:44:17, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 14:44:12, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 14:44:18, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 14:44:14, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-25 14:44:14, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-25 14:52:32, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-25 14:52:37, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-25 14:52:37, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-25 14:52:41, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-25 14:54:58, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-05-25 14:55:03, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-25 15:53:18, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-25 15:53:44, EXEC, v:1, k:ed@cercado, mode:FULL, rate:0, size:58
+2026-05-25 15:53:18, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 15:53:18, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 15:53:44, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:03:02, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:07:11, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:14:10, EXEC, v:1, k:ed@cercado, mode:FULL, rate:0, size:79
+2026-05-25 16:14:25, EXEC, v:1, k:ed@cercado, mode:FREE
+2026-05-25 16:17:29, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:14:08, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-05-25 16:17:33, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:23:04, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:21:56, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-25 16:27:48, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:24:49, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:32:27, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:32:37, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:33:23, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:33:28, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:45:57, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:49:11, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-25 16:48:47, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-25 16:48:52, MOVE, v:1, k:ed@cercado, mode:EDIT

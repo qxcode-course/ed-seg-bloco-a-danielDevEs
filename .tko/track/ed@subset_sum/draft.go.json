@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-23_17-17-29",
+            "content": "@@ -560,57 +560,7 @@\n  %7D%0A%0A\n-    fmt.Println(backTracking(numbers, 0, sumMax))%0A\n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-23_17-18-05",
+            "content": "@@ -201,57 +201,63 @@\n     \n+if \n sum +\n-=\n  num\n-%0A   \n+ %3E target %7B%0A\n      \n-%0A\n        \n- if sum %3E target%7B%0A\n+continue%0A    \n     \n+%7D%0A\n     \n@@ -264,17 +264,17 @@\n     sum \n--\n++\n = num%0A  \n@@ -275,25 +275,24 @@\n num%0A        \n-%7D\n %0A    %7D%0A    %0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-05-23_17-19-51",
+            "content": "@@ -10,42 +10,23 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22slices%22%0A)%0A%0A%0A// \n+%0A%0A\n func\n@@ -84,19 +84,317 @@\n  %7B%0A    %0A\n-// \n+%0A    if idx %3E len(numbers) - 1%7B%0A        return false%0A    %7D%0A    sum := 0%0A    for _, num := range numbers%7B%0A        sum += num%0A        %0A        if sum %3E target%7B%0A            sum -= num%0A        %7D%0A    %7D%0A    %0A    if sum == target %7B%0A        return true%0A    %7D%0A%0A    return backTracking (numbers, idx+1, target)%0A\n %7D%0A%0A%0Afunc\n@@ -554,64 +554,12 @@\n   %7D%0A\n+%0A\n    \n- slices.Sort(numbers)%0A    fmt.Println(numbers)%0A    //\n  fmt\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-05-23_17-35-39",
+            "content": "@@ -37,16 +37,88 @@\n es%22%0A)%0A%0A%0A\n+// func backTracking (numbers %5B%5Dint, idx, target int) bool %7B%0A    %0A// %7D%0A%0A\n %0Afunc ma\n@@ -136,22 +136,22 @@\n  var n, \n-target\n+sumMax\n  int%0A   \n@@ -165,22 +165,22 @@\n an(&n, &\n-target\n+sumMax\n )%0A%0A    v\n@@ -300,685 +300,85 @@\n rs)%0A\n-%0A\n     \n-var canFindSum func(index int, currentSum int) bool%0A%0A    canFindSum = func(index int, currentSum int) bool %7B%0A%0A    if currentSum == target %7B%0A        return true%0A    %7D%0A    if currentSum %3E target %7B%0A        return false%0A    %7D%0A    if index %3E= len(numbers) %7B%0A        return false %0A    %7D%0A%0A    // 2. RAMIFICA%C3%87%C3%83O (As Duas Escolhas)%0A    %0A    // Escolha A: Incluir o n%C3%BAmero atual na soma%0A    include := canFindSum(index + 1, currentSum + numbers%5Bindex%5D)%0A    if include %7B%0A        return true // Se esse caminho deu certo, n%C3%A3o precisa testar mais nada! (Pruning)%0A    %7D%0A%0A    // Escolha B: Ignorar o n%C3%BAmero atual%0A    exclude := canFindSum(index + 1, currentSum)%0A    %0A    return exclude%0A%7D\n+fmt.Println(numbers)%0A    // fmt.Println(backTracking(numbers, 0, sumMax))\n %0A%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-23_17-41-16",
+            "content": "@@ -339,20 +339,16 @@\n bool %7B%0A%0A\n-    \n     if c\n@@ -369,36 +369,32 @@\n arget %7B%0A        \n-    \n return true%0A    \n@@ -393,30 +393,22 @@\n rue%0A    \n-    %7D%0A   \n+%7D%0A\n     \n- \n if curre\n@@ -424,36 +424,32 @@\n arget %7B%0A        \n-    \n return false%0A   \n@@ -449,26 +449,18 @@\n lse%0A    \n-   \n- \n %7D%0A\n-    \n     if i\n@@ -486,28 +486,24 @@\n ) %7B%0A        \n-  \n-  \n return false\n@@ -504,35 +504,27 @@\n  false %0A    \n-    %7D%0A%0A    \n+%7D%0A%0A\n     // 2. RA\n@@ -556,29 +556,21 @@\n as)%0A    \n-    %0A \n+%0A\n     \n-   \n // Escol\n@@ -606,20 +606,16 @@\n na soma%0A\n-    \n     incl\n@@ -672,20 +672,16 @@\n index%5D)%0A\n-    \n     if i\n@@ -693,28 +693,24 @@\n e %7B%0A        \n-   \n- \n return true \n@@ -787,23 +787,15 @@\n     \n-    %7D%0A%0A   \n+%7D%0A%0A\n     \n- \n // E\n@@ -827,20 +827,16 @@\n o atual%0A\n-    \n     excl\n@@ -880,25 +880,17 @@\n um)%0A    \n-  \n-  %0A    \n+%0A\n     retu\n@@ -904,47 +904,9 @@\n ude%0A\n-    %7D%0A    fmt.Println(canFindSum(0, 0))\n+%7D\n %0A%0A%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-23_17-42-21",
+            "content": "@@ -539,32 +539,77 @@\n lse %0A        %7D%0A%0A\n+        // 2. RAMIFICA%C3%87%C3%83O (As Duas Escolhas)%0A\n         %0A       \n@@ -593,32 +593,32 @@\n olhas)%0A        %0A\n-\n         // Escol\n@@ -828,16 +828,26 @@\n is nada!\n+ (Pruning)\n %0A       \n@@ -982,24 +982,24 @@\n clude%0A    %7D%0A\n-\n     fmt.Prin\n@@ -1020,10 +1020,11 @@\n (0, 0))%0A\n+%0A\n %7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-24_12-58-49",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"slices\"\n)\n\n\n\nfunc main() {\n\n    var n, target int\n    fmt.Scan(&n, &target)\n\n    var numbers = make([]int, n)\n    for i := range numbers{\n        fmt.Scan(&numbers[i])\n    }\n    slices.Sort(numbers)\n\n    var canFindSum func(index int, currentSum int) bool\n\n    canFindSum = func(index int, currentSum int) bool {\n\n        if currentSum == target {\n            return true\n        }\n        if currentSum > target {\n            return false\n        }\n        if index >= len(numbers) {\n            return false \n        }\n\n        \n        // Escolha A: Incluir o n\u00famero atual na soma\n        include := canFindSum(index + 1, currentSum + numbers[index])\n        if include {\n            return true // Se esse caminho deu certo, n\u00e3o precisa testar mais nada!\n        }\n\n        // Escolha B: Ignorar o n\u00famero atual\n        exclude := canFindSum(index + 1, currentSum)\n        \n        return exclude\n    }\n    fmt.Println(canFindSum(0, 0))\n}\n",
+            "lines": "48"
+        }
+    ]
+}

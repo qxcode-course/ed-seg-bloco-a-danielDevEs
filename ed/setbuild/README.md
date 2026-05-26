@@ -1,4 +1,4 @@
-# Conjunto usando Lista Sequencial Ordenada
+ # Conjunto usando Lista Sequencial Ordenada
 
 - Conjuntos normalmente são implementados com tabelas hash ou árvores.
 - Mas vamos implementar um conjunto usando uma lista sequencial ordenada.

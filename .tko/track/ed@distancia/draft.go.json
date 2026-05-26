@@ -1,0 +1,279 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-24_14-05-01",
+            "content": "@@ -50,20 +50,16 @@\n    %0A    \n-var \n instance\n@@ -63,45 +63,24 @@\n nce \n-string%0A    fmt.Scan(&instance)\n+:= %5B%5Drune%7B%7D%0A\n %0A   \n- //\n  for\n@@ -81,27 +81,24 @@\n    for %7B%0A   \n- //\n      var ele\n@@ -111,23 +111,20 @@\n une%0A    \n-//\n     \n- \n fmt.Scan\n@@ -133,27 +133,24 @@\n element)%0A   \n- //\n      if elem\n@@ -166,26 +166,24 @@\n n'%7B%0A    \n-//\n         \n  break%0A \n@@ -166,33 +166,32 @@\n n'%7B%0A            \n- \n break%0A    //    \n@@ -179,27 +179,24 @@\n    break%0A   \n- //\n      %7D%0A    /\n@@ -189,27 +189,24 @@\n        %7D%0A   \n- //\n      instanc\n@@ -243,53 +243,14 @@\n     \n-// %7D%0A    fmt.Println(string(instance))\n+%7D%0A\n %0A   \n- //\n  var\n@@ -264,19 +264,16 @@\n int%0A%0A   \n- //\n  numbers\n@@ -299,19 +299,16 @@\n it)%0A%0A   \n- //\n  for i :\n@@ -321,27 +321,24 @@\n e limit%7B%0A   \n- //\n      numbers\n@@ -344,27 +344,24 @@\n s%5Bi%5D = i%0A   \n- //\n  %7D%0A%0A%0A%0A    //\n@@ -357,19 +357,16 @@\n %7D%0A%0A%0A%0A   \n- //\n  var Put\n@@ -429,19 +429,16 @@\n une%0A%0A   \n- //\n  PutNumb\n@@ -497,27 +497,24 @@\n %5Drune %7B%0A%0A   \n- //\n      if idx \n@@ -534,27 +534,24 @@\n ce) - 1%7B%0A   \n- //\n          ret\n@@ -562,27 +562,24 @@\n instance%0A   \n- //\n      %7D%0A     \n@@ -581,27 +581,24 @@\n         %0A   \n- //\n      if inst\n@@ -614,27 +614,24 @@\n  != '.'%7B%0A   \n- //\n          ret\n@@ -669,27 +669,24 @@\n , idx+1)%0A   \n- //\n      %7D%0A%0A    \n@@ -680,27 +680,24 @@\n       %7D%0A%0A   \n- //\n      for _, \n@@ -720,26 +720,24 @@\n rs%7B%0A    \n-//\n         \n  instanc\n@@ -720,33 +720,32 @@\n rs%7B%0A            \n- \n instance%5Bidx%5D = \n@@ -752,27 +752,24 @@\n rune(n)%0A%0A   \n- //\n          var\n@@ -784,35 +784,32 @@\n Left int = 1%0A   \n- //\n          for ins\n@@ -862,27 +862,24 @@\n Index--%7B%0A   \n- //\n             \n@@ -898,35 +898,32 @@\n eft %3E limit%7B%0A   \n- //\n                 \n@@ -924,35 +924,32 @@\n        break%0A   \n- //\n              %7D%0A \n@@ -947,35 +947,32 @@\n       %7D%0A    %0A   \n- //\n              if \n@@ -1008,35 +1008,32 @@\n stance%5Bidx%5D%7B%0A   \n- //\n                 \n@@ -1048,35 +1048,32 @@\n e%5Bidx%5D = '.'%0A   \n- //\n              %7D%0A \n@@ -1067,34 +1067,32 @@\n           %7D%0A    \n-//\n              con\n@@ -1083,25 +1083,24 @@\n             \n- \n controlLeft+\n@@ -1100,27 +1100,24 @@\n olLeft++%0A   \n- //\n          %7D%0A \n@@ -1120,35 +1120,32 @@\n  %7D%0A    %0A    %0A   \n- //\n          var con\n@@ -1161,27 +1161,24 @@\n  int = 1%0A   \n- //\n          for\n@@ -1251,27 +1251,24 @@\n Index++%7B%0A   \n- //\n             \n@@ -1292,27 +1292,24 @@\n %3E limit%7B%0A   \n- //\n             \n@@ -1318,27 +1318,24 @@\n    break%0A   \n- //\n             \n@@ -1341,27 +1341,24 @@\n   %7D%0A    %0A   \n- //\n             \n@@ -1402,27 +1402,24 @@\n ce%5Bidx%5D%7B%0A   \n- //\n             \n@@ -1443,26 +1443,24 @@\n %5D = '.'%0A    \n-//\n             \n@@ -1455,33 +1455,29 @@\n             \n- \n %7D%0A   \n- //\n             \n@@ -1500,18 +1500,16 @@\n     \n-//\n         \n  %7D%0A \n@@ -1500,33 +1500,29 @@\n             \n- \n %7D%0A   \n- //\n      %7D%0A    /\n@@ -1519,19 +1519,16 @@\n    %7D%0A   \n- //\n      ret\n@@ -1574,21 +1574,15 @@\n %0A   \n- //\n  %7D%0A%0A   \n- //\n  fmt\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-24_14-07-30",
+            "content": "@@ -98,42 +98,8 @@\n ce)%0A\n-    VetString := %5B%5Dbyte(instance)%0A\n     \n@@ -307,23 +307,32 @@\n tln(\n-VetS\n+s\n tring\n+(instance)\n )\n-%0A\n %0A   \n+ //\n  var\n@@ -346,16 +346,19 @@\n int%0A%0A   \n+ //\n  numbers\n@@ -384,16 +384,19 @@\n it)%0A%0A   \n+ //\n  for i :\n@@ -414,20 +414,23 @@\n it%7B%0A    \n+//\n     \n+ \n numbers%5B\n@@ -443,20 +443,23 @@\n %0A   \n+ //\n  %7D%0A%0A%0A%0A\n-//\n     \n+//\n  var\n@@ -475,38 +475,38 @@\n r func(instance \n-string\n+%5B%5Drune\n , numbers %5B%5Dint,\n@@ -519,22 +519,22 @@\n nt) \n-string%0A%0A//\n+%5B%5Drune%0A%0A\n     \n+//\n  Put\n@@ -556,22 +556,22 @@\n nstance \n-string\n+%5B%5Drune\n , number\n@@ -592,24 +592,24 @@\n nt) \n-string\n+%5B%5Drune\n  %7B%0A%0A\n-//\n     \n+//\n     \n@@ -638,22 +638,22 @@\n e) - 1%7B%0A\n-//\n     \n+//\n         \n@@ -669,22 +669,22 @@\n nstance%0A\n-//\n     \n+//\n      %7D%0A \n@@ -687,30 +687,30 @@\n  %7D%0A        %0A\n-//\n     \n+//\n      if inst\n@@ -727,22 +727,22 @@\n != '.'%7B%0A\n-//\n     \n+//\n         \n@@ -789,22 +789,22 @@\n +1)%0A\n-//\n     \n+//\n      %7D%0A%0A\n //  \n@@ -799,22 +799,22 @@\n      %7D%0A%0A\n-//\n     \n+//\n      for\n@@ -837,22 +837,22 @@\n umbers%7B%0A\n-//\n     \n+//\n         \n@@ -872,25 +872,23 @@\n %5D = \n-string\n+rune\n (n)%0A%0A\n-//\n     \n+//\n     \n@@ -908,38 +908,38 @@\n rolLeft int = 1%0A\n-//\n     \n+//\n          for ins\n@@ -993,22 +993,22 @@\n ndex--%7B%0A\n-//\n     \n+//\n         \n@@ -1028,38 +1028,38 @@\n olLeft %3E limit%7B%0A\n-//\n     \n+//\n                 \n@@ -1057,38 +1057,38 @@\n           break%0A\n-//\n     \n+//\n              %7D%0A \n@@ -1083,38 +1083,38 @@\n          %7D%0A    %0A\n-//\n     \n+//\n              if \n@@ -1147,38 +1147,38 @@\n  instance%5Bidx%5D%7B%0A\n-//\n     \n+//\n                 \n@@ -1190,38 +1190,38 @@\n ance%5Bidx%5D = '.'%0A\n-//\n     \n+//\n              %7D%0A/\n@@ -1211,38 +1211,38 @@\n /             %7D%0A\n-//\n     \n+//\n              con\n@@ -1248,30 +1248,30 @@\n ntrolLeft++%0A\n-//\n     \n+//\n          %7D%0A \n@@ -1275,30 +1275,30 @@\n %7D%0A    %0A    %0A\n-//\n     \n+//\n          var\n@@ -1319,22 +1319,22 @@\n int = 1%0A\n-//\n     \n+//\n         \n@@ -1412,22 +1412,22 @@\n ndex++%7B%0A\n-//\n     \n+//\n         \n@@ -1456,22 +1456,22 @@\n  limit%7B%0A\n-//\n     \n+//\n         \n@@ -1485,22 +1485,22 @@\n   break%0A\n-//\n     \n+//\n         \n@@ -1511,22 +1511,22 @@\n  %7D%0A    %0A\n-//\n     \n+//\n         \n@@ -1575,22 +1575,22 @@\n e%5Bidx%5D%7B%0A\n-//\n     \n+//\n         \n@@ -1618,22 +1618,22 @@\n %5D = '.'%0A\n-//\n     \n+//\n         \n@@ -1635,30 +1635,30 @@\n           %7D%0A\n-//\n     \n+//\n             \n@@ -1673,22 +1673,22 @@\n Right++%0A\n-//\n     \n+//\n         \n@@ -1690,35 +1690,35 @@\n       %7D%0A\n-//\n     \n+//\n      %7D%0A\n-//\n     \n+//\n      ret\n@@ -1761,24 +1761,24 @@\n +1)%0A\n-//\n     \n+//\n  %7D%0A%0A\n-//\n     \n+//\n  fmt\n@@ -1786,16 +1786,23 @@\n Println(\n+string(\n instance\n@@ -1806,11 +1806,9 @@\n nce)\n+)\n %0A%0A\n-// \n %7D%0A\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-05-24_14-10-12",
+            "content": "@@ -1812,10 +1812,13 @@\n tance)%0A%0A\n+// \n %7D%0A\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-05-24_14-10-18",
+            "content": "@@ -337,23 +337,16 @@\n Println(\n-string(\n VetStrin\n@@ -347,17 +347,16 @@\n tString)\n-)\n %0A%0A    va\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-05-24_14-10-38",
+            "content": "@@ -97,19 +97,16 @@\n nce)%0A   \n- //\n  VetStri\n@@ -324,19 +324,16 @@\n // %7D%0A   \n- //\n  fmt.Pri\n@@ -469,16 +469,19 @@\n    %7D%0A%0A%0A%0A\n+// \n     var \n@@ -496,38 +496,38 @@\n r func(instance \n-%5B%5Dbyte\n+string\n , numbers %5B%5Dint,\n@@ -540,16 +540,19 @@\n nt) \n-%5B%5Dbyte%0A%0A\n+string%0A%0A// \n     \n@@ -577,22 +577,22 @@\n nstance \n-%5B%5Dbyte\n+string\n , number\n@@ -613,26 +613,28 @@\n nt) \n-%5B%5Dbyte\n+string\n  %7B%0A%0A\n+//\n         \n if i\n@@ -625,24 +625,25 @@\n %0A%0A//        \n+ \n if idx == le\n@@ -659,16 +659,18 @@\n e) - 1%7B%0A\n+//\n         \n@@ -669,24 +669,25 @@\n             \n+ \n return insta\n@@ -690,16 +690,19 @@\n nstance%0A\n+// \n         \n@@ -712,24 +712,26 @@\n        %0A\n+//\n         \n if insta\n@@ -714,32 +714,33 @@\n      %0A//        \n+ \n if instance%5Bidx%5D\n@@ -748,16 +748,19 @@\n != '.'%7B%0A\n+// \n         \n@@ -802,24 +802,27 @@\n ers, idx+1)%0A\n+// \n         %7D%0A%0A \n@@ -820,24 +820,26 @@\n      %7D%0A%0A\n+//\n         \n for _, n\n@@ -826,24 +826,25 @@\n %0A%0A//        \n+ \n for _, n := \n@@ -858,16 +858,18 @@\n umbers%7B%0A\n+//\n         \n@@ -864,32 +864,33 @@\n %7B%0A//            \n+ \n instance%5Bidx%5D = \n@@ -893,17 +893,22 @@\n %5D = \n-byte\n+string\n (n)%0A%0A\n+// \n     \n@@ -931,32 +931,35 @@\n rolLeft int = 1%0A\n+// \n             for \n@@ -1016,16 +1016,19 @@\n ndex--%7B%0A\n+// \n         \n@@ -1051,32 +1051,35 @@\n olLeft %3E limit%7B%0A\n+// \n                 \n@@ -1080,32 +1080,35 @@\n           break%0A\n+// \n                 \n@@ -1106,32 +1106,35 @@\n          %7D%0A    %0A\n+// \n                 \n@@ -1170,32 +1170,35 @@\n  instance%5Bidx%5D%7B%0A\n+// \n                 \n@@ -1213,32 +1213,35 @@\n ance%5Bidx%5D = '.'%0A\n+// \n                 \n@@ -1234,32 +1234,34 @@\n               %7D%0A\n+//\n                 \n@@ -1256,24 +1256,25 @@\n             \n+ \n controlLeft+\n@@ -1271,24 +1271,27 @@\n ntrolLeft++%0A\n+// \n             \n@@ -1298,24 +1298,27 @@\n %7D%0A    %0A    %0A\n+// \n             \n@@ -1342,16 +1342,18 @@\n int = 1%0A\n+//\n         \n@@ -1348,32 +1348,33 @@\n 1%0A//            \n+ \n for instanceInde\n@@ -1435,16 +1435,19 @@\n ndex++%7B%0A\n+// \n         \n@@ -1471,32 +1471,35 @@\n lRight %3E limit%7B%0A\n+// \n                 \n@@ -1504,24 +1504,27 @@\n       break%0A\n+// \n             \n@@ -1530,24 +1530,27 @@\n      %7D%0A    %0A\n+// \n             \n@@ -1598,16 +1598,19 @@\n e%5Bidx%5D%7B%0A\n+// \n         \n@@ -1641,16 +1641,19 @@\n %5D = '.'%0A\n+// \n         \n@@ -1654,32 +1654,35 @@\n               %7D%0A\n+// \n                 \n@@ -1696,16 +1696,19 @@\n Right++%0A\n+// \n         \n@@ -1705,32 +1705,35 @@\n /             %7D%0A\n+// \n         %7D%0A      \n@@ -1718,32 +1718,35 @@\n  %7D%0A//         %7D%0A\n+// \n         return P\n@@ -1780,23 +1780,29 @@\n  idx+1)%0A\n+// \n     %7D%0A%0A\n+// \n     fmt.\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-05-24_14-12-27",
+            "content": "@@ -1715,47 +1715,16 @@\n tln(\n-PutNumber(%5B%5Dbyte(instance), numbers, 0)\n+instance\n )%0A%0A%7D\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-05-24_14-13-24",
+            "content": "@@ -1711,23 +1711,16 @@\n Println(\n-string(\n PutNumbe\n@@ -1751,13 +1751,12 @@\n ers, 0))\n-)\n %0A%0A%7D%0A\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-05-24_14-13-39",
+            "content": "@@ -477,33 +477,8 @@\n  %7D%0A%0A\n-    fmt.Println(numbers)%0A\n %0A%0A  \n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-05-24_14-14-25",
+            "content": "@@ -401,15 +401,26 @@\n  := \n-%5B%5Dint%7B%7D\n+make(%5B%5Dint, limit)\n %0A%0A  \n@@ -462,29 +462,15 @@\n bers\n- = append(numbers, i)\n+%5Bi%5D = i\n %0A   \n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-05-24_14-15-18",
+            "content": "@@ -385,62 +385,31 @@\n int%0A\n-    fmt.Scan(&limit)%0A    numbers := make(%5B%5Dint, limit)\n+%0A    numbers := %5B%5Dint%7B%7D\n %0A%0A  \n@@ -451,15 +451,29 @@\n bers\n-%5Bi%5D = i\n+ = append(numbers, i)\n %0A   \n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-05-24_14-16-08",
+            "content": "@@ -461,18 +461,16 @@\n ge limit\n-+1\n %7B%0A      \n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-05-24_14-16-30",
+            "content": "@@ -454,26 +454,21 @@\n  := \n-0; i %3C=\n+range\n  limit\n-; i+\n +\n+1\n %7B%0A  \n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-05-24_14-17-10",
+            "content": "@@ -434,18 +434,16 @@\n t, limit\n-+1\n )%0A%0A    f\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-05-24_14-17-31",
+            "content": "@@ -714,41 +714,8 @@\n  1%7B%0A\n-            fmt.Println(%22parou%22)%0A\n     \n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-05-24_14-19-38",
+            "content": "@@ -882,42 +882,8 @@\n +1)%0A\n-            fmt.Println(%22NUMERO%22)%0A\n     \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-24_14-19-56",
+            "content": "@@ -827,42 +827,8 @@\n .'%7B%0A\n-            fmt.Println(%22NUMERO%22)%0A\n     \n@@ -874,24 +874,58 @@\n ers, idx+1)%0A\n+            fmt.Println(%22NUMERO%22)%0A\n         %7D%0A%0A \n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-05-24_14-20-07",
+            "content": "@@ -926,36 +926,8 @@\n   %7D%0A\n-        fmt.Println(%22Ponto%22)\n %0A   \n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-05-24_14-20-46",
+            "content": "@@ -1025,50 +1025,8 @@\n e(n)\n-%0A            fmt.Println(string(instance))\n %0A%0A  \n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-05-24_14-21-20",
+            "content": "@@ -1326,10 +1326,8 @@\n %5Bidx\n--1\n %5D%7B%0A \n@@ -1712,18 +1712,16 @@\n ance%5Bidx\n-+1\n %5D%7B%0A     \n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-24_14-24-16",
+            "content": "@@ -502,16 +502,42 @@\n %0A    %7D%0A%0A\n+    fmt.Println(numbers)%0A%0A\n %0A    var\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-05-24_14-24-31",
+            "content": "@@ -913,16 +913,18 @@\n mt.Print\n+ln\n (%22Ponto%22\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-24_14-24-44",
+            "content": "@@ -529,35 +529,35 @@\n func(instance %5B%5D\n-run\n+byt\n e, numbers %5B%5Dint\n@@ -569,19 +569,19 @@\n  int) %5B%5D\n-run\n+byt\n e%0A%0A    P\n@@ -607,19 +607,19 @@\n tance %5B%5D\n-run\n+byt\n e, numbe\n@@ -639,19 +639,19 @@\n  int) %5B%5D\n-run\n+byt\n e %7B%0A%0A   \n@@ -913,18 +913,16 @@\n mt.Print\n-ln\n (%22Ponto%22\n@@ -986,19 +986,19 @@\n %5Bidx%5D = \n-run\n+byt\n e(n)%0A   \n@@ -1897,19 +1897,19 @@\n umber(%5B%5D\n-run\n+byt\n e(instan\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-24_14-26-03",
+            "content": "@@ -1020,16 +1020,23 @@\n Println(\n+string(\n instance\n@@ -1036,16 +1036,17 @@\n nstance)\n+)\n %0A%0A      \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-24_14-26-41",
+            "content": "@@ -998,11 +998,8 @@\n ne(n\n-+48\n )%0A  \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-24_14-27-53",
+            "content": "@@ -1023,23 +1023,16 @@\n Println(\n-string(\n instance\n@@ -1032,17 +1032,16 @@\n nstance)\n-)\n %0A%0A      \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-24_14-28-13",
+            "content": "@@ -976,163 +976,34 @@\n     \n-colocado := false%0A            if(colocado == true)%7B%0A                break%0A            %7D%0A%0A            instance%5Bidx%5D = rune(n+48)%0A            colocado = true\n+instance%5Bidx%5D = rune(n+48)\n %0A   \n@@ -1348,45 +1348,8 @@\n '.'%0A\n-                    colocado = false%0A\n     \n@@ -1692,24 +1692,24 @@\n nce%5Bidx+1%5D%7B%0A\n+\n             \n@@ -1740,45 +1740,8 @@\n '.'%0A\n-                    colocado = false%0A\n     \n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-24_14-34-53",
+            "content": "@@ -678,16 +678,20 @@\n nstance)\n+ - 1\n %7B%0A      \n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-05-24_14-35-40",
+            "content": "@@ -925,36 +925,8 @@\n o%22)%0A\n-%0A        colocado := false%0A%0A\n     \n@@ -968,19 +968,49 @@\n         \n-if \n+colocado := false%0A            if(\n colocado\n@@ -1017,17 +1017,17 @@\n  == true\n- \n+)\n %7B%0A      \n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-05-24_14-36-43",
+            "content": "@@ -1796,91 +1796,8 @@\n     \n-            fmt.Println(%22index:%22, instance%5BinstanceIndex%5D, %22idx:%22, instance%5Bidx+1%5D)\n %0A   \n@@ -1900,50 +1900,8 @@\n '.'%0A\n-                    fmt.Println(%22tirado%22)%0A\n     \n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-05-24_14-38-24",
+            "content": "@@ -1822,31 +1822,24 @@\n n(%22index:%22, \n-string(\n instance%5Bins\n@@ -1849,17 +1849,16 @@\n ceIndex%5D\n-)\n , %22idx:%22\n@@ -1859,23 +1859,16 @@\n %22idx:%22, \n-string(\n instance\n@@ -1875,17 +1875,16 @@\n %5Bidx+1%5D)\n-)\n %0A       \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-24_14-39-31",
+            "content": "@@ -1886,16 +1886,18 @@\n ance%5Bidx\n++1\n %5D))%0A    \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-24_14-41-45",
+            "content": "@@ -1367,105 +1367,8 @@\n     \n-            fmt.Println(%22index:%22, string(instance%5BinstanceIndex%5D), %22idx:%22, string(instance%5Bidx%5D))\n %0A   \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-24_14-45-43",
+            "content": "@@ -1519,16 +1519,18 @@\n ance%5Bidx\n+-1\n %5D%7B%0A     \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-24_14-46-08",
+            "content": "@@ -1237,20 +1237,16 @@\n x := idx\n- - 1\n ; instan\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-24_14-46-54",
+            "content": "@@ -1748,18 +1748,16 @@\n x := idx\n-+1\n ; instan\n@@ -2039,32 +2039,34 @@\n  == instance%5Bidx\n++1\n %5D%7B%0A             \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-24_14-47-27",
+            "content": "@@ -1229,32 +1229,36 @@\n anceIndex := idx\n+ - 1\n ; instanceIndex \n@@ -1748,16 +1748,18 @@\n x := idx\n++1\n ; instan\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-24_14-48-45",
+            "content": "@@ -1566,50 +1566,8 @@\n '.'%0A\n-                    fmt.Println(%22tirado%22)%0A\n     \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-05-24_14-50-15",
+            "content": "@@ -1241,10 +1241,8 @@\n  idx\n--1\n ; in\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-24_14-51-05",
+            "content": "@@ -1394,14 +1394,8 @@\n ln(%22\n-TRAS: \n inde\n@@ -1960,16 +1960,8 @@\n ln(%22\n-FRENTE: \n inde\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-24_14-53-34",
+            "content": "@@ -1794,18 +1794,16 @@\n x := idx\n-+1\n ; instan\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-24_14-54-00",
+            "content": "@@ -1199,17 +1199,17 @@\n t int = \n-0\n+1\n %0A       \n@@ -1308,18 +1308,17 @@\n rolLeft \n-==\n+%3E\n  limit%7B%0A\n@@ -1756,18 +1756,17 @@\n t int = \n- 0\n+1\n %0A       \n@@ -1882,18 +1882,17 @@\n olRight \n-==\n+%3E\n  limit%7B%0A\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-24_14-54-56",
+            "content": "@@ -1256,17 +1256,16 @@\n eIndex %3E\n-=\n  0; inst\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-24_14-55-24",
+            "content": "@@ -1830,16 +1830,20 @@\n nstance)\n+ - 1\n ; instan\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-24_14-55-46",
+            "content": "@@ -1655,34 +1655,8 @@\n lse%0A\n-                    break%0A\n     \n@@ -2229,34 +2229,8 @@\n lse%0A\n-                    break%0A\n     \n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-05-24_14-57-22",
+            "content": "@@ -683,35 +683,32 @@\n ce)%7B%0A           \n- //\n  fmt.Println(%22pa\n@@ -713,16 +713,16 @@\n parou%22)%0A\n+\n         \n@@ -796,35 +796,32 @@\n '.'%7B%0A           \n- //\n  fmt.Println(%22NU\n@@ -895,27 +895,24 @@\n    %7D%0A       \n- //\n  fmt.Println\n@@ -1370,35 +1370,32 @@\n %0A               \n- //\n  fmt.Println(%22TR\n@@ -1583,35 +1583,32 @@\n                 \n- //\n  fmt.Println(%22ti\n@@ -1968,35 +1968,32 @@\n %0A               \n- //\n  fmt.Println(%22FR\n@@ -2164,32 +2164,32 @@\n ance%5Bidx%5D = '.'%0A\n+\n                 \n@@ -2191,19 +2191,16 @@\n         \n- //\n  fmt.Pri\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-05-24_15-00-08",
+            "content": "@@ -1134,35 +1134,32 @@\n true%0A           \n- //\n  fmt.Println(str\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-05-24_15-00-25",
+            "content": "@@ -683,32 +683,35 @@\n ce)%7B%0A           \n+ //\n  fmt.Println(%22pa\n@@ -716,16 +716,16 @@\n parou%22)%0A\n-\n         \n@@ -799,32 +799,35 @@\n '.'%7B%0A           \n+ //\n  fmt.Println(%22NU\n@@ -901,24 +901,27 @@\n    %7D%0A       \n+ //\n  fmt.Println\n@@ -1134,32 +1134,35 @@\n true%0A           \n+ //\n  fmt.Println(str\n@@ -1382,32 +1382,35 @@\n %0A               \n+ //\n  fmt.Println(%22TR\n@@ -1598,32 +1598,35 @@\n                 \n+ //\n  fmt.Println(%22ti\n@@ -1986,32 +1986,35 @@\n %0A               \n+ //\n  fmt.Println(%22FR\n@@ -2185,32 +2185,32 @@\n ance%5Bidx%5D = '.'%0A\n-\n                 \n@@ -2208,24 +2208,27 @@\n             \n+ //\n  fmt.Println\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-05-24_15-01-33",
+            "content": "@@ -1367,106 +1367,8 @@\n   %7D%0A\n-                if instance%5BinstanceIndex%5D == '.'%7B%0A                    continue%0A                %7D%0A\n     \n@@ -1965,106 +1965,8 @@\n   %7D%0A\n-                if instance%5BinstanceIndex%5D == '.'%7B%0A                    continue%0A                %7D%0A\n     \n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-05-24_15-03-19",
+            "content": "@@ -1418,42 +1418,8 @@\n .'%7B%0A\n-                    controlLeft++%0A\n     \n@@ -2114,43 +2114,8 @@\n .'%7B%0A\n-                    controlRight++%0A\n     \n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-05-24_15-09-24",
+            "content": "@@ -26,34 +26,8 @@\n fmt%22\n-%0A%0A%09%22golang.org/x/exp/rand%22\n %0A)%0A%0A\n@@ -717,127 +717,8 @@\n u%22)%0A\n-            for _, v := range instance%7B%0A                if v == '.'%0A                return PutNumber(in)%0A            %7D%0A\n     \n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-05-25_13-45-52",
+            "content": "@@ -750,19 +750,16 @@\n         \n- //\n  for _, \n@@ -786,27 +786,24 @@\n %0A           \n- //\n      if v ==\n@@ -818,19 +818,16 @@\n         \n- //\n      ret\n@@ -855,19 +855,16 @@\n         \n- //\n  %7D%0A     \n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-25_13-47-26",
+            "content": "@@ -22,16 +22,42 @@\n (%0A%09%22fmt%22\n+%0A%0A%09%22golang.org/x/exp/rand%22\n %0A)%0A%0A%0Afun\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-25_13-47-45",
+            "content": "@@ -683,35 +683,32 @@\n ce)%7B%0A           \n- //\n  fmt.Println(%22pa\n@@ -713,16 +713,16 @@\n parou%22)%0A\n+\n         \n@@ -927,35 +927,32 @@\n '.'%7B%0A           \n- //\n  fmt.Println(%22NU\n@@ -1026,27 +1026,24 @@\n    %7D%0A       \n- //\n  fmt.Println\n@@ -1633,35 +1633,32 @@\n %0A               \n- //\n  fmt.Println(%22TR\n@@ -1846,35 +1846,32 @@\n                 \n- //\n  fmt.Println(%22ti\n@@ -2364,35 +2364,32 @@\n %0A               \n- //\n  fmt.Println(%22FR\n@@ -2560,32 +2560,32 @@\n ance%5Bidx%5D = '.'%0A\n+\n                 \n@@ -2587,19 +2587,16 @@\n         \n- //\n  fmt.Pri\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-05-25_13-48-15",
+            "content": "@@ -1265,35 +1265,32 @@\n true%0A           \n- //\n  fmt.Println(str\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-05-25_13-48-29",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n\nfunc main() {\n    \n    var instance string\n    fmt.Scan(&instance)\n    // VetString := []byte(instance)\n    // for {\n    //     var element rune\n    //     fmt.Scan(&element)\n    //     if element == '\\n'{\n    //         break\n    //     }\n    //     instance = append(instance, element)\n    // }\n    // fmt.Println(string(VetString))\n\n    var limit int\n    fmt.Scan(&limit)\n    numbers := make([]int, limit+1)\n\n    for i := 0; i <= limit; i++{\n        numbers[i] = i\n    }\n\n\n    var PutNumber func(instance []rune, numbers []int, idx int) []rune\n\n    PutNumber = func(instance []rune, numbers []int, idx int) []rune {\n\n        if idx == len(instance){\n            // fmt.Println(\"parou\")\n            // for _, v := range instance{\n            //     if v == '.'\n            //     return PutNumber(in)\n            // }\n            return instance\n        }\n        \n        if instance[idx] != '.'{\n            // fmt.Println(\"NUMERO\")\n            return PutNumber(instance, numbers, idx+1)\n        }\n        // fmt.Println(\"Ponto\")\n\n        colocado := false\n\n        for _, n := range numbers{\n            if colocado == true {\n                break\n            }\n\n            instance[idx] = rune(n+48)\n            colocado = true\n            // fmt.Println(string(instance))\n\n            var controlLeft int = 0\n            for instanceIndex := idx-1; instanceIndex >= 0; instanceIndex--{\n                if controlLeft == limit{\n                    break\n                }\n                if instance[instanceIndex] == '.'{\n                    controlLeft++\n                    continue\n                }\n                // fmt.Println(\"TRAS: index:\", string(instance[instanceIndex]), \"idx:\", string(instance[idx]))\n                if instance[instanceIndex] == instance[idx]{\n                    instance[idx] = '.'\n                    // fmt.Println(\"tirado\")\n                    colocado = false\n                    break\n                }\n                controlLeft++\n            }\n    \n    \n            var controlRight int =  0\n            for instanceIndex := idx+1; instanceIndex < len(instance); instanceIndex++{\n                if controlRight == limit{\n                    break\n                }\n                if instance[instanceIndex] == '.'{\n                    controlRight++\n                    continue\n                }\n                // fmt.Println(\"FRENTE: index:\", string(instance[instanceIndex]), \"idx:\", string(instance[idx]))\n                if instance[instanceIndex] == instance[idx]{\n                    instance[idx] = '.'\n                    // fmt.Println(\"tirado\")\n                    colocado = false\n                    break\n                }\n                controlRight++\n            }\n        }\n        return PutNumber(instance, numbers, idx+1)\n    }\n\n    fmt.Println(string(PutNumber([]rune(instance), numbers, 0)))\n\n}\n",
+            "lines": "106"
+        }
+    ]
+}

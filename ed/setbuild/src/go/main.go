@@ -98,9 +98,6 @@ func (s *Set) Insert(value int){
 		s.data[i] = s.data[i-1]
 	}
 
-
-
-
 	s.data[pos] = value
 	s.size++
 }
