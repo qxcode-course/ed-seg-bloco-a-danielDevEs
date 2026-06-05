@@ -1,0 +1,154 @@
+2026-06-05 15:46:47, MOVE, v:1, k:sandbox@user_004, mode:PICK
+2026-06-05 15:46:52, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:100, size:151
+2026-06-05 15:46:59, MOVE, v:1, k:sandbox@user_004, mode:BACK
+2026-06-05 15:47:14, MOVE, v:1, k:sandbox@user_004, mode:PICK
+2026-06-05 15:47:17, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:100, size:190
+2026-06-05 15:48:03, MOVE, v:1, k:sandbox@user_004, mode:BACK
+2026-06-05 15:48:06, MOVE, v:1, k:ed@prin_list2, mode:DOWN
+2026-06-05 15:48:07, MOVE, v:1, k:sandbox@user_004, mode:PICK
+2026-06-05 15:46:32, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-06-05 15:46:32, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-06-05 15:46:47, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-05 15:46:47, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-05 15:46:51, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-05 15:47:14, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-06-05 15:47:14, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-06-05 15:47:16, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-06-05 15:47:59, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-06-05 15:48:20, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 15:48:06, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 15:51:11, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 15:56:02, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 15:56:43, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:53
+2026-06-05 15:56:46, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0
+2026-06-05 15:56:48, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0
+2026-06-05 15:57:07, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:53
+2026-06-05 15:58:14, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:53
+2026-06-05 15:58:17, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0
+2026-06-05 16:00:32, MOVE, v:1, k:sandbox@user_004, mode:BACK
+2026-06-05 16:00:35, MOVE, v:1, k:sandbox@user_004, mode:PICK
+2026-06-05 15:58:12, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 15:58:16, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:05:43, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:11:08, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:56
+2026-06-05 16:10:47, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:11:07, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:12:35, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:59
+2026-06-05 16:12:49, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:59
+2026-06-05 16:13:06, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:59
+2026-06-05 16:13:38, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:60
+2026-06-05 16:13:35, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:13:37, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:19:07, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:59
+2026-06-05 16:19:34, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:60
+2026-06-05 16:19:38, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0
+2026-06-05 16:20:26, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:60
+2026-06-05 16:20:48, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:60
+2026-06-05 16:21:13, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:20:48, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:21:21, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:62
+2026-06-05 16:22:44, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:68
+2026-06-05 16:22:46, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0
+2026-06-05 16:22:48, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0
+2026-06-05 16:23:00, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:68
+2026-06-05 16:23:07, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:68
+2026-06-05 16:26:13, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:70
+2026-06-05 16:26:11, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:26:13, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:26:15, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0
+2026-06-05 16:26:30, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:70
+2026-06-05 16:27:09, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:70
+2026-06-05 16:27:48, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:0, size:70
+2026-06-05 16:28:40, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:30, size:69
+2026-06-05 16:30:22, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:30, size:69
+2026-06-05 16:30:29, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:30
+2026-06-05 16:30:29, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:30:20, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-05 16:38:22, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:100, size:69
+2026-06-05 16:38:48, MOVE, v:1, k:sandbox@user_004, mode:BACK
+2026-06-05 16:39:03, MOVE, v:1, k:sandbox@user_004, mode:PICK
+2026-06-05 16:39:05, EXEC, v:1, k:sandbox@user_004, mode:FULL, rate:100
+2026-06-05 16:39:46, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-06-05 16:39:48, EXEC, v:1, k:ed@prin_list2, mode:FULL, rate:100, size:69
+2026-06-05 16:39:49, MOVE, v:1, k:ed@prin_list2, mode:BACK
+2026-06-05 16:39:51, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-06-05 16:39:53, EXEC, v:1, k:ed@prin_list2, mode:FULL, rate:100
+2026-06-05 16:39:54, MOVE, v:1, k:ed@prin_list2, mode:BACK
+2026-06-05 16:40:04, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-06-05 16:40:35, EXEC, v:1, k:ed@prin_list2, mode:FULL, rate:100
+2026-06-05 16:40:35, MOVE, v:1, k:ed@prin_list2, mode:BACK
+2026-06-05 16:45:38, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-06-05 16:45:47, MOVE, v:1, k:ed@prin_list2, mode:BACK
+2026-06-05 16:45:49, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-06-05 16:45:54, EXEC, v:1, k:ed@prin_list2, mode:FULL, rate:100, size:108
+2026-06-05 16:48:06, MOVE, v:1, k:ed@prin_list2, mode:BACK
+2026-06-05 16:48:11, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-06-05 16:48:16, EXEC, v:1, k:ed@prin_list2, mode:FULL, rate:100, size:101
+2026-06-05 16:49:54, MOVE, v:1, k:ed@prin_list2, mode:BACK
+2026-06-05 16:49:59, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-06-05 16:45:19, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-05 16:45:19, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-05 16:45:19, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-06-05 16:45:38, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-05 16:45:38, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-05 16:45:43, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-05 16:45:53, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:sandbox@user_002, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:sandbox@user_003, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:sandbox@user_004, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@dfs_read, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@battleship, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@fuga, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@lista_d3, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@manipulacao, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@pintando, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@mumia, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-06-05 16:46:33, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-06-05 16:48:11, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-05 16:48:11, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-05 16:48:14, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-05 16:48:14, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-06-05 16:49:59, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-06-05 16:49:59, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-06-05 16:51:31, MOVE, v:1, k:ed@prin_list2, mode:BACK

@@ -5,104 +5,117 @@ import (
 )
 
 
-func main() {
-    
-    var instance string
-    fmt.Scan(&instance)
-    // VetString := []byte(instance)
-    // for {
-    //     var element rune
-    //     fmt.Scan(&element)
-    //     if element == '\n'{
-    //         break
-    //     }
-    //     instance = append(instance, element)
-    // }
-    // fmt.Println(string(VetString))
-    var instancecopy string
-    instancecopy = instance
 
-    var limit int
-    fmt.Scan(&limit)
-    numbers := make([]int, limit+1)
+func verifySpace(instance []byte, limit, index int, num byte) bool{
+    space := true
 
-    for i := 0; i <= limit; i++{
-        numbers[i] = i
-    }
-
-
-    var PutNumber func(instance []rune, numbers []int, idx int) []rune
-
-    PutNumber = func(instance []rune, numbers []int, idx int) []rune {
-
-        if idx == len(instance){
-            // fmt.Println("parou")
-            // for _, v := range instance{
-            //     if v == '.'
-            //     return PutNumber(in)
-            // }
-            return instance
-        }
-        
-        if instance[idx] != '.'{
-            // fmt.Println("NUMERO")
-            return PutNumber(instance, numbers, idx+1)
-        }
-        // fmt.Println("Ponto")
-
-        colocado := false
-
-        for _, n := range numbers{
-            if colocado == true {
+        countL := 0
+        for i := index-1; i >= 0; i--{
+            if countL == limit{
                 break
             }
-
-            instance[idx] = rune(n+48)
-            colocado = true
-            // fmt.Println(string(instance))
-
-            var controlLeft int = 0
-            for instanceIndex := idx-1; instanceIndex >= 0; instanceIndex--{
-                if controlLeft == limit{
-                    break
-                }
-                if instance[instanceIndex] == '.'{
-                    controlLeft++
-                    continue
-                }
-                // fmt.Println("TRAS: index:", string(instance[instanceIndex]), "idx:", string(instance[idx]))
-                if instance[instanceIndex] == instance[idx]{
-                    instance[idx] = '.'
-                    // fmt.Println("tirado")
-                    colocado = false
-                    break
-                }
-                controlLeft++
+            if instance[i] == num{
+                space = false
             }
-    
-    
-            var controlRight int =  0
-            for instanceIndex := idx+1; instanceIndex < len(instance); instanceIndex++{
-                if controlRight == limit{
-                    break
-                }
-                if instance[instanceIndex] == '.'{
-                    controlRight++
-                    continue
-                }
-                // fmt.Println("FRENTE: index:", string(instance[instanceIndex]), "idx:", string(instance[idx]))
-                if instance[instanceIndex] == instance[idx]{
-                    instance[idx] = '.'
-                    // fmt.Println("tirado")
-                    colocado = false
-                    break
-                }
-                controlRight++
-            }
+            countL++
         }
-        return PutNumber(instance, numbers, idx+1)
+        countR := 0
+        for i := index+1; i < len(instance); i++{
+            if countR == limit{
+                break
+            }
+            if instance[i] == num{
+                space = false
+            }
+            countR++
+        }
+
+        return space
+}
+
+
+
+
+
+
+
+
+func main() {
+    var instance string
+    var limit int
+    
+    fmt.Scanln(&instance)
+    fmt.Scanln(&limit)
+
+
+    numbers := []byte{}
+
+    for i := 0; i <= limit; i++{
+        
+        numbers = append(numbers, byte('0'+i))
     }
 
-    fmt.Println(string(PutNumber([]rune(instance), numbers, 0)))
+    pontos := 0
+    for _, e := range instance{
+        if e == '.'{
+            pontos++
+        }
+    }
+    // validsBlocks := [][pontos]valids
+    
+    copyInstance := []byte(instance)
+    
+    
+    
+    
+    var validCombinations func(copyInstance []byte, index int) (bool, []byte)
+    
+    validCombinations = func(copyInstance []byte, index int) (bool, []byte) {
 
+        if index == len(copyInstance) {
+            return true, copyInstance
+        }
+
+        if copyInstance[index] != '.' {
+            return validCombinations(copyInstance, index+1)
+        }
+
+        for _, num := range numbers {
+
+            if !verifySpace(copyInstance, limit, index, num) {
+                continue
+            }
+
+            // escolhe
+            copyInstance[index] = num
+
+            // explora
+            ok, result := validCombinations(copyInstance, index+1)
+
+            if ok {
+                return true, result
+            }
+
+            // desfaz
+            copyInstance[index] = '.'
+        }
+
+        return false, copyInstance
+    }
+    
+    flag := false
+
+        for i, e := range instance{
+           if e == '.'{
+               status, newInstance := validCombinations(copyInstance, i)
+               if status{
+                    instance = string(newInstance)
+                    flag = true
+                    break
+               }
+           }
+        }
+        if flag {
+            fmt.Println(instance)
+        }
 }

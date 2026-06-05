@@ -88,10 +88,13 @@ func (l *DList[T]) PushFront(value T) {
 
 func (l *DList[T]) Insert(it *DNode[T], value T) *DNode[T] {
 	n := &DNode[T]{Value: value, root: l.root}
+	
 	n.prev = it.prev
 	n.next = it
+
 	it.prev.next = n
 	it.prev = n
+
 	l.size++
 	return n
 }

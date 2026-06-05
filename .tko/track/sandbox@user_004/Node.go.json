@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-05_15-46-52",
+            "content": "package main\n\ntype Node struct{\n    data rune\n    next *Node\n    prev *Node\n}\n\nfunc (n *Node) Next() *Node {\n\treturn n.next\n}\n\nfunc (n *Node) Prev() *Node {\n\treturn n.prev\n}\n",
+            "lines": "15"
+        }
+    ]
+}

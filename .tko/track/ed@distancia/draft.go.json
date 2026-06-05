@@ -272,8 +272,148 @@
         },
         {
             "label": "2026-05-25_13-48-29",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n\nfunc main() {\n    \n    var instance string\n    fmt.Scan(&instance)\n    // VetString := []byte(instance)\n    // for {\n    //     var element rune\n    //     fmt.Scan(&element)\n    //     if element == '\\n'{\n    //         break\n    //     }\n    //     instance = append(instance, element)\n    // }\n    // fmt.Println(string(VetString))\n\n    var limit int\n    fmt.Scan(&limit)\n    numbers := make([]int, limit+1)\n\n    for i := 0; i <= limit; i++{\n        numbers[i] = i\n    }\n\n\n    var PutNumber func(instance []rune, numbers []int, idx int) []rune\n\n    PutNumber = func(instance []rune, numbers []int, idx int) []rune {\n\n        if idx == len(instance){\n            // fmt.Println(\"parou\")\n            // for _, v := range instance{\n            //     if v == '.'\n            //     return PutNumber(in)\n            // }\n            return instance\n        }\n        \n        if instance[idx] != '.'{\n            // fmt.Println(\"NUMERO\")\n            return PutNumber(instance, numbers, idx+1)\n        }\n        // fmt.Println(\"Ponto\")\n\n        colocado := false\n\n        for _, n := range numbers{\n            if colocado == true {\n                break\n            }\n\n            instance[idx] = rune(n+48)\n            colocado = true\n            // fmt.Println(string(instance))\n\n            var controlLeft int = 0\n            for instanceIndex := idx-1; instanceIndex >= 0; instanceIndex--{\n                if controlLeft == limit{\n                    break\n                }\n                if instance[instanceIndex] == '.'{\n                    controlLeft++\n                    continue\n                }\n                // fmt.Println(\"TRAS: index:\", string(instance[instanceIndex]), \"idx:\", string(instance[idx]))\n                if instance[instanceIndex] == instance[idx]{\n                    instance[idx] = '.'\n                    // fmt.Println(\"tirado\")\n                    colocado = false\n                    break\n                }\n                controlLeft++\n            }\n    \n    \n            var controlRight int =  0\n            for instanceIndex := idx+1; instanceIndex < len(instance); instanceIndex++{\n                if controlRight == limit{\n                    break\n                }\n                if instance[instanceIndex] == '.'{\n                    controlRight++\n                    continue\n                }\n                // fmt.Println(\"FRENTE: index:\", string(instance[instanceIndex]), \"idx:\", string(instance[idx]))\n                if instance[instanceIndex] == instance[idx]{\n                    instance[idx] = '.'\n                    // fmt.Println(\"tirado\")\n                    colocado = false\n                    break\n                }\n                controlRight++\n            }\n        }\n        return PutNumber(instance, numbers, idx+1)\n    }\n\n    fmt.Println(string(PutNumber([]rune(instance), numbers, 0)))\n\n}\n",
+            "content": "@@ -365,64 +365,8 @@\n ng))\n-%0A    var instancecopy string%0A    instancecopy = instance\n %0A%0A  \n",
             "lines": "106"
+        },
+        {
+            "label": "2026-06-01_09-45-27",
+            "content": "@@ -1,76 +1,2959 @@\n-%0Apackage main%0Aimport %22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n+package main%0A%0Aimport (%0A%09%22fmt%22%0A)%0A%0A%0Afunc main() %7B%0A    %0A    var instance string%0A    fmt.Scan(&instance)%0A    // VetString := %5B%5Dbyte(instance)%0A    // for %7B%0A    //     var element rune%0A    //     fmt.Scan(&element)%0A    //     if element == '%5Cn'%7B%0A    //         break%0A    //     %7D%0A    //     instance = append(instance, element)%0A    // %7D%0A    // fmt.Println(string(VetString))%0A    var instancecopy string%0A    instancecopy = instance%0A%0A    var limit int%0A    fmt.Scan(&limit)%0A    numbers := make(%5B%5Dint, limit+1)%0A%0A    for i := 0; i %3C= limit; i++%7B%0A        numbers%5Bi%5D = i%0A    %7D%0A%0A%0A    var PutNumber func(instance %5B%5Drune, numbers %5B%5Dint, idx int) %5B%5Drune%0A%0A    PutNumber = func(instance %5B%5Drune, numbers %5B%5Dint, idx int) %5B%5Drune %7B%0A%0A        if idx == len(instance)%7B%0A            // fmt.Println(%22parou%22)%0A            // for _, v := range instance%7B%0A            //     if v == '.'%0A            //     return PutNumber(in)%0A            // %7D%0A            return instance%0A        %7D%0A        %0A        if instance%5Bidx%5D != '.'%7B%0A            // fmt.Println(%22NUMERO%22)%0A            return PutNumber(instance, numbers, idx+1)%0A        %7D%0A        // fmt.Println(%22Ponto%22)%0A%0A        colocado := false%0A%0A        for _, n := range numbers%7B%0A            if colocado == true %7B%0A                break%0A            %7D%0A%0A            instance%5Bidx%5D = rune(n+48)%0A            colocado = true%0A            // fmt.Println(string(instance))%0A%0A            var controlLeft int = 0%0A            for instanceIndex := idx-1; instanceIndex %3E= 0; instanceIndex--%7B%0A                if controlLeft == limit%7B%0A                    break%0A                %7D%0A                if instance%5BinstanceIndex%5D == '.'%7B%0A                    controlLeft++%0A                    continue%0A                %7D%0A                // fmt.Println(%22TRAS: index:%22, string(instance%5BinstanceIndex%5D), %22idx:%22, string(instance%5Bidx%5D))%0A                if instance%5BinstanceIndex%5D == instance%5Bidx%5D%7B%0A                    instance%5Bidx%5D = '.'%0A                    // fmt.Println(%22tirado%22)%0A                    colocado = false%0A                    break%0A                %7D%0A                controlLeft++%0A            %7D%0A    %0A    %0A            var controlRight int =  0%0A            for instanceIndex := idx+1; instanceIndex %3C len(instance); instanceIndex++%7B%0A                if controlRight == limit%7B%0A                    break%0A                %7D%0A                if instance%5BinstanceIndex%5D == '.'%7B%0A                    controlRight++%0A                    continue%0A                %7D%0A                // fmt.Println(%22FRENTE: index:%22, string(instance%5BinstanceIndex%5D), %22idx:%22, string(instance%5Bidx%5D))%0A                if instance%5BinstanceIndex%5D == instance%5Bidx%5D%7B%0A                    instance%5Bidx%5D = '.'%0A                    // fmt.Println(%22tirado%22)%0A                    colocado = false%0A                    break%0A                %7D%0A                controlRight++%0A            %7D%0A        %7D%0A        return PutNumber(instance, numbers, idx+1)%0A    %7D%0A%0A    fmt.Println(string(PutNumber(%5B%5Drune(instance), numbers, 0)))%0A\n %0A%7D%0A\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-06-01_09-46-19",
+            "content": "@@ -42,137 +42,35 @@\n     \n-var instance string%0A    var limit int%0A%0A    fmt.Scanln(&instance)%0A    fmt.Scanln(&limit)%0A%0A    fmt.Println(instance, %22%5Cn%22, limit)%0A%0A%0A\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-06-01_09-48-00",
+            "content": "@@ -152,16 +152,17 @@\n nstance,\n+ \n %22%5Cn%22, li\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_09-48-12",
+            "content": "@@ -152,16 +152,21 @@\n nstance,\n+%22%5Cn%22,\n  limit)%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_09-48-22",
+            "content": "@@ -155,117 +155,17 @@\n ance\n-%5B0%5D)%0A    // var validCombinations func(index int)%0A    %0A    // validCombinations = func(index int) %7B%0A%0A    // %7D\n+, limit)%0A\n %0A%0A%0A%7D\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-01_09-51-08",
+            "content": "@@ -76,20 +76,16 @@\n mit int%0A\n-    \n %0A    fmt\n@@ -131,345 +131,36 @@\n t)%0A%0A\n-%0A    numbers := %5B%5Dbyte%7B%7D%0A%0A    for i := 0; i %3C= limit; i++%7B%0A        numbers = append(numbers, i)%0A    %7D%0A%0A    fmt.Println(string(numbers))%0A%0A    pontos := 0%0A    for _, e := range instance%7B%0A        if e == '.'%7B%0A            pontos++%0A        %7D%0A    %7D%0A    validsBlocks := %5B%5D%5Bpontos%5Dvalids%0A%0A    // fmt.Println(instance%5B0%5D)%0A    %0A    %0A    %0A    %0A    \n+    fmt.Println(instance%5B0%5D)\n %0A   \n@@ -206,22 +206,22 @@\n t)%0A    %0A\n-//\n     \n+//\n  validCo\n@@ -255,164 +255,18 @@\n ) %7B%0A\n-//         instance%5Bi%5D = %0A//     %7D%0A    %0A//      for i, e := range instance%7B%0A//         if e == '.'%7B%0A//             validCombinations(i)%0A//         %7D%0A//     %7D\n+%0A    // %7D%0A%0A\n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-01_10-07-29",
+            "content": "@@ -194,17 +194,8 @@\n ++%7B%0A\n-        %0A\n     \n@@ -228,23 +228,17 @@\n rs, \n-byte(i)\n+i\n )%0A    %7D%0A\n     \n@@ -229,24 +229,25 @@\n s, i)%0A    %7D%0A\n+%0A\n     fmt.Prin\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-01_10-09-36",
+            "content": "@@ -391,19 +391,16 @@\n    %7D%0A   \n- //\n  validsB\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-01_10-09-43",
+            "content": "@@ -268,16 +268,23 @@\n tln(\n+string(\n numbers)\n %0A%0A  \n@@ -279,16 +279,17 @@\n numbers)\n+)\n %0A%0A    po\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-01_10-09-57",
+            "content": "@@ -1,8 +1,9 @@\n+%0A\n package \n@@ -11,654 +11,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0A%0A%0Afunc verifySpace(instance %5B%5Dbyte, limit, index int, num byte) bool%7B%0A    space := true%0A%0A        countL := 0%0A        for i := index-1; i %3E 0; i--%7B%0A            if countL == limit%7B%0A                break%0A            %7D%0A            if instance%5Bi%5D == instance%5Bindex%5D%7B%0A                space = false%0A            %7D%0A            countL++%0A        %7D%0A        countR := 0%0A        for i := index+1; i %3C len(instance); i++%7B%0A            if countR == limit%7B%0A                break%0A            %7D%0A            if instance%5Bi%5D == instance%5Bindex%5D%7B%0A                space = false%0A            %7D%0A            countR++%0A        %7D%0A%0A        return space%0A%7D%0A%0A%0A%0A%0A%0A\n func\n@@ -420,24 +420,27 @@\n %5Dvalids%0A%0A   \n+ //\n  fmt.Println\n@@ -466,40 +466,8 @@\n     \n-copyInstance := %5B%5Dbyte(instance)\n %0A   \n@@ -482,20 +482,18 @@\n    %0A    \n-%0A   \n+//\n  var val\n@@ -521,34 +521,22 @@\n ndex\n-, indexNum int) bool\n+ int)\n %0A    %0A\n+// \n     \n@@ -569,39 +569,26 @@\n ndex\n-, indexNum int) bool%7B%0A%0A\n+ int) %7B%0A//\n         \n if i\n@@ -587,393 +587,40 @@\n     \n-if\n  in\n-dexNum %3E= len(numbers)%7B%0A            return false%0A        %7D%0A%0A        can := verifySpace(copyInstance, limit, index, numbers%5BindexNum%5D)%0A%0A        if !can %7B%0A            validCombinations(index, indexNum+1)%0A            return false%0A        %7D%0A%0A%0A        copyInstance%5Bindex%5D = numbers%5BindexNum%5D%0A        %0A%0A        return true%0A    %7D%0A    %0A    flag := false%0A%0A    for inum := range numbers%7B%0A  \n+stance%5Bi%5D = %0A//     %7D%0A    %0A//\n     \n@@ -645,26 +645,26 @@\n e instance%7B%0A\n-  \n+//\n          if \n@@ -665,34 +665,34 @@\n    if e == '.'%7B%0A\n-  \n+//\n              sta\n@@ -691,18 +691,8 @@\n     \n- status :=\n  val\n@@ -711,184 +711,26 @@\n ns(i\n-, inum)%0A               if status%7B%0A                   flag = true%0A                   break%0A               %7D%0A           %7D%0A        %7D%0A        if flag %7B%0A            break%0A        %7D%0A\n+)%0A//         %7D%0A// \n     \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-01_10-42-49",
+            "content": "@@ -1796,61 +1796,8 @@\n us%7B%0A\n-                    instance = string(copyInstance)%0A \n     \n@@ -1823,17 +1823,16 @@\n  = true%0A\n- \n         \n@@ -1944,32 +1944,6 @@\n   %7D%0A\n-    fmt.Println(instance)%0A\n %7D%0A\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-06-01_10-43-28",
+            "content": "@@ -1051,16 +1051,46 @@\n s%5Dvalids\n+%0A%0A    fmt.Println(instance%5B0%5D)\n %0A    %0A  \n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-01_10-44-05",
+            "content": "@@ -875,24 +875,49 @@\n te(i))%0A    %7D\n+%0A    fmt.Println(numbers)\n %0A%0A    pontos\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-06-01_10-44-15",
+            "content": "@@ -1120,37 +1120,16 @@\n ns func(\n-copyInstance %5B%5Dbyte, \n index, i\n@@ -1141,30 +1141,20 @@\n um int) \n-(\n bool\n-, %5B%5Dbyte)\n %0A    %0A  \n@@ -1184,29 +1184,8 @@\n unc(\n-copyInstance %5B%5Dbyte, \n inde\n@@ -1205,23 +1205,12 @@\n nt) \n-(\n bool\n-, %5B%5Dbyte) \n %7B%0A%0A \n@@ -1247,299 +1247,33 @@\n ers)\n- %7C%7C copyInstance%5Bindex%5D != '.'%7B%0A            return false, %5B%5Dbyte(instance)%0A        %7D%0A%0A        completa := true%0A        for _, e := range copyInstance%7B%0A            if e == '.'%7B%0A                completa = false%0A            %7D%0A        %7D%0A        if completa %7B%0A            return true, copyInstanc\n+%7B%0A            return fals\n e%0A  \n@@ -1378,39 +1378,32 @@\n n %7B%0A            \n-return \n validCombination\n@@ -1400,38 +1400,24 @@\n ombinations(\n-copyInstance, \n index, index\n@@ -1423,16 +1423,41 @@\n xNum+1)%0A\n+            return false%0A\n         \n@@ -1537,58 +1537,12 @@\n urn \n-validCombinations(copyInstance, index+1, indexNum)\n+true\n %0A   \n@@ -1684,21 +1684,8 @@\n atus\n-, newInstance\n  := \n@@ -1702,30 +1702,16 @@\n nations(\n-copyInstance, \n i, inum)\n@@ -1779,11 +1779,12 @@\n ing(\n-new\n+copy\n Inst\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-06-01_10-55-54",
+            "content": "@@ -652,19 +652,16 @@\n %0A%7D%0A%0A%0A%0A%0A%0A\n-%0A%0A%0A\n func mai\n@@ -1306,18 +1306,48 @@\n numbers)\n+ %7C%7C copyInstance%5Bindex%5D != '.'\n %7B%0A\n-\n         \n@@ -1396,129 +1396,8 @@\n  %7D%0A%0A\n-        if copyInstance%5Bindex%5D != '.' %7B%0A            return validCombinations(copyInstance, index+1, indexNum)%0A        %7D%0A%0A\n     \n@@ -1409,33 +1409,32 @@\n ompleta := true%0A\n-%0A\n         for _, e\n@@ -1521,32 +1521,32 @@\n e%0A            %7D%0A\n+\n         %7D%0A%0A     \n@@ -1531,33 +1531,32 @@\n     %7D%0A        %7D%0A\n-%0A\n         if compl\n",
+            "lines": "117"
+        },
+        {
+            "label": "2026-06-01_10-59-11",
+            "content": "@@ -2235,71 +2235,8 @@\n us%7B%0A\n-                    fmt.Println(%22Entrou%22, string(newInstance))%0A\n     \n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-01_11-00-39",
+            "content": "@@ -2477,62 +2477,54 @@\n     \n-fmt.Println(instance)%0A            break%0A        %7D%0A    %7D\n+break%0A        %7D%0A    %7D%0A    fmt.Println(instance)\n %0A%7D%0A\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-01_11-01-13",
+            "content": "@@ -263,35 +263,47 @@\n  instance%5Bi%5D == \n-num\n+instance%5Bindex%5D\n %7B%0A              \n@@ -531,19 +531,31 @@\n e%5Bi%5D == \n-num\n+instance%5Bindex%5D\n %7B%0A      \n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-01_11-04-14",
+            "content": "@@ -164,17 +164,16 @@\n x-1; i %3E\n-=\n  0; i--%7B\n@@ -853,12 +853,8 @@\n yte(\n-'0'+\n i))%0A\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-01_11-07-58",
+            "content": "@@ -1294,33 +1294,8 @@\n ers)\n- %7C%7Cindex %3E= len(instance)\n %7B%0A  \n@@ -1318,28 +1318,32 @@\n  false, \n-copyI\n+%5B%5Dbyte(i\n nstance\n+)\n %0A       \n@@ -1459,33 +1459,32 @@\n Num)%0A        %7D%0A%0A\n-%0A\n         completa\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-01_11-09-09",
+            "content": "@@ -2536,32 +2536,6 @@\n   %7D%0A\n-    fmt.Println(instance)%0A\n %7D%0A\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-06-01_11-09-24",
+            "content": "@@ -1254,24 +1254,25 @@\n byte) %7B%0A\n+%0A\n         \n validCom\n@@ -1267,126 +1267,60 @@\n     \n-validCombinations = func(copyInstance %5B%5Dbyte, index, indexNum int) (bool, %5B%5Dbyte) %7B%0A%0A    if \n+if indexNum %3E= len(numbers) %7C%7C\n index \n-=\n+%3E\n = len(\n-copyI\n+i\n nstance)\n  %7B%0A \n@@ -1315,17 +1315,16 @@\n nstance)\n- \n %7B%0A      \n@@ -1325,26 +1325,31 @@\n         \n+    \n return \n-tru\n+fals\n e, copyI\n@@ -1352,24 +1352,28 @@\n opyInstance%0A\n+    \n     %7D%0A%0A    i\n@@ -1367,24 +1367,28 @@\n      %7D%0A%0A    \n+    \n if copyInsta\n@@ -1407,16 +1407,20 @@\n = '.' %7B%0A\n+    \n         \n@@ -1471,281 +1471,322 @@\n +1, \n-0)%0A    %7D%0A%0A    for _, num := range numbers %7B%0A%0A        if !verifySpace(copyInstance, limit, index, num) %7B%0A            continue%0A        %7D%0A%0A        // escolhe%0A        copyInstance%5Bindex%5D = num%0A%0A        // explora%0A        ok, result := validCombinations(copyInstance, index+1, 0\n+indexNum)%0A        %7D%0A%0A%0A        completa := true%0A%0A        for _, e := range copyInstance%7B%0A            if e == '.'%7B%0A                completa = false%0A            %7D%0A        %7D%0A%0A        if completa %7B%0A            return true, copyInstance%0A        %7D%0A%0A        can := verifySpace(copyInstance, limit, index, numbers%5BindexNum%5D\n )%0A%0A \n@@ -1799,10 +1799,12 @@\n  if \n-ok\n+!can\n  %7B%0A \n@@ -1825,91 +1825,133 @@\n urn \n-true, result%0A        %7D%0A%0A        // desfaz%0A        copyInstance%5Bindex%5D = '.'%0A    %7D%0A%0A\n+validCombinations(copyInstance, index, indexNum+1)%0A        %7D%0A%0A%0A        copyInstance%5Bindex%5D = numbers%5BindexNum%5D%0A        %0A%0A    \n     \n@@ -1957,35 +1957,66 @@\n  return \n-false, copyInstance\n+validCombinations(copyInstance, index+1, indexNum)\n %0A    %7D%0A \n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-06-01_11-11-57",
+            "content": "@@ -1254,21 +1254,109 @@\n byte) %7B%0A\n-%0A\n     \n+    validCombinations = func(copyInstance %5B%5Dbyte, index, indexNum int) (bool, %5B%5Dbyte) %7B%0A%0A\n     if i\n@@ -1379,28 +1379,24 @@\n Instance) %7B%0A\n-    \n         retu\n@@ -1417,35 +1417,27 @@\n nstance%0A    \n-  \n-  \n %7D%0A%0A\n-    \n     if copyI\n@@ -1460,20 +1460,16 @@\n = '.' %7B%0A\n-    \n         \n@@ -1519,35 +1519,27 @@\n x+1, 0)%0A    \n- \n-   %7D%0A%0A    \n+%7D%0A%0A\n     for _, n\n@@ -1561,20 +1561,16 @@\n bers %7B%0A%0A\n-    \n         \n@@ -1632,20 +1632,16 @@\n         \n-    \n continue\n@@ -1641,36 +1641,32 @@\n ontinue%0A        \n-    \n %7D%0A%0A            /\n@@ -1656,28 +1656,24 @@\n  %7D%0A%0A        \n-  \n-  \n // escolhe%0A \n@@ -1671,20 +1671,16 @@\n escolhe%0A\n-    \n         \n@@ -1710,28 +1710,24 @@\n um%0A%0A        \n-    \n // explora%0A \n@@ -1733,20 +1733,16 @@\n         \n- \n-   \n ok, resu\n@@ -1800,20 +1800,16 @@\n         \n-    \n if ok %7B%0A\n@@ -1816,28 +1816,24 @@\n             \n-   \n- \n return true,\n@@ -1844,28 +1844,24 @@\n ult%0A        \n-    \n %7D%0A%0A         \n@@ -1859,20 +1859,16 @@\n         \n- \n-   \n // desfa\n@@ -1873,28 +1873,24 @@\n faz%0A        \n-  \n-  \n copyInstance\n@@ -1903,35 +1903,27 @@\n %5D = '.'%0A    \n-    %7D%0A%0A    \n+%7D%0A%0A\n     return f\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-06-01_11-12-30",
+            "content": "@@ -2178,19 +2178,16 @@\n         \n- //\n  fmt.Pri\n@@ -2457,10 +2457,36 @@\n %7D%0A    %7D%0A\n+    fmt.Println(instance)%0A\n %7D%0A\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-01_11-13-48",
+            "content": "@@ -1122,32 +1122,42 @@\n ce %5B%5Dbyte, index\n+, indexNum\n  int) (bool, %5B%5Db\n@@ -1217,24 +1217,34 @@\n %5Dbyte, index\n+, indexNum\n  int) (bool,\n@@ -1442,16 +1442,19 @@\n  index+1\n+, 0\n )%0A      \n@@ -1750,16 +1750,19 @@\n  index+1\n+, 0\n )%0A%0A     \n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-01_11-15-29",
+            "content": "@@ -1937,16 +1937,47 @@\n  false%0A%0A\n+    for inum := range numbers%7B%0A\n         \n@@ -2099,16 +2099,22 @@\n tance, i\n+, inum\n )%0A      \n@@ -2411,19 +2411,16 @@\n         \n- //\n  break%0A \n@@ -2428,10 +2428,16 @@\n       %7D%0A\n+    %7D%0A\n %7D%0A\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-06-01_11-16-13",
+            "content": "@@ -2096,16 +2096,82 @@\n status%7B%0A\n+                    // fmt.Println(%22Entrou%22, string(newInstance))%0A\n         \n@@ -2355,28 +2355,49 @@\n intln(instance)%0A\n+            // break%0A\n         %7D%0A%7D%0A\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-06-01_11-16-46",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n\n\nfunc verifySpace(instance []byte, limit, index int, num byte) bool{\n    space := true\n\n        countL := 0\n        for i := index-1; i >= 0; i--{\n            if countL == limit{\n                break\n            }\n            if instance[i] == num{\n                space = false\n            }\n            countL++\n        }\n        countR := 0\n        for i := index+1; i < len(instance); i++{\n            if countR == limit{\n                break\n            }\n            if instance[i] == num{\n                space = false\n            }\n            countR++\n        }\n\n        return space\n}\n\n\n\n\n\n\n\n\nfunc main() {\n    var instance string\n    var limit int\n    \n    fmt.Scanln(&instance)\n    fmt.Scanln(&limit)\n\n\n    numbers := []byte{}\n\n    for i := 0; i <= limit; i++{\n        \n        numbers = append(numbers, byte('0'+i))\n    }\n\n    pontos := 0\n    for _, e := range instance{\n        if e == '.'{\n            pontos++\n        }\n    }\n    // validsBlocks := [][pontos]valids\n    \n    copyInstance := []byte(instance)\n    \n    \n    \n    \n    var validCombinations func(copyInstance []byte, index int) (bool, []byte)\n    \n    validCombinations = func(copyInstance []byte, index int) (bool, []byte) {\n\n        if index == len(copyInstance) {\n            return true, copyInstance\n        }\n\n        if copyInstance[index] != '.' {\n            return validCombinations(copyInstance, index+1)\n        }\n\n        for _, num := range numbers {\n\n            if !verifySpace(copyInstance, limit, index, num) {\n                continue\n            }\n\n            // escolhe\n            copyInstance[index] = num\n\n            // explora\n            ok, result := validCombinations(copyInstance, index+1)\n\n            if ok {\n                return true, result\n            }\n\n            // desfaz\n            copyInstance[index] = '.'\n        }\n\n        return false, copyInstance\n    }\n    \n    flag := false\n\n        for i, e := range instance{\n           if e == '.'{\n               status, newInstance := validCombinations(copyInstance, i)\n               if status{\n                    instance = string(newInstance)\n                    flag = true\n                    break\n               }\n           }\n        }\n        if flag {\n            fmt.Println(instance)\n        }\n}\n",
+            "lines": "121"
         }
     ]
 }

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_22-39-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n    numIsle := 0\n    \n\tvar isle func(grid [][]byte, r, c int) bool\n\tisle = func(grid [][]byte, r, c int) bool {\n\n\t\tdestruct := false\n\t\tif (r < 0 || r >= len(grid)) || (c < 0 || c >= len(grid[0])) {\n\t\t\treturn true\n\t\t}\n\t\tif destruct {\n\t\t\treturn true\n\t\t}\n\n\t\tif grid[r][c] == '1' {\n            grid[r][c] = '0'\n\t\t\tdestruct = true\n\t\t\tisle(grid, r+1, c)\n\t\t\tisle(grid, r-1, c)\n\t\t\tisle(grid, r, c+1)\n\t\t\tisle(grid, r, c-1)\n\t\t\treturn true\n\t\t}\n\t\treturn false\n\t}\n\trows := len(grid)\n\tcowls := len(grid[0])\n    for r := range rows{\n        for c := range cowls{\n            if grid[r][c] == '1'{\n                numIsle++\n                isle(grid, r, c)\n            }\n        }\n    }\n\n\treturn numIsle\n\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tif err := scanner.Err(); err != nil {\n\t\tfmt.Fprintln(os.Stderr, err)\n\t\tos.Exit(1)\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "69"
+        }
+    ]
+}

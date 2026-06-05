@@ -1,0 +1,43 @@
+2026-05-29 10:19:32, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-05-29 10:20:18, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:25
+2026-05-29 10:19:32, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 10:20:58, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 10:20:18, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 10:21:51, MOVE, v:1, k:ed@battleship, mode:EDIT
+2026-05-29 10:21:51, MOVE, v:1, k:ed@battleship, mode:EDIT
+2026-05-29 10:21:51, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-05-29 10:21:51, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-05-29 10:21:51, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-05-29 10:21:51, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-05-29 10:21:51, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-29 10:21:51, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-29 10:26:26, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:29
+2026-05-29 10:27:51, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:29
+2026-05-29 10:29:14, EXEC, v:1, k:ed@rotten, mode:FREE
+2026-05-29 10:27:49, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 10:29:15, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 10:29:51, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:29
+2026-05-29 10:29:44, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 10:29:50, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 10:49:23, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 10:54:27, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 10:59:29, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 11:04:26, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 11:06:23, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:81
+2026-05-29 11:08:40, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 11:06:23, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 11:11:19, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:75
+2026-05-29 11:11:46, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:75
+2026-05-29 11:13:13, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0, size:84
+2026-05-29 11:13:18, EXEC, v:1, k:ed@rotten, mode:FULL, rate:0
+2026-05-29 13:55:12, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-05-29 13:55:01, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-29 13:55:01, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-05-29 13:55:12, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 13:55:12, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 13:59:30, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 14:04:04, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-05-29 14:06:08, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-05-29 14:06:16, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-29 14:06:17, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-29 14:06:25, MOVE, v:1, k:ed@wordsearch, mode:PICK

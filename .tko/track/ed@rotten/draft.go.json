@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-29_10-20-18",
+            "content": "@@ -142,127 +142,41 @@\n maxR\n-)%0A%0A    for r := 0; r %3C maxR; r++ %7B%0A        campoLaranjas%5Br%5D = make(%5B%5Dint, maxC)%0A    %7D  %0A%0A%0A    for r := 0; r %3C maxR; r++\n+, maxC)%0A%0A%0A    for r := range maxR\n  %7B%0A \n@@ -195,24 +195,18 @@\n  := \n-0; c %3C maxC; c++\n+range maxC\n  %7B%0A \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-05-29_10-26-26",
+            "content": "@@ -376,32 +376,26 @@\n or r := \n-0; r %3C maxR; r++\n+range maxR\n  %7B%0A     \n@@ -406,32 +406,26 @@\n or c := \n-0; c %3C maxC; c++\n+range maxC\n  %7B%0A     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-29_10-27-51",
+            "content": "@@ -316,17 +316,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &campoLa\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-29_10-29-51",
+            "content": "@@ -29,950 +29,8 @@\n %22%0A)%0A\n-%0A%0A%0Afunc apodrecerLaranjas(campoLaranjas %5B%5D%5B%5Dint) int%7B%0A    maxR := len(campoLaranjas)%0A    maxC := len(campoLaranjas%5B0%5D)%0A    %0A    var apodrecer func(r, c int) bool%0A    // segundos := 0%0A%0A    for r := 0; r %3C maxR; r++ %7B%0A        for c := 0; c %3C maxC; c++ %7B%0A            if campoLaranjas%5Br%5D%5Bc%5D == 2 %7B%0A                apodrecer(r, c)%0A                // for apodrecer(r, c) != true %7C%7C apodrecer(r, c) != false %7B%0A                //     segundos++%0A                // %7D%0A            %7D%0A        %7D%0A    %7D%0A%0A    apodrecer = func(r, c int) bool %7B%0A%0A        if (r %3C 0 %7C%7C r %3E= maxR) %7C%7C (c %3C 0 %7C%7C c %3E= maxC)%7B%0A            return false%0A        %7D%0A%0A%0A%0A        laranja := campoLaranjas%5Br%5D%5Bc%5D%0A%0A        if laranja == 1 %7B%0A            laranja = 2%0A        %7D%0A%0A        dirs := %5B%5D%5B%5Dint%7B%7B1, 0%7D, %7B0, 1%7D, %7B-1, 0%7D, %7B0, -1%7D%7D%0A%0A        for _, d := range dirs%7B%0A            nr, nc := r+d%5B0%5D, c+d%5B1%5D%0A            apodrecer(nr, nc)%0A        %7D%0A%0A%0A%0A        return true%0A    %7D%0A%0A%0A%0A%0Areturn 0%0A%7D%0A%0A%0A%0A%0A%0A%0A\n func\n@@ -292,24 +292,24 @@\n maxC; c++ %7B%0A\n-\n             \n@@ -356,10 +356,145 @@\n %0A    %7D%0A%0A\n+    for r := 0; r %3C maxR; r++ %7B%0A        for c := 0; c %3C maxC; c++ %7B%0A            fmt.Printf(%22%25d%22, campoLaranjas%5Br%5D%5Bc%5D)%0A        %7D%0A    %7D%0A%0A\n %7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-29_11-06-23",
+            "content": "@@ -726,35 +726,23 @@\n         \n-campoLaranjas%5Br%5D%5Bc%5D\n+laranja\n  = 2%0A   \n@@ -909,32 +909,35 @@\n , nc)%0A        %7D%0A\n+%0A%0A%0A\n         return t\n@@ -946,16 +946,20 @@\n e%0A    %7D%0A\n+%0A%0A%0A%0A\n return 0\n@@ -1302,37 +1302,6 @@\n  %7D%0A%0A\n-    fmt.Println(campoLaranjas)%0A\n %7D%0A\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-05-29_11-11-18",
+            "content": "@@ -1306,44 +1306,8 @@\n   %7D%0A\n-    apodrecerLaranjas(campoLaranjas)\n %0A   \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-05-29_11-11-45",
+            "content": "@@ -748,17 +748,17 @@\n r%5D%5Bc%5D = \n-9\n+2\n %0A       \n@@ -959,190 +959,8 @@\n   %7D%0A\n-%0A%0A    for r := 0; r %3C maxR; r++ %7B%0A        for c := 0; c %3C maxC; c++ %7B%0A            if campoLaranjas%5Br%5D%5Bc%5D == 9 %7B%0A                campoLaranjas%5Br%5D%5Bc%5D = 2%0A            %7D%0A        %7D%0A    %7D%0A\n retu\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-05-29_11-13-13",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n\n\nfunc apodrecerLaranjas(campoLaranjas [][]int) int{\n    maxR := len(campoLaranjas)\n    maxC := len(campoLaranjas[0])\n    \n    var apodrecer func(r, c int) bool\n    // segundos := 0\n\n    for r := 0; r < maxR; r++ {\n        for c := 0; c < maxC; c++ {\n            if campoLaranjas[r][c] == 2 {\n                apodrecer(r, c)\n                // for apodrecer(r, c) != true || apodrecer(r, c) != false {\n                //     segundos++\n                // }\n            }\n        }\n    }\n\n    apodrecer = func(r, c int) bool {\n\n        if (r < 0 || r >= maxR) || (c < 0 || c >= maxC){\n            return false\n        }\n\n\n\n        laranja := campoLaranjas[r][c]\n\n        if laranja == 1 {\n            campoLaranjas[r][c] = 9\n        }\n\n        dirs := [][]int{{1, 0}, {0, 1}, {-1, 0}, {0, -1}}\n\n        for _, d := range dirs{\n            nr, nc := r+d[0], c+d[1]\n            apodrecer(nr, nc)\n        }\n        return true\n    }\n\n\n    for r := 0; r < maxR; r++ {\n        for c := 0; c < maxC; c++ {\n            if campoLaranjas[r][c] == 9 {\n                campoLaranjas[r][c] = 2\n            }\n        }\n    }\nreturn 0\n}\n\n\n\n\n\n\nfunc main() {\n    var maxR, maxC int\n    fmt.Scanf(\"%d%d\", &maxR, &maxC)\n\n    campoLaranjas := make([][]int, maxR)\n\n    for r := 0; r < maxR; r++ {\n        campoLaranjas[r] = make([]int, maxC)\n    }  \n\n\n    for r := 0; r < maxR; r++ {\n        for c := 0; c < maxC; c++ {\n            fmt.Scan(&campoLaranjas[r][c])\n        }\n    }\n    apodrecerLaranjas(campoLaranjas)\n    fmt.Println(campoLaranjas)\n}\n",
+            "lines": "84"
+        }
+    ]
+}
