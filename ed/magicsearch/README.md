@@ -1,4 +1,4 @@
-# Magic Search com busca binária
+ # Magic Search com busca binária
 
 Dado uma lista de elementos ordenados, com possibilidade de repetição de valores, utilize uma variação da busca binária para retornar:
 

@@ -13,14 +13,17 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- ed@dfs
+- ed@tree
+- ed@map_set
+- ed@linear
 flags:
   inbox: all
   panel: skills
-  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
-selected: ed@pintura
-selected_index: 22
+selected: ed@serial
+selected_index: 27

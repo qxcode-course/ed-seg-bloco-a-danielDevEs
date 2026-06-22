@@ -1,0 +1,4 @@
+2026-06-07 11:26:52, MOVE, v:1, k:sandbox@user_004, mode:PICK
+2026-06-07 11:26:57, EXEC, v:1, k:sandbox@user_004, mode:FREE, size:38
+2026-06-07 11:29:01, MOVE, v:1, k:sandbox@user_004, mode:EDIT
+2026-06-07 11:29:44, MOVE, v:1, k:sandbox@user_004, mode:EDIT

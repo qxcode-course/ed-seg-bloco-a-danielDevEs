@@ -1,0 +1,97 @@
+2026-06-21 15:56:35, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-06-21 15:56:37, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:100
+2026-06-21 15:56:38, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-06-21 15:58:56, MOVE, v:1, k:ed@bettersearch, mode:DOWN
+2026-06-21 15:59:01, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-06-21 15:58:56, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 16:01:29, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 16:11:37, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 16:10:09, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-06-21 16:10:09, MOVE, v:1, k:sandbox@user_002, mode:EDIT
+2026-06-21 16:10:09, MOVE, v:1, k:sandbox@user_003, mode:EDIT
+2026-06-21 16:10:09, MOVE, v:1, k:ed@lista_d3, mode:EDIT
+2026-06-21 16:10:09, MOVE, v:1, k:sandbox@user_001, mode:EDIT
+2026-06-21 16:10:09, MOVE, v:1, k:ed@escapeSpread, mode:EDIT
+2026-06-21 16:10:09, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-06-21 16:10:13, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-06-21 16:10:13, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:sandbox@user_004, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@battleship, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@dfs_read, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@fuga, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@fib1, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@lista_d2, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@longest, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@manipulacao, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@mumia, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@pintando, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@treinando, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@vetequals, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@triangulo, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-06-21 16:10:36, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-06-21 16:17:24, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 16:22:36, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 16:27:44, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:51
+2026-06-21 16:27:39, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 16:27:21, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 16:27:43, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 16:28:35, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-06-21 17:29:46, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-06-21 17:29:48, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63
+2026-06-21 17:30:25, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:81, size:51
+2026-06-21 17:31:29, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:45, size:55
+2026-06-21 17:32:19, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:81, size:51
+2026-06-21 17:33:06, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:81, size:54
+2026-06-21 17:33:46, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:90, size:57
+2026-06-21 17:34:15, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:90, size:57
+2026-06-21 17:34:20, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:57
+2026-06-21 17:29:46, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 17:34:19, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 17:29:56, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-06-21 17:29:56, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-06-21 17:34:19, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 17:35:29, EXEC, v:1, k:ed@bettersearch, mode:FULL, size:57, fail:COMP
+2026-06-21 17:35:42, EXEC, v:1, k:ed@bettersearch, mode:FULL, size:57, fail:COMP
+2026-06-21 17:36:09, EXEC, v:1, k:ed@bettersearch, mode:FULL, size:57, fail:COMP
+2026-06-21 17:36:59, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:57
+2026-06-21 17:37:14, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:63, size:57
+2026-06-21 17:37:27, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:57
+2026-06-21 17:37:28, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-06-21 17:37:48, SELF, v:1, k:ed@bettersearch, self:1, rate:100, study:30, concept:1
+2026-06-21 17:37:58, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-06-21 17:37:25, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 17:37:26, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-06-21 17:37:58, MOVE, v:1, k:ed@magicsearch, mode:EDIT

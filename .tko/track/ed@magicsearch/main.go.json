@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-22_15-12-45",
+            "content": "@@ -115,227 +115,27 @@\n  %7B%0A%09\n-low := 0%0A%09mid := 0%0A%09high := len(slice) - 1%0A%0A%09for low %3C= high %7B%0A%09%09mid = low + (high - low)/2%0A%09%09%0A%09%09if value == slice%5Bmid%5D %7B%0A%09%09%09return mid%0A%09%09%7D%0A%0A%09%09if slice%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else %7B%0A%09%09%09high = mid - 1%0A%09%09%7D%0A%09%7D\n+_, _ = slice, value\n %0A%09re\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-22_15-19-39",
+            "content": "@@ -157,44 +157,8 @@\n  - 1\n-%0A%09if len(slice) == 0 %7B%0A%09%09return 0%0A%09%7D\n %0A%0A%09f\n@@ -203,16 +203,18 @@\n  low)/2%0A\n+%09%09\n %0A%09%09if va\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-22_15-21-43",
+            "content": "@@ -373,19 +373,17 @@\n %09return \n-mid\n+0\n %0A%7D%0A%0Afunc\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-22_15-29-56",
+            "content": "@@ -380,10 +380,8 @@\n  mid\n-+1\n %0A%7D%0A%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-22_15-30-55",
+            "content": "@@ -376,16 +376,18 @@\n turn mid\n++1\n %0A%7D%0A%0Afunc\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-22_15-31-22",
+            "content": "@@ -369,53 +369,8 @@\n %0A%09%7D%0A\n-%09if slice%5Bmid%5D %3C value%7B%0A%09%09return mid + 1%0A%09%7D %0A\n %09ret\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-22_15-31-59",
+            "content": "@@ -271,62 +271,8 @@\n %5D %7B%0A\n-%09%09%09if slice%5Bmid+1%5D == value %7B%0A%09%09%09%09return mid + 1%0A%09%09%09%7D%0A\n %09%09%09r\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-22_15-33-17",
+            "content": "@@ -271,18 +271,8 @@\n %5D %7B%0A\n-%09%09%09for %7B%0A%09\n %09%09%09i\n@@ -305,44 +305,22 @@\n %09%09%09%09\n-%09mid++%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09break%0A%09%09%09%09%7D\n+return mid + 1\n %0A%09%09%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-06-22_15-35-29",
+            "content": "@@ -280,87 +280,8 @@\n r %7B%0A\n-%09%09%09%09if mid+1 == len(slice)-1 && slice%5Bmid+1%5D == value%7B%0A%09%09%09%09%09return mid+1%0A%09%09%09%09%7D%0A\n %09%09%09%09\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-22_15-36-50",
+            "content": "@@ -317,16 +317,18 @@\n lice%5Bmid\n++1\n %5D == val\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-22_15-37-39",
+            "content": "@@ -304,16 +304,39 @@\n slice)-1\n+ && slice%5Bmid%5D == value\n %7B%0A%09%09%09%09%09r\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-22_15-38-02",
+            "content": "@@ -286,16 +286,18 @@\n %09%09if mid\n++1\n  == len(\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-22_15-39-27",
+            "content": "@@ -319,16 +319,18 @@\n turn mid\n++1\n %0A%09%09%09%09%7D%0A%09\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-22_15-40-24",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\tlow := 0\n\tmid := 0\n\thigh := len(slice) - 1\n\tif len(slice) == 0 {\n\t\treturn 0\n\t}\n\n\tfor low <= high {\n\t\tmid = low + (high - low)/2\n\n\t\tif value == slice[mid] {\n\t\t\tfor {\n\t\t\t\tif mid == len(slice)-1{\n\t\t\t\t\treturn mid\n\t\t\t\t}\n\t\t\t\tif slice[mid+1] == value {\n\t\t\t\t\tmid++\n\t\t\t\t} else {\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn mid\n\t\t}\n\n\t\tif slice[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\tif slice[mid] < value{\n\t\treturn mid + 1\n\t} \n\treturn mid\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "62"
+        }
+    ]
+}

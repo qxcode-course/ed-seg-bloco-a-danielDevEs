@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-21_16-27-44",
+            "content": "@@ -368,10 +368,8 @@\n  mid\n-+1\n %0A%7D%0A%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-21_17-30-25",
+            "content": "@@ -351,85 +351,27 @@\n %09%7D%0A%09\n-if mid %3C value %7B%0A%09%09return false, mid - 1%0A%09%7D else %7B%0A%09%09return false, mid + 1%0A%09%7D\n+return false, mid+1\n %0A%7D%0A%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-21_17-31-29",
+            "content": "@@ -346,16 +346,69 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09if mid %3C value %7B%0A%09%09return false, mid - 1%0A%09%7D else %7B%0A%09\n %09return \n@@ -422,18 +422,20 @@\n mid + 1%0A\n+%09%7D%0A\n %7D\n- \n %0A%0Afunc m\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-06-21_17-32-19",
+            "content": "@@ -350,53 +350,8 @@\n %0A%09%7D%0A\n-%09if mid %3E value %7B%0A%09%09return false, mid - 1%0A%09%7D%0A\n %09ret\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-21_17-33-06",
+            "content": "@@ -125,50 +125,8 @@\n ) %7B%0A\n-%09if len(slice) == 0%7B%0A%09%09return false, 0%0A%09%7D%0A\n %09mid\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-06-21_17-33-46",
+            "content": "@@ -397,17 +397,16 @@\n if mid %3E\n-=\n  value %7B\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-21_17-34-15",
+            "content": "@@ -426,16 +426,20 @@\n lse, mid\n+ - 1\n %0A%09%7D%0A%09ret\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-21_17-34-20",
+            "content": "@@ -204,16 +204,18 @@\n slice) -\n+ 1\n %0A%0A%09for l\n@@ -349,16 +349,18 @@\n  = mid +\n+ 1\n %0A%09%09%7D els\n@@ -378,16 +378,18 @@\n  = mid -\n+ 1\n %0A%09%09%7D%0A%09%7D%0A\n@@ -396,17 +396,18 @@\n %09if mid \n-%3C\n+%3E=\n  value %7B\n@@ -426,18 +426,16 @@\n lse, mid\n- +\n %0A%09%7D%0A%09ret\n@@ -448,16 +448,20 @@\n lse, mid\n+ + 1\n %0A%7D %0A%0Afun\n@@ -616,16 +616,18 @@\n ge parts\n+%5B1\n  : len(p\n@@ -631,16 +631,18 @@\n n(parts)\n+-1\n %5D %7B%0A%09%09va\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-21_17-35-29",
+            "content": "@@ -208,10 +208,8 @@\n e) -\n- 1\n %0A%0A%09f\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-21_17-35-42",
+            "content": "@@ -349,18 +349,16 @@\n  = mid +\n- 1\n %0A%09%09%7D els\n@@ -376,18 +376,16 @@\n  = mid -\n- 1\n %0A%09%09%7D%0A%09%7D%0A\n@@ -423,17 +423,16 @@\n e, mid +\n-1\n %0A%09%7D%0A%09ret\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-21_17-36-09",
+            "content": "@@ -427,17 +427,16 @@\n e, mid +\n- \n 1%0A%09%7D%0A%09re\n@@ -618,10 +618,8 @@\n arts\n-%5B1\n  : l\n@@ -631,10 +631,8 @@\n rts)\n--1\n %5D %7B%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-21_17-36-59",
+            "content": "@@ -425,16 +425,20 @@\n lse, mid\n+ + 1\n %0A%09%7D%0A%09ret\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-21_17-37-14",
+            "content": "@@ -425,20 +425,16 @@\n lse, mid\n- + 1\n %0A%09%7D%0A%09ret\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-21_17-37-27",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\n\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\tif len(slice) == 0{\n\t\treturn false, 0\n\t}\n\tmid := 0\n\tlow := 0\n\thigh := len(slice) - 1\n\n\tfor low <= high {\n\t\tmid = low + (high-low) / 2\n\n\t\tif slice[mid] == value {\n\t\t\treturn true, mid\n\t\t}\n\n\t\tif slice[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\tif mid < value {\n\t\treturn false, mid + 1\n\t}\n\treturn false, mid\n} \n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "57"
+        }
+    ]
+}

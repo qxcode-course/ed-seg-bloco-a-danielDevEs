@@ -1,22 +1,44 @@
 package main
-import "fmt"
-func main() {
-    qtd := 0
-    fmt.Scan(&qtd)
-    fmt.Println(gerarFib(qtd))
-    
+
+import (
+	"fmt"
+	"strings"
+)
+
+
+type Info struct {
+    QtdVoga int
+    QtdCons int
+    QtdPala int
 }
 
-func gerarFib(qtdElem int) []int {
-    var fib []int = make([]int, qtdElem)
 
-    for i := 0; i < qtdElem; i++{
-        if i < 2 {
-            fib[i] = 1
-            continue
+
+func main() {
+    texto := "  eu me  lasquei"
+
+    info := Analisar(texto)
+
+    fmt.Printf("Vogais: %d\n", info.QtdVoga)
+    fmt.Printf("Consoantes: %d\n", info.QtdCons)
+    fmt.Printf("Palavras: %d\n", info.QtdPala)
+}
+
+
+func Analisar(texto string) Info {
+    var info Info
+    runes := []rune(texto)
+
+    for _, c := range runes {
+        if c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'{
+            info.QtdVoga++
+        } else if (c != ' '){
+            info.QtdCons++
         }
-        fib[i] = fib[i-1] + fib[i-2]
     }
 
-    return fib
+    palavras := strings.Split(texto, " ")
+    info.QtdPala = len(palavras)
+
+    return info
 }

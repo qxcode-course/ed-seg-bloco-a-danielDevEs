@@ -79,7 +79,13 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	line := scanner.Text()
-	parts := strings.Split(line, " ")
+	
+	parts := strings.Fields(line)
+
+	fmt.Printf("%q\n", line)
+	fmt.Printf("DEBUG: [%s]\n", parts[0])
+	fmt.Printf("%q\n", parts)
+
 	root := create(&parts)
 	BShow(root, "")
 }
