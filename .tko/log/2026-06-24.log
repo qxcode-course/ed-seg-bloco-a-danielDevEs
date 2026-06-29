@@ -1,0 +1,18 @@
+2026-06-24 15:56:02, MOVE, v:1, k:ed@serial, mode:PICK
+2026-06-24 15:56:04, EXEC, v:1, k:ed@serial, mode:FULL, rate:0
+2026-06-24 15:56:15, MOVE, v:1, k:ed@serial, mode:BACK
+2026-06-24 15:56:20, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-24 16:00:51, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:128
+2026-06-24 15:56:02, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-06-24 15:56:04, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-06-24 15:56:19, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-06-24 15:56:19, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-06-24 15:56:20, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-24 16:00:48, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-24 16:00:51, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-24 16:03:39, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:136
+2026-06-24 16:04:57, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:136
+2026-06-24 16:05:45, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-24 16:04:57, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-24 16:10:22, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-24 16:13:23, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:141

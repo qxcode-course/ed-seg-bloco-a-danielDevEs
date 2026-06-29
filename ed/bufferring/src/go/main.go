@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -43,9 +44,74 @@ func (b *Deque) Debug() string {
 	return strings.Join(result, " |")
 }
 
+func (b *Deque) Len() int {
+	return b.size
+}
 
-func (b *Deque) Resize()
+func (b *Deque) Resize(newCap int) []int{
+	newData := make([]int, newCap)
+	for i := range b.data {
+		newData[i] = b.data[(b.front + i) % b.capacity] 
+	}
+	b.capacity = newCap
+	b.front = 0
+	return newData
+}
 
+func (b *Deque) PushBack(v int) {
+	if b.Len() >= b.capacity {
+		b.data = b.Resize(2*b.capacity)
+	}
+	
+	pos := (b.size + b.front) % b.capacity
+	b.data[pos] = v
+	b.size++
+}
+
+func (b *Deque) PushFront(v int) {
+	if b.size >= b.capacity {
+		b.data = b.Resize(2*b.capacity)
+	}
+	b.front = (b.front - 1 + b.capacity) % b.capacity
+	b.data[b.front] = v
+	b.size++
+}
+func (b *Deque) PopFront(){
+	if b.Len() == 0 {
+		fmt.Println("fail: buffer vazio")
+		return
+	}
+	b.front = (b.front + 1) % b.capacity
+	b.size--
+}
+func (b *Deque) PopBack(){
+	if b.Len() == 0 {
+		fmt.Println("fail: buffer vazio")
+		return
+	}
+	b.size--
+	
+}
+
+func (b *Deque) Front() (int, bool) {
+	if b.Len() == 0 {
+		return -1, false
+	}
+	return b.data[b.front], true
+}
+
+func (b *Deque) Back() (int, bool){
+	if b.Len() == 0 {
+		return -1, false
+	}
+	pos := (b.front + b.size - 1) % b.capacity
+	return b.data[pos], true
+}
+
+func (b *Deque) Clear(){
+	b.size = 0
+	b.front = 0
+}
 
 
 func main() {
@@ -73,39 +139,35 @@ func main() {
 		case "debug":
 			fmt.Println(buf.Debug())
 		case "size":
-			// fmt.Println(buf.Len())
+			fmt.Println(buf.Len())
 		case "push_back":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	buf.PushBack(num)
-			// }
+			for _, v := range args[1:] {
+				num, _ := strconv.Atoi(v)
+				buf.PushBack(num)
+			}
 		case "push_front":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	buf.PushFront(num)
-			// }
+			for _, v := range args[1:] {
+				num, _ := strconv.Atoi(v)
+				buf.PushFront(num)
+			}
 		case "pop_back":
-			// if err := buf.PopBack(); err != nil {
-			// 	fmt.Println(err)
-			// }
+			buf.PopBack();
 		case "pop_front":
-			// if err := buf.PopFront(); err != nil {
-			// 	fmt.Println(err)
-			// }
+			buf.PopFront()
 		case "front":
-			// if val, err := buf.Front(); err != nil {
-			// 	fmt.Println(err)
-			// } else {
-			// 	fmt.Println(val)
-			// }
+			if val, err := buf.Front(); err != true {
+				fmt.Println(err)
+			} else {
+				fmt.Println(val)
+			}
 		case "back":
-			// if val, err := buf.Back(); err != nil {
-			// 	fmt.Println(err)
-			// } else {
-			// 	fmt.Println(val)
-			// }
+			if val, err := buf.Back(); err != true {
+				fmt.Println(err)
+			} else {
+				fmt.Println(val)
+			}
 		case "clear":
-			// buf.Clear()
+			buf.Clear()
 		case "end":
 			return
 		default:

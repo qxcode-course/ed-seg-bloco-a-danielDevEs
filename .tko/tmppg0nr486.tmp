@@ -14,8 +14,8 @@ sources:
   quests: null
 expanded:
 - ed@tree
-- ed@linear
 - ed@vector
+- ed@linear
 flags:
   inbox: all
   panel: skills
@@ -25,5 +25,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@inverter
-selected_index: 27
+selected: ed@fila_enc
+selected_index: 14
